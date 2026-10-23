@@ -157,10 +157,10 @@
     counters.forEach(function (el) { cio.observe(el); });
   }
 
-  /* ---------- vertical demo video: graceful fallback ---------- */
-  var video = document.getElementById('demo-video');
-  var fallback = document.getElementById('video-fallback');
-  if (video && fallback) {
+  /* ---------- demo videos: graceful fallback ---------- */
+  document.querySelectorAll('video').forEach(function (video) {
+    var fallback = video.parentElement ? video.parentElement.querySelector('.video-fallback') : null;
+    if (!fallback) return;
     function showFallback() { fallback.classList.add('show'); video.style.display = 'none'; }
     video.addEventListener('error', showFallback);
     // source-level error (no file on server yet)
@@ -170,7 +170,7 @@
     setTimeout(function () {
       if (video.readyState === 0 && video.networkState !== 2) showFallback();
     }, 4000);
-  }
+  });
 
   /* ---------- current year in footer ---------- */
   document.querySelectorAll('[data-year]').forEach(function (el) {

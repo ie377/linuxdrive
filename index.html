@@ -273,8 +273,50 @@
         </div>
     </section>
 
+    <!-- ============ VIDEO ============ -->
+    <section id="video" class="py-20 bg-slate-900/50 border-y border-slate-800/70 relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(50% 50% at 20% 50%, rgba(34,197,94,.06), transparent 70%);"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid lg:grid-cols-2 gap-14 items-center">
+                <div class="reveal order-2">
+                    <span class="eyebrow">Видеообзор</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-5">LinuxDrive <span class="text-brand-green">в деле</span></h2>
+                    <p class="text-slate-400 leading-relaxed mb-6">Короткий вертикальный обзор: как выглядит флешка, как запускается меню Ventoy и как стартует живая система — меньше минуты, всё по-настоящему.</p>
+                    <ul class="space-y-3 text-slate-300 mb-8">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-brand-green mt-1"></i><span>Распаковка и внешний вид накопителя</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-brand-green mt-1"></i><span>Загрузка и фирменное меню выбора систем</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-brand-green mt-1"></i><span>Запуск live-сессии прямо с флешки</span></li>
+                    </ul>
+                    <div class="ozon-card rounded-2xl p-5 flex items-start gap-4">
+                        <div class="w-11 h-11 rounded-xl bg-[#005bff]/25 border border-[#005bff]/50 flex items-center justify-center flex-none">
+                            <i class="fa-solid fa-truck-fast text-[#4d8dff] text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white mb-1">Бесплатная доставка до пункта Ozon</h3>
+                            <p class="text-sm text-slate-300 leading-relaxed">При заказе на сайте отправим флешку бесплатно до ближайшего к вам пункта выдачи Ozon. <a href="order.html#delivery" class="text-[#4d8dff] underline underline-offset-2 hover:no-underline">Подробнее о доставке</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal order-1 flex justify-center lg:justify-start">
+                    <div class="phone-frame featured w-[330px] sm:w-[400px] lg:w-[440px]">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <video id="demo-video" src="linuxdrive.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
+                            <div id="video-fallback" class="video-fallback">
+                                <i class="fa-solid fa-clapperboard text-5xl text-slate-600"></i>
+                                <p class="text-sm text-slate-400 font-semibold">Видеообзор скоро появится</p>
+                                <p class="text-xs text-slate-500">Загружаем вертикальный обзор флешки LinuxDrive</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ============ DISTROS GRID ============ -->
-    <section id="distros" class="py-20 bg-slate-900/50 border-y border-slate-800/70">
+    <section id="distros" class="py-20 bg-slate-950">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 reveal">
                 <span class="eyebrow">Состав сборки · 16.10.2026</span>
@@ -389,48 +431,6 @@
         </div>
     </section>
 
-    <!-- ============ VIDEO ============ -->
-    <section id="video" class="py-20 bg-slate-950 relative overflow-hidden">
-        <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(50% 50% at 20% 50%, rgba(34,197,94,.06), transparent 70%);"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <div class="grid lg:grid-cols-2 gap-14 items-center">
-                <div class="reveal order-2 lg:order-1">
-                    <span class="eyebrow">Видеообзор</span>
-                    <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-5">LinuxDrive <span class="text-brand-green">в деле</span></h2>
-                    <p class="text-slate-400 leading-relaxed mb-6">Короткий вертикальный обзор: как выглядит флешка, как запускается меню Ventoy и как стартует живая система — меньше минуты, всё по-настоящему.</p>
-                    <ul class="space-y-3 text-slate-300 mb-8">
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-brand-green mt-1"></i><span>Распаковка и внешний вид накопителя</span></li>
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-brand-green mt-1"></i><span>Загрузка и фирменное меню выбора систем</span></li>
-                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-brand-green mt-1"></i><span>Запуск live-сессии прямо с флешки</span></li>
-                    </ul>
-                    <div class="ozon-card rounded-2xl p-5 flex items-start gap-4">
-                        <div class="w-11 h-11 rounded-xl bg-[#005bff]/25 border border-[#005bff]/50 flex items-center justify-center flex-none">
-                            <i class="fa-solid fa-truck-fast text-[#4d8dff] text-lg"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-white mb-1">Бесплатная доставка до пункта Ozon</h3>
-                            <p class="text-sm text-slate-300 leading-relaxed">При заказе на сайте отправим флешку бесплатно до ближайшего к вам пункта выдачи Ozon. <a href="order.html#delivery" class="text-[#4d8dff] underline underline-offset-2 hover:no-underline">Подробнее о доставке</a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="reveal order-1 lg:order-2 flex justify-center">
-                    <div class="phone-frame w-[290px] sm:w-[330px]">
-                        <div class="phone-notch"></div>
-                        <div class="phone-screen">
-                            <video id="demo-video" src="linuxdrive.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
-                            <div id="video-fallback" class="video-fallback">
-                                <i class="fa-solid fa-clapperboard text-5xl text-slate-600"></i>
-                                <p class="text-sm text-slate-400 font-semibold">Видеообзор скоро появится</p>
-                                <p class="text-xs text-slate-500">Загружаем вертикальный обзор флешки LinuxDrive</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- ============ HOW IT WORKS ============ -->
     <section id="how" class="py-20 bg-slate-900/50 border-y border-slate-800/70">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -476,8 +476,38 @@
         </div>
     </section>
 
+    <!-- ============ WIDE VIDEO ============ -->
+    <section id="video-wide" class="py-20 bg-slate-950 relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(55% 55% at 50% 35%, rgba(56,189,248,.08), transparent 70%);"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-12 reveal">
+                <span class="eyebrow">Подробный обзор</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-4">LinuxDrive <span class="text-sky-400">на большом экране</span></h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Полноценный видеообзор в горизонтальном формате: что записано на флешке, как устроено фирменное меню Ventoy, как системы стартуют в live-режиме и как проходит установка.</p>
+            </div>
+            <div class="reveal wide-frame max-w-5xl mx-auto">
+                <div class="wide-bar">
+                    <span class="wb-dot bg-red-500/80"></span><span class="wb-dot bg-yellow-500/80"></span><span class="wb-dot bg-green-500/80"></span>
+                    <span class="wide-bar-title"><i class="fa-solid fa-film mr-2 text-sky-400"></i>linuxwide.mp4 · видеообзор LinuxDrive</span>
+                </div>
+                <div class="wide-screen">
+                    <video id="demo-video-wide" src="https://burostatiki.ru/video/linuxwide.mp4" controls muted loop playsinline preload="metadata"></video>
+                    <div class="video-fallback">
+                        <i class="fa-solid fa-clapperboard text-6xl text-slate-600"></i>
+                        <p class="text-base text-slate-400 font-semibold">Большой видеообзор скоро появится</p>
+                        <p class="text-sm text-slate-500">Загружаем горизонтальный обзор — загляните чуть позже</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center reveal">
+                <a href="order.html" class="btn-primary px-8 py-3.5 text-lg"><i class="fa-solid fa-bolt"></i> Заказать за 3&nbsp;298&nbsp;₽</a>
+                <a href="#video" class="btn-outline px-8 py-3.5"><i class="fa-solid fa-mobile-screen text-brand-green"></i> Короткий вертикальный обзор</a>
+            </div>
+        </div>
+    </section>
+
     <!-- ============ DELIVERY ============ -->
-    <section id="delivery" class="py-20 bg-slate-950">
+    <section id="delivery" class="py-20 bg-slate-900/50 border-y border-slate-800/70">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="reveal ozon-card rounded-3xl p-8 md:p-12 relative overflow-hidden">
                 <div class="absolute -top-24 -right-24 w-72 h-72 bg-[#005bff] blur-[110px] opacity-20 rounded-full pointer-events-none"></div>
@@ -517,7 +547,7 @@
     </section>
 
     <!-- ============ PRICE / CTA ============ -->
-    <section id="order" class="py-20 bg-slate-900/50 border-t border-slate-800/70">
+    <section id="order" class="py-20 bg-slate-950">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="reveal">
                 <span class="eyebrow">Комплект</span>

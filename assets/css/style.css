@@ -286,6 +286,19 @@ a.chip:hover { border-color: rgba(34,197,94,.55); color: #bbf7d0; background: rg
   border: 1px solid rgba(148,163,184,.3);
   box-shadow: 0 40px 80px -30px rgba(0,0,0,.8), 0 0 50px -10px rgba(34,197,94,.15);
 }
+/* крупный, акцентный плеер (главная страница) */
+.phone-frame.featured {
+  border-color: rgba(34,197,94,.4);
+  box-shadow:
+    0 0 100px -12px rgba(34,197,94,.45),
+    0 45px 90px -30px rgba(0,0,0,.85),
+    inset 0 1px 0 rgba(255,255,255,.08);
+  animation: phone-glow 5s ease-in-out infinite;
+}
+@keyframes phone-glow {
+  0%, 100% { box-shadow: 0 0 80px -14px rgba(34,197,94,.35), 0 45px 90px -30px rgba(0,0,0,.85), inset 0 1px 0 rgba(255,255,255,.08); }
+  50%      { box-shadow: 0 0 120px -10px rgba(34,197,94,.55), 0 45px 90px -30px rgba(0,0,0,.85), inset 0 1px 0 rgba(255,255,255,.08); }
+}
 .phone-notch {
   position: absolute; top: 20px; left: 50%; transform: translateX(-50%);
   width: 84px; height: 20px; border-radius: 9999px;
@@ -306,6 +319,35 @@ a.chip:hover { border-color: rgba(34,197,94,.55); color: #bbf7d0; background: rg
     #060b18;
 }
 .video-fallback.show { display: flex; }
+
+/* ---------- wide 16:9 video frame ---------- */
+.wide-frame {
+  position: relative;
+  border-radius: 1.3rem;
+  padding: 10px;
+  background: linear-gradient(160deg, #1e293b, #0b1120 60%, #1e293b);
+  border: 1px solid rgba(148,163,184,.3);
+  box-shadow:
+    0 0 90px -18px rgba(56,189,248,.28),
+    0 45px 90px -30px rgba(0,0,0,.85),
+    inset 0 1px 0 rgba(255,255,255,.08);
+}
+.wide-bar { display: flex; align-items: center; gap: 7px; padding: 4px 10px 12px; }
+.wb-dot { width: 11px; height: 11px; border-radius: 9999px; display: inline-block; flex: none; }
+.wide-bar-title {
+  margin-left: .7rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .72rem; color: #64748b;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.wide-screen {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: .85rem;
+  overflow: hidden;
+  background: #020617;
+}
+.wide-screen video { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* ---------- FAQ accordion ---------- */
 .faq-item { border: 1px solid rgba(148,163,184,.15); border-radius: .9rem; background: rgba(255,255,255,.03); overflow: hidden; transition: border-color .25s ease; }
