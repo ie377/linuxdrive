@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru" class="scroll-smooth">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinuxDrive — мультизагрузочная флешка с 16 дистрибутивами Linux</title>
+<meta name="description" content="Купить мультизагрузочную USB-флешку с 16 дистрибутивами Linux на базе Ventoy — 3 298 ₽. UEFI и Legacy BIOS, Secure Boot, авторское меню, руководство 30 страниц. Бесплатная доставка до пункта выдачи Ozon при заказе на сайте.">
+<link rel="canonical" href="https://linuxdrive.ru/">
+<meta property="og:site_name" content="LinuxDrive">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="LinuxDrive — мультизагрузочная флешка с 16 дистрибутивами Linux">
+<meta property="og:description" content="Купить мультизагрузочную USB-флешку с 16 дистрибутивами Linux на базе Ventoy — 3 298 ₽. UEFI и Legacy BIOS, Secure Boot, авторское меню, руководство 30 страниц. Бесплатная доставка до пункта выдачи Ozon при заказе на сайте.">
+<meta property="og:url" content="https://linuxdrive.ru/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Cpath d='M15 21l11 11-11 11' stroke='%2322c55e' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='32' y='39' width='17' height='6' rx='3' fill='%2322c55e'/%3E%3C/svg%3E">
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
@@ -14,434 +26,403 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/106115108" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мультизагрузочная флешка Linux 12-в-1 | Готовое решение</title>
-    <meta name="description" content="Загрузочная флешка с 12 дистрибутивами Linux. Ubuntu, Mint, Kali и другие. Инструкции в комплекте.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        brand: {
-                            green: '#22c55e',
-                            dark: '#0f172a',
-                            accent: '#38bdf8'
-                        }
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    sans: ['Inter', 'sans-serif'],
+                    mono: ['JetBrains Mono', 'monospace'],
+                },
+                colors: {
+                    brand: {
+                        green: '#22c55e',
+                        dark: '#0f172a',
+                        accent: '#38bdf8'
                     }
                 }
             }
         }
-    </script>
-    <style>
-        .hero-bg {
-            background-color: #0f172a;
-            background-image: radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .tech-glow:hover {
-            box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
-        }
-
-        /* --- Стили Formspree Widget --- */
-        #formspree__widget * {
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
-
-        #fs_widget_btn {
-            position: fixed;
-            z-index: 40; 
-            right: 20px;
-            bottom: 20px;
-            padding: 14px 24px;
-            font-size: 16px;
-            font-weight: bold;
-            color: white;
-            background-color: #f59e0b;
-            border: none;
-            border-radius: 9999px;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        #fs_widget_btn:hover {
-            background-color: #d97706;
-            transform: translateY(-2px);
-        }
-
-        #formspree__modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(15, 23, 42, 0.8);
-            backdrop-filter: blur(4px);
-            z-index: 2000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-        }
-        #formspree__modal.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        #formspree__widget {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            width: 90%;
-            max-width: 400px;
-            background-color: white;
-            border-radius: 16px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            overflow: hidden;
-        }
-
-        .fs-header {
-            padding: 20px 24px;
-            background-color: #f59e0b;
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .fs-close-btn {
-            background: rgba(0,0,0,0.1);
-            border: none;
-            color: white;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            transition: background 0.2s;
-        }
-        .fs-close-btn:hover {
-            background: rgba(0,0,0,0.2);
-        }
-
-        .fs-body {
-            padding: 24px;
-        }
-
-        .fs-form-group {
-            margin-bottom: 16px;
-        }
-        .fs-form-group label {
-            display: block;
-            margin-bottom: 6px;
-            font-size: 14px;
-            color: #374151;
-            font-weight: 600;
-        }
-        .fs-form-group input,
-        .fs-form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #e5e7eb;
-            border-radius: 8px;
-            font-size: 16px;
-            color: #1f2937; /* ЯВНО задаем темный цвет текста для светлого фона */
-            background-color: #ffffff;
-            transition: all 0.2s;
-        }
-        .fs-form-group input:focus,
-        .fs-form-group textarea:focus {
-            border-color: #f59e0b;
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
-        }
-
-        .fs-submit-btn {
-            width: 100%;
-            padding: 14px;
-            font-size: 16px;
-            font-weight: bold;
-            color: white;
-            background-color: #10b981;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .fs-submit-btn:hover {
-            background-color: #059669;
-        }
-        .fs-submit-btn:disabled {
-            background-color: #9ca3af;
-            cursor: not-allowed;
-        }
-        
-        #fs_result {
-            text-align: center;
-            margin-top: 12px;
-            font-size: 13px;
-            color: #6b7280;
-        }
-        .fs-success { color: #059669 !important; font-weight: bold; }
-        .fs-error { color: #dc2626 !important; font-weight: bold; }
-    </style>
+    }
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Мультизагрузочная USB-флешка LinuxDrive 16-в-1",
+  "description": "Мультизагрузочный USB 3.0 накопитель на базе Ventoy с 16 дистрибутивами Linux, авторским оформлением меню и руководством на 30 страниц. Сборка от 16.10.2026.",
+  "brand": { "@type": "Brand", "name": "LinuxDrive" },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://linuxdrive.ru/order.html",
+    "priceCurrency": "RUB",
+    "price": "3298",
+    "availability": "https://schema.org/InStock",
+    "areaServed": "RU",
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "RUB" },
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "RU" }
+    }
+  }
+}
+</script>
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-brand-green selection:text-slate-900">
+<body class="bg-slate-950 text-slate-100 font-sans antialiased">
 
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-700">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center gap-2">
-                    <i class="fa-brands fa-linux text-brand-green text-3xl"></i>
-                    <span class="font-bold text-xl tracking-tight">Linux<span class="text-brand-green">Drive</span></span>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#features" class="hover:text-brand-green transition px-3 py-2 rounded-md text-sm font-medium">Преимущества</a>
-                        <a href="#distros" class="hover:text-brand-green transition px-3 py-2 rounded-md text-sm font-medium">Системы</a>
-                        <a href="#bonuses" class="hover:text-brand-green transition px-3 py-2 rounded-md text-sm font-medium">Бонусы</a>
-                        <a href="#contact" class="bg-brand-green text-slate-900 hover:bg-green-400 transition px-4 py-2 rounded-full text-sm font-bold">Купить</a>
-                    </div>
-                </div>
-                <div class="md:hidden">
-                    <a href="tel:+79952376995" class="text-brand-green font-bold"><i class="fa-solid fa-phone mr-2"></i>Позвонить</a>
-                </div>
+<header id="site-header" class="site-header fixed w-full z-50 bg-slate-950/75 backdrop-blur-md border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <a href="index.html" class="flex items-center gap-2.5 group" aria-label="LinuxDrive — на главную">
+                <span class="w-9 h-9 rounded-lg bg-brand-green/15 border border-brand-green/40 flex items-center justify-center group-hover:bg-brand-green/25 transition">
+                    <i class="fa-brands fa-linux text-brand-green text-xl"></i>
+                </span>
+                <span class="font-bold text-xl tracking-tight">Linux<span class="text-brand-green">Drive</span></span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-1" aria-label="Основная навигация">
+                <a href="index.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white transition active">Главная</a>
+                        <a href="distros.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white transition">Дистрибутивы</a>
+                        <a href="guide.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white transition">Руководство</a>
+                        <a href="order.html#delivery" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white transition">Доставка</a>
+                <a href="order.html" class="btn-primary ml-4 px-5 py-2.5 text-sm">Заказать · 3 298 ₽</a>
+            </nav>
+            <div class="flex items-center gap-4 md:hidden">
+                <a href="tel:+79952376995" class="text-brand-green font-bold text-sm"><i class="fa-solid fa-phone mr-1.5"></i>Позвонить</a>
+                <button id="burger" class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-700 text-slate-200 hover:border-brand-green/50 transition" aria-label="Меню" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
         </div>
-    </nav>
+    </div>
+    <div id="mobile-menu" class="md:hidden border-t border-slate-800 bg-slate-950/97 backdrop-blur-lg">
+        <div class="px-4 py-4 space-y-1.5">
+            <a href="index.html" class="block px-4 py-3 rounded-lg text-slate-200 hover:bg-slate-800 hover:text-brand-green transition font-medium">Главная</a>
+                <a href="distros.html" class="block px-4 py-3 rounded-lg text-slate-200 hover:bg-slate-800 hover:text-brand-green transition font-medium">Дистрибутивы</a>
+                <a href="guide.html" class="block px-4 py-3 rounded-lg text-slate-200 hover:bg-slate-800 hover:text-brand-green transition font-medium">Руководство</a>
+                <a href="order.html#delivery" class="block px-4 py-3 rounded-lg text-slate-200 hover:bg-slate-800 hover:text-brand-green transition font-medium">Доставка</a>
+                <a href="order.html" class="block px-4 py-3 rounded-lg bg-brand-green text-slate-900 font-bold text-center">Заказать · 3 298 ₽</a>
+        </div>
+    </div>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero-bg min-h-screen flex items-center justify-center pt-20 pb-10 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-20" style="background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
-            <div class="text-center lg:text-left space-y-8">
-                <div class="inline-block px-4 py-2 rounded-full bg-slate-800 border border-slate-700 text-brand-green text-sm font-mono mb-4">
-                    <i class="fa-solid fa-bolt mr-2"></i>Версия 2026.01 Ready
+<main>
+    <!-- ============ HERO ============ -->
+    <section class="hero-bg min-h-screen flex items-center pt-24 pb-14 relative overflow-hidden">
+        <div class="hero-grid-overlay"></div>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid lg:grid-cols-2 gap-14 items-center w-full">
+            <div class="text-center lg:text-left">
+                <div class="fade-up d-1 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/80 border border-slate-700/80 text-brand-green text-sm font-mono mb-6 shadow-lg">
+                    <span class="relative flex h-2.5 w-2.5">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+                    </span>
+                    Свежая сборка · 16.10.2026 · 16 систем
                 </div>
-                <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
-                    Вся сила <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600">Linux</span><br>
+                <h1 class="fade-up d-2 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1]">
+                    Весь <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-400 to-sky-400">Linux</span> —<br class="hidden sm:block">
                     на одной флешке
                 </h1>
-                <p class="text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0">
-                    12 операционных систем, профессиональные инструкции и инструменты спасения данных. Вставьте, выберите, работайте.
+                <p class="fade-up d-3 mt-5 text-lg md:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                    Мультизагрузочный USB&nbsp;3.0 накопитель на базе Ventoy: <b class="text-white">16 актуальных дистрибутивов Linux</b>, авторское оформление меню и руководство на 30 страниц. Загружается на любом ПК — UEFI и Legacy BIOS.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="https://www.avito.ru/sankt-peterburg/tovary_dlya_kompyutera/multizagruzochnaya_fleshka_linuks_12_v_1_7834413303" target="_blank" class="px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-500 transition shadow-lg shadow-blue-500/20 flex items-center justify-center gap-2 text-lg">
-                        <i class="fa-solid fa-store"></i> Купить на Авито
+                <p class="fade-up d-3 mt-4 h-7 font-mono text-sm md:text-base text-sky-300">
+                    <span id="typewriter" class="typewriter-caret" data-phrases='["Попробуйте любую систему без установки", "Воскресите старый ноутбук за 5 минут", "Спасите файлы, если Windows не грузится", "Бесплатная доставка до пункта Ozon"]'>Попробуйте любую систему без установки</span>
+                </p>
+                <div class="fade-up d-4 mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="order.html" class="btn-primary px-8 py-4 text-lg">
+                        <i class="fa-solid fa-bolt"></i> Заказать за 3&nbsp;298&nbsp;₽
                     </a>
-                    <a href="#features" class="px-8 py-4 bg-slate-800 text-white font-semibold rounded-xl hover:bg-slate-700 border border-slate-700 transition flex items-center justify-center gap-2">
-                        Узнать больше <i class="fa-solid fa-arrow-down"></i>
+                    <a href="distros.html" class="btn-outline px-8 py-4 text-lg">
+                        <i class="fa-brands fa-linux text-brand-green"></i> Все 16 систем
                     </a>
                 </div>
-                <div class="flex items-center justify-center lg:justify-start gap-6 text-slate-400 text-sm mt-4">
-                    <span class="flex items-center gap-1"><i class="fa-solid fa-check text-brand-green"></i> USB 3.0</span>
-                    <span class="flex items-center gap-1"><i class="fa-solid fa-check text-brand-green"></i>Кастомный загрузчик</span>
-                    <span class="flex items-center gap-1"><i class="fa-solid fa-check text-brand-green"></i> Гарантия</span>
+                <p class="fade-up d-5 mt-3 text-sm text-slate-400">
+                    <i class="fa-solid fa-truck-fast ozon-accent mr-1.5"></i>При заказе на сайте — <b class="text-white">бесплатная отправка</b> до ближайшего пункта выдачи Ozon
+                </p>
+                <div class="fade-up d-5 flex flex-wrap items-center justify-center lg:justify-start gap-x-5 gap-y-2 text-slate-400 text-sm mt-7">
+                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-brand-green"></i> USB 3.0</span>
+                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-brand-green"></i> UEFI + Legacy BIOS</span>
+                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-brand-green"></i> Secure Boot</span>
+                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-brand-green"></i> exFAT</span>
+                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-brand-green"></i> Гарантия</span>
                 </div>
             </div>
-            
-            <div class="relative group perspective-1000">
-                <div class="glass-card rounded-2xl p-6 transform transition duration-500 hover:scale-105 hover:rotate-1 relative bg-slate-900/90 border-slate-700/50 shadow-2xl">
-                    <div class="absolute -top-4 -right-4 bg-brand-green text-slate-900 font-bold px-4 py-2 rounded-lg shadow-lg rotate-12 z-20">
-                        HIT продаж!
-                    </div>
-                    <div class="flex items-center justify-between mb-6 border-b border-slate-700 pb-4">
-                        <span class="text-brand-green font-mono font-bold text-lg">>_ BOOT MENU</span>
-                        <div class="flex gap-2">
-                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+
+            <!-- Animated Ventoy boot menu -->
+            <div class="fade-up d-4 relative max-w-md mx-auto w-full lg:max-w-none">
+                <div class="terminal-wrap">
+                    <div class="terminal-glow"></div>
+                    <div class="terminal" id="ventoy-term">
+                        <div class="flex items-center justify-between px-5 py-3.5 border-b border-slate-700/60 bg-slate-900/60">
+                            <span class="text-brand-green font-mono font-bold text-sm tracking-wide">&gt;_ VENTOY <span class="text-slate-500 font-normal">· LINUXDRIVE</span></span>
+                            <div class="flex gap-1.5">
+                                <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+                                <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+                                <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
+                            </div>
+                        </div>
+                        <div class="term-body">
+                            <ul id="term-list" class="term-list py-2 font-mono">
+                                <li class="term-item sel"><i class="fa-solid fa-cube text-cyan-400 w-5 text-center flex-none"></i><span class="ti-name">Arch Linux</span><span class="ti-ver">2026.10.01</span></li>
+                                <li class="term-item"><i class="fa-solid fa-screwdriver-wrench text-slate-200 w-5 text-center flex-none"></i><span class="ti-name">MX Linux</span><span class="ti-ver">25.3 Xfce</span></li>
+                                <li class="term-item"><i class="fa-brands fa-fedora text-blue-400 w-5 text-center flex-none"></i><span class="ti-name">Fedora Budgie</span><span class="ti-ver">44</span></li>
+                                <li class="term-item"><i class="fa-solid fa-gamepad text-purple-400 w-5 text-center flex-none"></i><span class="ti-name">Nobara</span><span class="ti-ver">44 Official</span></li>
+                                <li class="term-item"><i class="fa-brands fa-linux text-lime-400 w-5 text-center flex-none"></i><span class="ti-name">Linux Mint</span><span class="ti-ver">22.3 Cinnamon</span></li>
+                                <li class="term-item"><i class="fa-solid fa-feather text-gray-300 w-5 text-center flex-none"></i><span class="ti-name">elementary OS</span><span class="ti-ver">8.1 «Horus»</span></li>
+                                <li class="term-item"><i class="fa-solid fa-dove text-blue-300 w-5 text-center flex-none"></i><span class="ti-name">Lubuntu</span><span class="ti-ver">24.04.4 LTS</span></li>
+                                <li class="term-item"><i class="fa-solid fa-dog text-amber-400 w-5 text-center flex-none"></i><span class="ti-name">Puppy Linux</span><span class="ti-ver">TrixiePup64 Wayland</span></li>
+                                <li class="term-item"><i class="fa-solid fa-robot text-yellow-400 w-5 text-center flex-none"></i><span class="ti-name">Pop!_OS</span><span class="ti-ver">24.04</span></li>
+                                <li class="term-item"><i class="fa-solid fa-shuttle-space text-indigo-300 w-5 text-center flex-none"></i><span class="ti-name">EndeavourOS</span><span class="ti-ver">«Titan-Nova»</span></li>
+                                <li class="term-item"><i class="fa-solid fa-window-maximize text-sky-300 w-5 text-center flex-none"></i><span class="ti-name">Zorin OS</span><span class="ti-ver">18.1 Core</span></li>
+                                <li class="term-item"><i class="fa-brands fa-debian text-red-400 w-5 text-center flex-none"></i><span class="ti-name">Debian</span><span class="ti-ver">13.7 «Trixie»</span></li>
+                                <li class="term-item"><i class="fa-brands fa-suse text-green-400 w-5 text-center flex-none"></i><span class="ti-name">openSUSE Leap</span><span class="ti-ver">16.0</span></li>
+                                <li class="term-item"><i class="fa-solid fa-dragon text-red-500 w-5 text-center flex-none"></i><span class="ti-name">Kali Linux</span><span class="ti-ver">2026.2</span></li>
+                                <li class="term-item"><i class="fa-solid fa-mountain text-emerald-400 w-5 text-center flex-none"></i><span class="ti-name">Manjaro</span><span class="ti-ver">26.1.0 GNOME</span></li>
+                                <li class="term-item"><i class="fa-brands fa-ubuntu text-orange-400 w-5 text-center flex-none"></i><span class="ti-name">Ubuntu</span><span class="ti-ver">26.04.1 LTS</span></li>
+                            </ul>
+                        </div>
+                        <div class="flex items-center justify-between px-5 py-3 border-t border-slate-700/60 bg-slate-900/60 text-[11px] font-mono text-slate-500">
+                            <span><i class="fa-solid fa-keyboard text-brand-green mr-1"></i>↑↓ выбор · Enter — запуск</span>
+                            <span>сборка 16.10.2026 · 16 ISO</span>
                         </div>
                     </div>
-                    <ul class="space-y-3 font-mono text-sm sm:text-base">
-                        <li class="flex items-center p-2 rounded hover:bg-slate-800 cursor-pointer text-green-400"><i class="fa-brands fa-ubuntu w-6"></i> Ubuntu 25.10 Desktop</li>
-                        <li class="flex items-center p-2 rounded hover:bg-slate-800 cursor-pointer text-slate-300"><i class="fa-brands fa-linux w-6"></i> Linux Mint 22.2 Cinnamon</li>
-                        <li class="flex items-center p-2 rounded hover:bg-slate-800 cursor-pointer text-slate-300"><i class="fa-solid fa-shield-halved w-6"></i> Kali Linux 2025.4</li>
-                        <li class="flex items-center p-2 rounded hover:bg-slate-800 cursor-pointer text-slate-300"><i class="fa-brands fa-fedora w-6"></i> Fedora 43 KDE</li>
-                        <li class="pl-8 text-slate-500">... и еще 8 систем</li>
+                    <div class="absolute -bottom-4 -left-4 hidden sm:flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 border border-slate-700 shadow-xl">
+                        <i class="fa-solid fa-shield-halved text-brand-green"></i>
+                        <span class="text-xs text-slate-300">Live-режим не трогает ваш диск</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#stats" class="absolute bottom-5 left-1/2 -translate-x-1/2 text-slate-500 hover:text-brand-green transition" aria-label="Прокрутить вниз">
+            <i class="fa-solid fa-angles-down text-xl animate-bounce"></i>
+        </a>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section id="stats" class="py-12 bg-slate-900/60 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="reveal">
+                <div class="stat-num text-4xl md:text-5xl font-bold text-brand-green"><span data-count="16">16</span></div>
+                <div class="mt-2 text-sm text-slate-400">дистрибутивов Linux<br>в актуальной сборке</div>
+            </div>
+            <div class="reveal">
+                <div class="stat-num text-4xl md:text-5xl font-bold text-sky-400"><span data-count="2">2</span></div>
+                <div class="mt-2 text-sm text-slate-400">режима загрузки:<br>UEFI и Legacy BIOS</div>
+            </div>
+            <div class="reveal">
+                <div class="stat-num text-4xl md:text-5xl font-bold text-brand-green"><span data-count="30">30</span></div>
+                <div class="mt-2 text-sm text-slate-400">страниц подробного<br>руководства в комплекте</div>
+            </div>
+            <div class="reveal">
+                <div class="stat-num text-4xl md:text-5xl font-bold text-sky-400"><span data-count="0">0</span>&nbsp;₽</div>
+                <div class="mt-2 text-sm text-slate-400">доставка до пункта Ozon<br>при заказе на сайте</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section id="features" class="py-20 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14 reveal">
+                <span class="eyebrow">Преимущества</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-4">Почему выбирают <span class="text-brand-green">LinuxDrive</span></h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Это не просто флешка с файлами, а профессионально собранный и проверенный инструмент — с загрузчиком, оформлением и документацией.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="reveal glass-card tech-glow p-7 rounded-2xl border-t-4 border-brand-green">
+                    <div class="w-12 h-12 bg-green-900/30 rounded-xl flex items-center justify-center mb-5 text-brand-green text-xl"><i class="fa-solid fa-copy"></i></div>
+                    <h3 class="text-lg font-bold mb-2.5">Ventoy — просто копируйте ISO</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Никакой «прошивки» флешки. Образы лежат обычными файлами: добавляйте, удаляйте и обновляйте системы простым копированием. Между загрузками флешка работает как обычный накопитель exFAT в Windows, macOS и Linux.</p>
+                </div>
+                <div class="reveal glass-card tech-glow p-7 rounded-2xl border-t-4 border-sky-500">
+                    <div class="w-12 h-12 bg-sky-900/30 rounded-xl flex items-center justify-center mb-5 text-sky-400 text-xl"><i class="fa-solid fa-flask"></i></div>
+                    <h3 class="text-lg font-bold mb-2.5">Live-режим без риска</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Любую из 16 систем можно запустить прямо с флешки — без установки и без изменений на диске. Проверьте Wi-Fi, звук и графику, а устанавливайте только то, что понравилось.</p>
+                </div>
+                <div class="reveal glass-card tech-glow p-7 rounded-2xl border-t-4 border-purple-500">
+                    <div class="w-12 h-12 bg-purple-900/30 rounded-xl flex items-center justify-center mb-5 text-purple-400 text-xl"><i class="fa-solid fa-palette"></i></div>
+                    <h3 class="text-lg font-bold mb-2.5">Авторское оформление меню</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Вместо скучного чёрного экрана — красивое графическое меню Ventoy с темой LinuxDrive: иконки дистрибутивов, подписи версий, понятная навигация.</p>
+                </div>
+                <div class="reveal glass-card tech-glow p-7 rounded-2xl border-t-4 border-red-500">
+                    <div class="w-12 h-12 bg-red-900/30 rounded-xl flex items-center justify-center mb-5 text-red-400 text-xl"><i class="fa-solid fa-life-ring"></i></div>
+                    <h3 class="text-lg font-bold mb-2.5">Спасательный инструмент</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Windows не грузится? Запуститесь с флешки, чтобы скопировать важные файлы, проверить диск, удалить вирусы или восстановить систему. Puppy Linux работает целиком в ОЗУ даже на «уставших» ПК.</p>
+                </div>
+                <div class="reveal glass-card tech-glow p-7 rounded-2xl border-t-4 border-amber-500">
+                    <div class="w-12 h-12 bg-amber-900/30 rounded-xl flex items-center justify-center mb-5 text-amber-400 text-xl"><i class="fa-solid fa-book-open"></i></div>
+                    <h3 class="text-lg font-bold mb-2.5">Руководство на 30 страниц</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">В комплекте — печатный буклет и PDF: первый запуск за 5 шагов, таблицы клавиш boot-меню, Secure Boot, установка и dual-boot с Windows, решение частых проблем и мини-словарь. Всё есть и на сайте.</p>
+                </div>
+                <div class="reveal glass-card tech-glow p-7 rounded-2xl border-t-4 border-emerald-500">
+                    <div class="w-12 h-12 bg-emerald-900/30 rounded-xl flex items-center justify-center mb-5 text-emerald-400 text-xl"><i class="fa-solid fa-headset"></i></div>
+                    <h3 class="text-lg font-bold mb-2.5">Гарантия и поддержка</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Гарантия на накопитель и помощь на всех этапах: от первого запуска до установки системы. Пишите и звоните — WhatsApp, Telegram, телефон.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ DISTROS GRID ============ -->
+    <section id="distros" class="py-20 bg-slate-900/50 border-y border-slate-800/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 reveal">
+                <span class="eyebrow">Состав сборки · 16.10.2026</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-4">16 дистрибутивов под любые задачи</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">От дружелюбного Mint для новичков до Kali для специалистов по безопасности. Версии — актуальные на дату сборки.</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+                <a href="distros.html#d01" class="reveal dist-mini glass-card rounded-xl p-4 text-center block group">
+                    <i class="fa-solid fa-cube text-3xl text-cyan-400 mb-2.5 block group-hover:scale-110 transition-transform"></i>
+                    <h4 class="font-bold text-sm leading-tight">Arch Linux</h4>
+                    <p class="text-[11px] font-mono text-slate-500 mt-1">2026.10.01</p>
+                    <p class="text-[11px] text-slate-400 mt-1.5 leading-snug">гибкость и легендарная Wiki</p>
+                </a>
+                <a href="distros.html#d02" class="reveal dist-mini glass-card rounded-xl p-4 text-center block group">
+                    <i class="fa-solid fa-screwdriver-wrench text-3xl text-slate-200 mb-2.5 block group-hover:scale-110 transition-transform"></i>
+                    <h4 class="font-bold text-sm leading-tight">MX Linux</h4>
+                    <p class="text-[11px] font-mono text-slate-500 mt-1">25.3 Xfce</p>
+                    <p class="text-[11px] text-slate-400 mt-1.5 leading-snug">стабильность Debian + MX Tools</p>
+                </a>
+                <a href="distros.html#d03" class="reveal dist-mini glass-card rounded-xl p-4 text-center block group">
+                    <i class="fa-brands fa-fedora text-3xl text-blue-400 mb-2.5 block group-hover:scale-110 transition-transform"></i>
+                    <h4 class="font-bold text-sm leading-tight">Fedora Budgie</h4>
+                    <p class="text-[11px] font-mono text-slate-500 mt-1">44</p>
+                    <p class="text-[11px] text-slate-400 mt-1.5 leading-snug">передовые технологии + лёгкая оболочка</p>
+                </a>
+                <a href="distros.html#d04" class="reveal dist-mini glass-card rounded-xl p-4 text-center block group">
+                    <i class="fa-solid fa-gamepad text-3xl text-purple-400 mb-2.5 block group-hover:scale-110 transition-transform"></i>
+                    <h4 class="font-bold text-sm leading-tight">Nobara</h4>
+                    <p class="text-[11px] font-mono text-slate-500 mt-1">44 Official</p>
+                    <p class="text-[11px] text-slate-400 mt-1.5 leading-snug">игровая сборка: Steam, Proton, драйверы</p>
+                </a>
+                <a href="distros.html#d05" class="reveal dist-mini glass-card rounded-xl p-4 text-center block group">
+                    <i class="fa-brands fa-linux text-3xl text-lime-400 mb-2.5 block group-hover:scale-110 transition-transform"></i>
+                    <h4 class="font-bold text-sm leading-tight">Linux Mint</h4>
+                    <p class="text-[11px] font-mono text-slate-500 mt-1">22.3 Cinnamon</p>
+                    <p class="text-[11px] text-slate-400 mt-1.5 leading-snug">лучший старт после Windows</p>
+                </a>
+                <a href="distros.html#d06" class="reveal dist-mini glass-card rounded-xl p-4 text-center block group">
+                    <i class="fa-solid fa-feather text-3xl text-gray-300 mb-2.5 block group-hover:scale-110 transition-transform"></i>
+                    <h4 class="font-bold text-sm leading-tight">elementary OS</h4>
+                    <p class="text-[11px] font-mono text-slate-500 mt-1">8.1 «Horus»</p>
+                    <p class="text-[11px] text-slate-400 mt-1.5 leading-snug">дизайн в духе macOS</p>
+                </a>
+                <a href="distros.html#d07" class="reveal dist-mini glass-card rounded-xl p-4 text-center block group">
+                    <i class="fa-solid fa-dove text-3xl text-blue-300 mb-2.5 block group-hover:scale-110 transition-transform"></i>
+                    <h4 class="font-bold text-sm leading-tight">Lubuntu</h4>
+                    <p class="text-[11px] font-mono text-slate-500 mt-1">24.04.4 LTS</p>
+                    <p class="text-[11px] text-slate-400 mt-1.5 leading-snug">второе дыхание для старых ПК</p>
+                </a>
+                <a href="distros.html#d08" class="reveal dist-mini glass-card rounded-xl p-4 text-center block group">
+                    <i class="fa-solid fa-dog text-3xl text-amber-400 mb-2.5 block group-hover:scale-110 transition-transform"></i>
+                    <h4 class="font-bold text-sm leading-tight">Puppy Linux</h4>
+                    <p class="text-[11px] font-mono text-slate-500 mt-1">TrixiePup64 Wayland</p>
+                    <p class="text-[11px] text-slate-400 mt-1.5 leading-snug">вся система в ОЗУ, образ ~1 ГБ</p>
+                </a>
+                <a href="distros.html#d09" class="reveal dist-mini glass-card rounded-xl p-4 text-center block group">
+                    <i class="fa-solid fa-robot text-3xl text-yellow-400 mb-2.5 block group-hover:scale-110 transition-transform"></i>
+                    <h4 class="font-bold text-sm leading-tight">Pop!_OS</h4>
+                    <p class="text-[11px] font-mono text-slate-500 mt-1">24.04</p>
+                    <p class="text-[11px] text-slate-400 mt-1.5 leading-snug">COSMIC на Rust, тайлинг, NVIDIA</p>
+                </a>
+                <a href="distros.html#d10" class="reveal dist-mini glass-card rounded-xl p-4 text-center block group">
+                    <i class="fa-solid fa-shuttle-space text-3xl text-indigo-300 mb-2.5 block group-hover:scale-110 transition-transform"></i>
+                    <h4 class="font-bold text-sm leading-tight">EndeavourOS</h4>
+                    <p class="text-[11px] font-mono text-slate-500 mt-1">«Titan-Nova»</p>
+                    <p class="text-[11px] text-slate-400 mt-1.5 leading-snug">самый короткий путь в Arch</p>
+                </a>
+                <a href="distros.html#d11" class="reveal dist-mini glass-card rounded-xl p-4 text-center block group">
+                    <i class="fa-solid fa-window-maximize text-3xl text-sky-300 mb-2.5 block group-hover:scale-110 transition-transform"></i>
+                    <h4 class="font-bold text-sm leading-tight">Zorin OS</h4>
+                    <p class="text-[11px] font-mono text-slate-500 mt-1">18.1 Core</p>
+                    <p class="text-[11px] text-slate-400 mt-1.5 leading-snug">выглядит как Windows/macOS</p>
+                </a>
+                <a href="distros.html#d12" class="reveal dist-mini glass-card rounded-xl p-4 text-center block group">
+                    <i class="fa-brands fa-debian text-3xl text-red-400 mb-2.5 block group-hover:scale-110 transition-transform"></i>
+                    <h4 class="font-bold text-sm leading-tight">Debian</h4>
+                    <p class="text-[11px] font-mono text-slate-500 mt-1">13.7 «Trixie»</p>
+                    <p class="text-[11px] text-slate-400 mt-1.5 leading-snug">эталон стабильности, 60 000+ пакетов</p>
+                </a>
+                <a href="distros.html#d13" class="reveal dist-mini glass-card rounded-xl p-4 text-center block group">
+                    <i class="fa-brands fa-suse text-3xl text-green-400 mb-2.5 block group-hover:scale-110 transition-transform"></i>
+                    <h4 class="font-bold text-sm leading-tight">openSUSE Leap</h4>
+                    <p class="text-[11px] font-mono text-slate-500 mt-1">16.0</p>
+                    <p class="text-[11px] text-slate-400 mt-1.5 leading-snug">снапшоты и откат, YaST</p>
+                </a>
+                <a href="distros.html#d14" class="reveal dist-mini glass-card rounded-xl p-4 text-center block group">
+                    <i class="fa-solid fa-dragon text-3xl text-red-500 mb-2.5 block group-hover:scale-110 transition-transform"></i>
+                    <h4 class="font-bold text-sm leading-tight">Kali Linux</h4>
+                    <p class="text-[11px] font-mono text-slate-500 mt-1">2026.2</p>
+                    <p class="text-[11px] text-slate-400 mt-1.5 leading-snug">600+ инструментов ИБ</p>
+                </a>
+                <a href="distros.html#d15" class="reveal dist-mini glass-card rounded-xl p-4 text-center block group">
+                    <i class="fa-solid fa-mountain text-3xl text-emerald-400 mb-2.5 block group-hover:scale-110 transition-transform"></i>
+                    <h4 class="font-bold text-sm leading-tight">Manjaro</h4>
+                    <p class="text-[11px] font-mono text-slate-500 mt-1">26.1.0 GNOME</p>
+                    <p class="text-[11px] text-slate-400 mt-1.5 leading-snug">Arch с комфортом: драйверы в 1 клик</p>
+                </a>
+                <a href="distros.html#d16" class="reveal dist-mini glass-card rounded-xl p-4 text-center block group">
+                    <i class="fa-brands fa-ubuntu text-3xl text-orange-400 mb-2.5 block group-hover:scale-110 transition-transform"></i>
+                    <h4 class="font-bold text-sm leading-tight">Ubuntu</h4>
+                    <p class="text-[11px] font-mono text-slate-500 mt-1">26.04.1 LTS</p>
+                    <p class="text-[11px] text-slate-400 mt-1.5 leading-snug">самая популярная и документированная</p>
+                </a>
+            </div>
+
+            <div class="text-center mt-10 reveal">
+                <a href="distros.html" class="btn-outline px-7 py-3.5">
+                    Описания, требования и первые команды всех систем <i class="fa-solid fa-arrow-right text-brand-green"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ VIDEO ============ -->
+    <section id="video" class="py-20 bg-slate-950 relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(50% 50% at 20% 50%, rgba(34,197,94,.06), transparent 70%);"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid lg:grid-cols-2 gap-14 items-center">
+                <div class="reveal order-2 lg:order-1">
+                    <span class="eyebrow">Видеообзор</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-5">LinuxDrive <span class="text-brand-green">в деле</span></h2>
+                    <p class="text-slate-400 leading-relaxed mb-6">Короткий вертикальный обзор: как выглядит флешка, как запускается меню Ventoy и как стартует живая система — меньше минуты, всё по-настоящему.</p>
+                    <ul class="space-y-3 text-slate-300 mb-8">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-brand-green mt-1"></i><span>Распаковка и внешний вид накопителя</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-brand-green mt-1"></i><span>Загрузка и фирменное меню выбора систем</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-brand-green mt-1"></i><span>Запуск live-сессии прямо с флешки</span></li>
                     </ul>
-                    <div class="mt-6 pt-4 border-t border-slate-700 text-xs text-slate-400 flex justify-between">
-                        <span>Status: Ready to Boot</span>
-                        <span>Free Space: 15GB</span>
+                    <div class="ozon-card rounded-2xl p-5 flex items-start gap-4">
+                        <div class="w-11 h-11 rounded-xl bg-[#005bff]/25 border border-[#005bff]/50 flex items-center justify-center flex-none">
+                            <i class="fa-solid fa-truck-fast text-[#4d8dff] text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white mb-1">Бесплатная доставка до пункта Ozon</h3>
+                            <p class="text-sm text-slate-300 leading-relaxed">При заказе на сайте отправим флешку бесплатно до ближайшего к вам пункта выдачи Ozon. <a href="order.html#delivery" class="text-[#4d8dff] underline underline-offset-2 hover:no-underline">Подробнее о доставке</a></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Features Grid -->
-    <section id="features" class="py-20 bg-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Почему выбирают <span class="text-brand-green">LinuxDrive</span>?</h2>
-                <p class="text-slate-400 max-w-2xl mx-auto">Это не просто флешка с файлами. Это профессионально настроенный инструмент, который экономит ваше время и нервы.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass-card p-8 rounded-2xl hover:bg-slate-800/50 transition duration-300 border-t-4 border-brand-green">
-                    <div class="w-12 h-12 bg-green-900/30 rounded-lg flex items-center justify-center mb-6 text-brand-green text-2xl">
-                        <i class="fa-solid fa-rocket"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Кастомный загрузчик</h3>
-                    <p class="text-slate-400">Никакой сложной перепрошивки. Нужно обновить систему? Просто скопируйте новый ISO-файл как на обычную флешку.</p>
-                </div>
-
-                <div class="glass-card p-8 rounded-2xl hover:bg-slate-800/50 transition duration-300 border-t-4 border-blue-500">
-                    <div class="w-12 h-12 bg-blue-900/30 rounded-lg flex items-center justify-center mb-6 text-blue-500 text-2xl">
-                        <i class="fa-solid fa-life-ring"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Спасательный круг</h3>
-                    <p class="text-slate-400">Windows не грузится? Запуститесь с флешки, чтобы скопировать важные файлы, удалить вирусы или починить диск.</p>
-                </div>
-
-                <div class="glass-card p-8 rounded-2xl hover:bg-slate-800/50 transition duration-300 border-t-4 border-purple-500">
-                    <div class="w-12 h-12 bg-purple-900/30 rounded-lg flex items-center justify-center mb-6 text-purple-500 text-2xl">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Премиум Оформление</h3>
-                    <p class="text-slate-400">Вместо скучного черного экрана — красивое графическое меню с иконками, в котором приятно работать.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Distributions List -->
-    <section id="distros" class="py-20 bg-slate-800/50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">12 Легендарных Дистрибутивов</h2>
-                <p class="text-slate-400">Мы отобрали лучшие версии для любых задач: от учебы до хакинга.</p>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                <div class="glass-card p-4 rounded-xl text-center hover:translate-y-[-5px] transition tech-glow">
-                    <i class="fa-brands fa-ubuntu text-4xl text-orange-500 mb-3"></i>
-                    <h4 class="font-bold">Ubuntu</h4>
-                    <p class="text-xs text-slate-500">Стандарт мира Linux</p>
-                </div>
-                <div class="glass-card p-4 rounded-xl text-center hover:translate-y-[-5px] transition tech-glow">
-                    <i class="fa-brands fa-linux text-4xl text-green-500 mb-3"></i>
-                    <h4 class="font-bold">Linux Mint</h4>
-                    <p class="text-xs text-slate-500">Идеален после Windows</p>
-                </div>
-                <div class="glass-card p-4 rounded-xl text-center hover:translate-y-[-5px] transition tech-glow">
-                    <i class="fa-solid fa-dragon text-4xl text-red-600 mb-3"></i>
-                    <h4 class="font-bold">Kali Linux</h4>
-                    <p class="text-xs text-slate-500">Кибербезопасность</p>
-                </div>
-                <div class="glass-card p-4 rounded-xl text-center hover:translate-y-[-5px] transition tech-glow">
-                    <i class="fa-brands fa-fedora text-4xl text-blue-500 mb-3"></i>
-                    <h4 class="font-bold">Fedora</h4>
-                    <p class="text-xs text-slate-500">Новейший софт</p>
-                </div>
-                <div class="glass-card p-4 rounded-xl text-center hover:translate-y-[-5px] transition tech-glow">
-                    <i class="fa-solid fa-cube text-4xl text-cyan-400 mb-3"></i>
-                    <h4 class="font-bold">Arch Linux</h4>
-                    <p class="text-xs text-slate-500">Для энтузиастов</p>
-                </div>
-                <div class="glass-card p-4 rounded-xl text-center hover:translate-y-[-5px] transition tech-glow">
-                    <i class="fa-solid fa-spiral text-4xl text-red-400 mb-3"></i>
-                    <h4 class="font-bold">Debian</h4>
-                    <p class="text-xs text-slate-500">Скала стабильности</p>
-                </div>
-                <div class="glass-card p-4 rounded-xl text-center hover:translate-y-[-5px] transition tech-glow">
-                    <i class="fa-solid fa-window-maximize text-4xl text-blue-300 mb-3"></i> 
-                    <h4 class="font-bold">Zorin OS</h4>
-                    <p class="text-xs text-slate-500">Дизайн как в Win 11</p>
-                </div>
-                 <div class="glass-card p-4 rounded-xl text-center hover:translate-y-[-5px] transition tech-glow">
-                    <i class="fa-solid fa-robot text-4xl text-yellow-500 mb-3"></i>
-                    <h4 class="font-bold">Pop!_OS</h4>
-                    <p class="text-xs text-slate-500">Для игр и работы</p>
-                </div>
-                 <div class="glass-card p-4 rounded-xl text-center hover:translate-y-[-5px] transition tech-glow">
-                    <i class="fa-solid fa-mountain text-4xl text-slate-200 mb-3"></i>
-                    <h4 class="font-bold">MX Linux</h4>
-                    <p class="text-xs text-slate-500">Для слабых ПК</p>
-                </div>
-                 <div class="glass-card p-4 rounded-xl text-center hover:translate-y-[-5px] transition tech-glow">
-                    <i class="fa-solid fa-leaf text-4xl text-green-300 mb-3"></i>
-                    <h4 class="font-bold">Manjaro</h4>
-                    <p class="text-xs text-slate-500">Мощный и удобный</p>
-                </div>
-                 <div class="glass-card p-4 rounded-xl text-center hover:translate-y-[-5px] transition tech-glow">
-                    <i class="fa-brands fa-apple text-4xl text-gray-300 mb-3"></i>
-                    <h4 class="font-bold">Elementary</h4>
-                    <p class="text-xs text-slate-500">Стиль macOS</p>
-                </div>
-                 <div class="glass-card p-4 rounded-xl text-center hover:translate-y-[-5px] transition tech-glow">
-                    <i class="fa-solid fa-gears text-4xl text-green-700 mb-3"></i>
-                    <h4 class="font-bold">openSUSE</h4>
-                    <p class="text-xs text-slate-500">Немецкое качество</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Bonuses Section -->
-    <section id="bonuses" class="py-20 bg-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-             <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 md:p-12 border border-slate-700 shadow-2xl relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-64 h-64 bg-green-500 blur-[100px] opacity-10 rounded-full pointer-events-none"></div>
-                
-                <div class="md:flex items-center gap-12">
-                    <div class="flex-1 space-y-6">
-                        <h2 class="text-3xl font-bold">🎁 Бонусы в комплекте</h2>
-                        <p class="text-lg text-slate-300">Мы не бросаем вас после покупки. На флешке вы найдете эксклюзивную базу знаний:</p>
-                        
-                        <ul class="space-y-4">
-                            <li class="flex items-start gap-3">
-                                <div class="bg-slate-700 p-2 rounded text-green-400 mt-1"><i class="fa-solid fa-file-pdf"></i></div>
-                                <div>
-                                    <h4 class="font-bold">Инструкция по Boot Menu</h4>
-                                    <p class="text-sm text-slate-400">Как запуститься на любом ноутбуке (Acer, HP, Lenovo и др).</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <div class="bg-slate-700 p-2 rounded text-green-400 mt-1"><i class="fa-solid fa-terminal"></i></div>
-                                <div>
-                                    <h4 class="font-bold">Шпаргалка по Терминалу</h4>
-                                    <p class="text-sm text-slate-400">ТОП-50 команд, чтобы почувствовать себя хакером.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <div class="bg-slate-700 p-2 rounded text-red-400 mt-1"><i class="fa-solid fa-kit-medical"></i></div>
-                                <div>
-                                    <h4 class="font-bold">Гайд "Спасатель данных"</h4>
-                                    <p class="text-sm text-slate-400">Как вытащить фото, если Windows умерла.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="flex-1 mt-8 md:mt-0 flex justify-center">
-                        <div class="relative">
-                            <i class="fa-regular fa-folder-open text-9xl text-slate-700"></i>
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <i class="fa-solid fa-book text-5xl text-brand-green animate-pulse"></i>
+                <div class="reveal order-1 lg:order-2 flex justify-center">
+                    <div class="phone-frame w-[290px] sm:w-[330px]">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <video id="demo-video" src="linuxdrive.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
+                            <div id="video-fallback" class="video-fallback">
+                                <i class="fa-solid fa-clapperboard text-5xl text-slate-600"></i>
+                                <p class="text-sm text-slate-400 font-semibold">Видеообзор скоро появится</p>
+                                <p class="text-xs text-slate-500">Загружаем вертикальный обзор флешки LinuxDrive</p>
                             </div>
                         </div>
                     </div>
@@ -450,157 +431,184 @@
         </div>
     </section>
 
-    <!-- Pricing & Contact -->
-    <section id="contact" class="py-20 relative">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl font-bold mb-8">Готовы открыть мир Linux?</h2>
-            
-            <div class="glass-card p-10 rounded-3xl border-2 border-brand-green/30 shadow-[0_0_50px_rgba(34,197,94,0.1)]">
-                <div class="text-slate-400 mb-2">Цена комплекта</div>
-                <div class="text-6xl font-extrabold text-white mb-6">2 598 ₽</div>
-                
-                <p class="text-slate-300 mb-8 max-w-lg mx-auto">
-                    Вы получаете скоростную USB 3.0 флешку 64GB+, настроенную вручную, с гарантией загрузки и полным пакетом инструкций.
-                </p>
+    <!-- ============ HOW IT WORKS ============ -->
+    <section id="how" class="py-20 bg-slate-900/50 border-y border-slate-800/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14 reveal">
+                <span class="eyebrow">Быстрый старт</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-4">Первый запуск — за 5 шагов</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Ничего устанавливать не нужно: live-сессия запускается прямо с флешки и не трогает ваш диск. Вся последовательность занимает пару минут.</p>
+            </div>
 
-                <div class="flex flex-col md:flex-row items-center justify-center gap-6">
-                    <a href="https://www.avito.ru/sankt-peterburg/tovary_dlya_kompyutera/multizagruzochnaya_fleshka_linuks_12_v_1_7834413303" target="_blank" class="w-full md:w-auto px-10 py-5 bg-blue-600 text-white text-xl font-bold rounded-xl hover:bg-blue-500 hover:scale-105 transition shadow-xl flex items-center justify-center gap-3">
-                        <i class="fa-solid fa-truck-fast"></i> Заказать Авито Доставкой
-                    </a>
-                    <a href="tel:+79952376995" class="w-full md:w-auto px-10 py-5 bg-brand-green text-slate-900 text-xl font-bold rounded-xl hover:bg-green-400 hover:scale-105 transition shadow-xl flex items-center justify-center gap-3">
-                        <i class="fa-solid fa-phone"></i> Позвонить
-                    </a>
+            <div class="grid gap-5 md:grid-cols-5">
+                <div class="reveal glass-card rounded-2xl p-6 relative">
+                    <div class="step-num mb-4">1</div>
+                    <h3 class="font-bold mb-2">Вставьте флешку</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">Лучше в порт USB&nbsp;3.0 (обычно синий) — загрузка заметно быстрее.</p>
                 </div>
-                
-                <div class="mt-8 pt-8 border-t border-slate-700 flex flex-col md:flex-row justify-center gap-8 text-sm text-slate-500">
-                    <span class="flex items-center gap-2 justify-center"><i class="fa-brands fa-whatsapp text-green-500 text-lg"></i> WhatsApp</span>
-                    <span class="flex items-center gap-2 justify-center"><i class="fa-brands fa-telegram text-blue-400 text-lg"></i> Telegram</span>
-                    <span class="flex items-center gap-2 justify-center"><i class="fa-solid fa-truck text-slate-300 text-lg"></i> Доставка до удобного пункта выдачи Озон/Я.Маркет</span>
+                <div class="reveal glass-card rounded-2xl p-6 relative">
+                    <div class="step-num mb-4">2</div>
+                    <h3 class="font-bold mb-2">Откройте boot-меню</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">При включении нажмите <span class="kbd">F12</span>, <span class="kbd">F11</span>, <span class="kbd">Esc</span> или другую клавишу — таблица по производителям в руководстве.</p>
+                </div>
+                <div class="reveal glass-card rounded-2xl p-6 relative">
+                    <div class="step-num mb-4">3</div>
+                    <h3 class="font-bold mb-2">Secure Boot — один раз</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">Если появится синий экран — зарегистрируйте ключ Ventoy: 5 нажатий по стрелкам и Enter.</p>
+                </div>
+                <div class="reveal glass-card rounded-2xl p-6 relative">
+                    <div class="step-num mb-4">4</div>
+                    <h3 class="font-bold mb-2">Выберите систему</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">В меню Ventoy отметьте нужный ISO и нажмите <span class="kbd">Enter</span> → Boot in normal mode.</p>
+                </div>
+                <div class="reveal glass-card rounded-2xl p-6 relative">
+                    <div class="step-num mb-4">5</div>
+                    <h3 class="font-bold mb-2">Работайте или установите</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">Проверьте Wi-Fi и звук в live-сессии, а установщик запустите, когда решите — ярлык «Install…» на рабочем столе.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-10 reveal">
+                <a href="guide.html" class="btn-outline px-7 py-3.5">
+                    <i class="fa-solid fa-book text-brand-green"></i> Полное руководство: клавиши, Secure Boot, dual-boot, FAQ
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ DELIVERY ============ -->
+    <section id="delivery" class="py-20 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="reveal ozon-card rounded-3xl p-8 md:p-12 relative overflow-hidden">
+                <div class="absolute -top-24 -right-24 w-72 h-72 bg-[#005bff] blur-[110px] opacity-20 rounded-full pointer-events-none"></div>
+                <div class="grid md:flex md:items-center gap-10 relative">
+                    <div class="flex-1">
+                        <span class="eyebrow" style="color:#4d8dff">Доставка</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-4">Закажите на сайте —<br>отправим <span class="text-[#4d8dff]">бесплатно</span> до пункта Ozon</h2>
+                        <p class="text-slate-300 leading-relaxed mb-6">При заказе через сайт доставка до ближайшего к вам пункта выдачи Ozon — за наш счёт. Останется только забрать флешку по пути домой.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <div class="step-num !w-10 !h-10 !text-base" style="background:rgba(0,91,255,.15);border-color:rgba(0,91,255,.5);color:#4d8dff">1</div>
+                                <div><h4 class="font-semibold text-white">Заполните форму заказа</h4><p class="text-sm text-slate-400">На странице <a href="order.html" class="text-brand-green hover:underline">«Заказ»</a> — это занимает минуту.</p></div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="step-num !w-10 !h-10 !text-base" style="background:rgba(0,91,255,.15);border-color:rgba(0,91,255,.5);color:#4d8dff">2</div>
+                                <div><h4 class="font-semibold text-white">Согласуем детали</h4><p class="text-sm text-slate-400">Свяжемся с вами, подтвердим заказ и выберем удобный пункт выдачи Ozon.</p></div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="step-num !w-10 !h-10 !text-base" style="background:rgba(0,91,255,.15);border-color:rgba(0,91,255,.5);color:#4d8dff">3</div>
+                                <div><h4 class="font-semibold text-white">Отправим бесплатно</h4><p class="text-sm text-slate-400">Надёжно упакуем и отправим за свой счёт — вы забираете в пункте Ozon.</p></div>
+                            </div>
+                        </div>
+                        <p class="mt-6 text-sm text-slate-400"><i class="fa-solid fa-circle-info ozon-accent mr-1.5"></i>Предпочитаете Авито? Флешка есть и там — с доставкой через Авито.</p>
+                    </div>
+                    <div class="flex-none text-center">
+                        <div class="glass-card rounded-2xl p-8 border-slate-700/60 w-full md:w-72">
+                            <div class="text-slate-400 text-sm mb-1">Цена комплекта</div>
+                            <div class="price-tag text-5xl font-extrabold mb-4">3&nbsp;298&nbsp;₽</div>
+                            <div class="text-xs text-slate-400 mb-5">доставка до пункта Ozon — 0&nbsp;₽</div>
+                            <a href="order.html" class="btn-primary w-full py-3.5">Оформить заказ</a>
+                            <a href="order.html#contacts" class="mt-3 inline-block text-sm text-slate-400 hover:text-brand-green transition">или свяжитесь с нами</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-slate-950 py-10 border-t border-slate-800 text-center text-slate-500 text-sm">
-        <div class="max-w-7xl mx-auto px-4">
-            <p>&copy; 2026 LinuxDrive. Все права защищены.</p>
-            <p class="mt-2">Не является публичной офертой. Логотипы дистрибутивов принадлежат их владельцам.</p>
-        </div>
-    </footer>
-
-    <!-- Formspree Popup Widget HTML -->
-    <button id="fs_widget_btn" onclick="toggleModal(true)">
-        <i class="fa-solid fa-envelope"></i> Быстрый заказ
-    </button>
-
-    <div id="formspree__modal">
-        <div id="formspree__widget"> 
-            <div class="fs-header">
-                Форма быстрого заказа
-                <button onclick="toggleModal(false)" class="fs-close-btn" aria-label="Закрыть форму">
-                    &times;
-                </button>
+    <!-- ============ PRICE / CTA ============ -->
+    <section id="order" class="py-20 bg-slate-900/50 border-t border-slate-800/70">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="reveal">
+                <span class="eyebrow">Комплект</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-10">Готовы открыть мир Linux?</h2>
             </div>
-         
-            <div class="fs-body"> 
-                <form id="fs_form" action="https://formspree.io/f/movgnzzk" method="POST" novalidate>
-                    <div class="fs-form-group">
-                        <label for="fs_interest">Что вас интересует</label>
-                        <textarea name="Заказ" id="fs_interest" placeholder="Хочу заказать флешку Linux..." rows="3" required></textarea>
-                    </div>
-                    
-                    <div class="fs-form-group">
-                        <label for="fs_contact">Телефон или Email</label>
-                        <input type="text" name="Контакт" id="fs_contact" placeholder="+7 (XXX) XXX-XX-XX" required />
-                    </div>
-                    
-                    <input type="hidden" name="_subject" value="Заказ с LinuxDrive" />
-                    
-                    <button type="submit" id="fs_submit_btn" class="fs-submit-btn">
-                        Отправить заявку
-                    </button>
-                    
-                    <p id="fs_result">Мы перезвоним в течение 15 минут.</p>
-                </form>
+
+            <div class="reveal glass-card p-8 md:p-12 rounded-3xl border-2 border-brand-green/30 shadow-[0_0_60px_rgba(34,197,94,0.12)]">
+                <div class="text-slate-400 mb-2">Цена комплекта</div>
+                <div class="price-tag text-6xl md:text-7xl font-extrabold mb-8">3&nbsp;298&nbsp;₽</div>
+
+                <ul class="text-left max-w-md mx-auto space-y-3 mb-9 text-slate-300">
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-green mt-1"></i><span>Скоростная флешка USB&nbsp;3.0 объёмом 64&nbsp;ГБ+</span></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-green mt-1"></i><span>16 дистрибутивов Linux — актуальная сборка от 16.10.2026</span></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-green mt-1"></i><span>Ventoy с авторской темой меню LinuxDrive</span></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-green mt-1"></i><span>Руководство на 30 страниц (PDF + печатный буклет)</span></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-green mt-1"></i><span>Гарантия на накопитель и поддержка</span></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-truck-fast ozon-accent mt-1"></i><span><b class="text-white">Бесплатная доставка</b> до ближайшего пункта выдачи Ozon при заказе на сайте</span></li>
+                </ul>
+
+                <div class="flex flex-col md:flex-row items-stretch md:items-center justify-center gap-4">
+                    <a href="order.html" class="btn-primary flex-1 md:flex-none px-10 py-4 text-lg">
+                        <i class="fa-solid fa-bolt"></i> Заказать на сайте
+                    </a>
+                    <a href="https://www.avito.ru/sankt-peterburg/tovary_dlya_kompyutera/multizagruzochnaya_fleshka_linuks_12_v_1_7834413303" target="_blank" rel="noopener" class="btn-avito flex-1 md:flex-none px-10 py-4 text-lg">
+                        <i class="fa-solid fa-store"></i> Купить на Авито
+                    </a>
+                    <a href="tel:+79952376995" class="btn-outline flex-1 md:flex-none px-10 py-4 text-lg">
+                        <i class="fa-solid fa-phone text-brand-green"></i> Позвонить
+                    </a>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-slate-700/70 flex flex-col md:flex-row justify-center gap-4 md:gap-8 text-sm text-slate-500">
+                    <span class="flex items-center gap-2 justify-center"><i class="fa-brands fa-whatsapp text-green-500 text-lg"></i> WhatsApp</span>
+                    <span class="flex items-center gap-2 justify-center"><i class="fa-brands fa-telegram text-sky-400 text-lg"></i> Telegram</span>
+                    <span class="flex items-center gap-2 justify-center"><i class="fa-solid fa-clock text-brand-green text-lg"></i> Отвечаем быстро</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-slate-950 border-t border-slate-800 relative">
+    <div class="marquee-line absolute top-0 left-0 right-0"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+            <div>
+                <a href="index.html" class="flex items-center gap-2.5 mb-4">
+                    <span class="w-9 h-9 rounded-lg bg-brand-green/15 border border-brand-green/40 flex items-center justify-center">
+                        <i class="fa-brands fa-linux text-brand-green text-xl"></i>
+                    </span>
+                    <span class="font-bold text-xl tracking-tight">Linux<span class="text-brand-green">Drive</span></span>
+                </a>
+                <p class="text-sm text-slate-400 leading-relaxed">Мультизагрузочные USB-флешки с Linux на базе Ventoy: готовые сборки, авторское оформление меню, подробное руководство. Собрано и проверено вручную.</p>
+                <p class="mt-3 text-xs font-mono text-slate-500"><i class="fa-solid fa-compact-disc text-brand-green mr-1.5"></i>Актуальная сборка: 16.10.2026 · 16 систем</p>
+            </div>
+            <div>
+                <h4 class="text-sm font-bold uppercase tracking-wider text-slate-200 mb-4">Навигация</h4>
+                <ul class="space-y-2.5 text-sm">
+                    <li><a class="footer-link" href="index.html"><i class="fa-solid fa-angle-right text-xs text-brand-green"></i>Главная</a></li>
+                    <li><a class="footer-link" href="distros.html"><i class="fa-solid fa-angle-right text-xs text-brand-green"></i>16 дистрибутивов</a></li>
+                    <li><a class="footer-link" href="guide.html"><i class="fa-solid fa-angle-right text-xs text-brand-green"></i>Руководство пользователя</a></li>
+                    <li><a class="footer-link" href="order.html"><i class="fa-solid fa-angle-right text-xs text-brand-green"></i>Заказ и доставка</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-sm font-bold uppercase tracking-wider text-slate-200 mb-4">Документы</h4>
+                <ul class="space-y-2.5 text-sm">
+                    <li><a class="footer-link" href="politika.html"><i class="fa-solid fa-file-shield text-xs text-brand-green"></i>Политика конфиденциальности</a></li>
+                    <li><a class="footer-link" href="soglasie.html"><i class="fa-solid fa-file-signature text-xs text-brand-green"></i>Согласие на обработку ПД</a></li>
+                </ul>
+                <p class="mt-4 text-xs text-slate-500 leading-relaxed">Информация на сайте не является публичной офертой.</p>
+            </div>
+            <div>
+                <h4 class="text-sm font-bold uppercase tracking-wider text-slate-200 mb-4">Контакты</h4>
+                <ul class="space-y-2.5 text-sm">
+                    <li><a class="footer-link" href="tel:+79952376995"><i class="fa-solid fa-phone text-xs text-brand-green"></i>+7 995 237-69-95</a></li>
+                    <li><a class="footer-link" href="https://wa.me/79952376995" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp text-xs text-green-500"></i>WhatsApp</a></li>
+                    <li><span class="footer-link"><i class="fa-brands fa-telegram text-xs text-sky-400"></i>Telegram: +7 995 237-69-95</span></li>
+                    <li><a class="footer-link" href="mailto:i02@ya.ru"><i class="fa-solid fa-envelope text-xs text-brand-green"></i>i02@ya.ru</a></li>
+                    <li><a class="footer-link" href="https://www.avito.ru/sankt-peterburg/tovary_dlya_kompyutera/multizagruzochnaya_fleshka_linuks_12_v_1_7834413303" target="_blank" rel="noopener"><i class="fa-solid fa-store text-xs text-sky-400"></i>Мы на Авито</a></li>
+                </ul>
             </div>
         </div>
     </div>
-
-    <script>
-        // Formspree Logic
-        const modal = document.getElementById('formspree__modal');
-        const form = document.getElementById('fs_form');
-        const result = document.getElementById('fs_result');
-        const submitBtn = document.getElementById('fs_submit_btn');
-
-        function toggleModal(show) {
-            if (show) {
-                modal.classList.add('visible');
-            } else {
-                modal.classList.remove('visible');
-                form.reset();
-                result.textContent = 'Мы перезвоним в течение 15 минут.';
-                result.className = '';
-            }
-        }
-
-        modal.addEventListener('click', (event) => {
-            if (event.target === modal) toggleModal(false);
-        });
-
-        form.addEventListener('submit', async (event) => {
-            event.preventDefault();
-            
-            let isValid = true;
-            const fields = form.querySelectorAll('[required]');
-            fields.forEach(f => {
-                if (!f.value.trim()) {
-                    f.style.borderColor = '#ef4444';
-                    isValid = false;
-                } else {
-                    f.style.borderColor = '#e5e7eb';
-                }
-            });
-
-            if (!isValid) return;
-
-            submitBtn.disabled = true;
-            result.textContent = 'Отправка...';
-
-            try {
-                const response = await fetch(form.action, {
-                    method: form.method,
-                    body: new FormData(form),
-                    headers: { 'Accept': 'application/json' }
-                });
-
-                if (response.ok) {
-                    result.textContent = 'Спасибо! Заказ принят.';
-                    result.className = 'fs-success';
-                    form.reset();
-                    setTimeout(() => toggleModal(false), 2500);
-                } else {
-                    result.textContent = 'Ошибка отправки.';
-                    result.className = 'fs-error';
-                }
-            } catch (error) {
-                result.textContent = 'Ошибка сети.';
-                result.className = 'fs-error';
-            } finally {
-                submitBtn.disabled = false;
-            }
-        });
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <div class="border-t border-slate-800/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
+            <p class="text-xs text-slate-500">&copy; <span data-year>2026</span> LinuxDrive · linuxdrive.ru</p>
+            <p class="legal-note mt-2 text-[11px] text-slate-600 max-w-4xl mx-auto">Linux&reg; — зарегистрированная товарная марка Линуса Торвальдса. Ubuntu, Linux Mint, Debian, Fedora, Nobara, Arch Linux, Manjaro, EndeavourOS, openSUSE, Kali Linux, elementary OS, Zorin OS, Pop!_OS, Lubuntu, MX Linux, Puppy Linux — товарные знаки соответствующих правообладателей. Все перечисленные системы распространяются свободно на условиях открытых лицензий (GNU GPL и др.) и предоставляются «как есть» их разработчиками. linuxdrive.ru не аффилирован ни с одним из проектов; оплата при покупке взимается исключительно за носитель, работу по сборке, оформлению, проверке и документации. Ventoy — свободное ПО (GPL-3.0), ventoy.net.</p>
+        </div>
+    </div>
+</footer>
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>

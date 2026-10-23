@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>16 дистрибутивов Linux на флешке — каталог | LinuxDrive</title>
+<meta name="description" content="Полный каталог систем на мультизагрузочной флешке LinuxDrive (сборка от 16.10.2026): Ubuntu 26.04 LTS, Linux Mint, Arch, Fedora, Kali, Debian, openSUSE и другие — описания, требования, установка и первые команды.">
+<link rel="canonical" href="https://linuxdrive.ru/distros.html">
+<meta property="og:site_name" content="LinuxDrive">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="16 дистрибутивов Linux на флешке — каталог | LinuxDrive">
+<meta property="og:description" content="Полный каталог систем на мультизагрузочной флешке LinuxDrive (сборка от 16.10.2026): Ubuntu 26.04 LTS, Linux Mint, Arch, Fedora, Kali, Debian, openSUSE и другие — описания, требования, установка и первые команды.">
+<meta property="og:url" content="https://linuxdrive.ru/distros.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Cpath d='M15 21l11 11-11 11' stroke='%2322c55e' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='32' y='39' width='17' height='6' rx='3' fill='%2322c55e'/%3E%3C/svg%3E">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106115108', 'ym');
+
+    ym(106115108, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106115108" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    sans: ['Inter', 'sans-serif'],
+                    mono: ['JetBrains Mono', 'monospace'],
+                },
+                colors: {
+                    brand: {
+                        green: '#22c55e',
+                        dark: '#0f172a',
+                        accent: '#38bdf8'
+                    }
+                }
+            }
+        }
+    }
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased">
+
+<header id="site-header" class="site-header fixed w-full z-50 bg-slate-950/75 backdrop-blur-md border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <a href="index.html" class="flex items-center gap-2.5 group" aria-label="LinuxDrive — на главную">
+                <span class="w-9 h-9 rounded-lg bg-brand-green/15 border border-brand-green/40 flex items-center justify-center group-hover:bg-brand-green/25 transition">
+                    <i class="fa-brands fa-linux text-brand-green text-xl"></i>
+                </span>
+                <span class="font-bold text-xl tracking-tight">Linux<span class="text-brand-green">Drive</span></span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-1" aria-label="Основная навигация">
+                <a href="index.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white transition">Главная</a>
+                        <a href="distros.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white transition active">Дистрибутивы</a>
+                        <a href="guide.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white transition">Руководство</a>
+                        <a href="order.html#delivery" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white transition">Доставка</a>
+                <a href="order.html" class="btn-primary ml-4 px-5 py-2.5 text-sm">Заказать · 3 298 ₽</a>
+            </nav>
+            <div class="flex items-center gap-4 md:hidden">
+                <a href="tel:+79952376995" class="text-brand-green font-bold text-sm"><i class="fa-solid fa-phone mr-1.5"></i>Позвонить</a>
+                <button id="burger" class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-700 text-slate-200 hover:border-brand-green/50 transition" aria-label="Меню" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden border-t border-slate-800 bg-slate-950/97 backdrop-blur-lg">
+        <div class="px-4 py-4 space-y-1.5">
+            <a href="index.html" class="block px-4 py-3 rounded-lg text-slate-200 hover:bg-slate-800 hover:text-brand-green transition font-medium">Главная</a>
+                <a href="distros.html" class="block px-4 py-3 rounded-lg text-slate-200 hover:bg-slate-800 hover:text-brand-green transition font-medium">Дистрибутивы</a>
+                <a href="guide.html" class="block px-4 py-3 rounded-lg text-slate-200 hover:bg-slate-800 hover:text-brand-green transition font-medium">Руководство</a>
+                <a href="order.html#delivery" class="block px-4 py-3 rounded-lg text-slate-200 hover:bg-slate-800 hover:text-brand-green transition font-medium">Доставка</a>
+                <a href="order.html" class="block px-4 py-3 rounded-lg bg-brand-green text-slate-900 font-bold text-center">Заказать · 3 298 ₽</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- PAGE HERO -->
+    <section class="page-hero pt-32 pb-14 bg-slate-950 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <nav class="text-xs text-slate-500 mb-4 fade-up" aria-label="Хлебные крошки">
+                <a href="index.html" class="hover:text-brand-green transition">Главная</a> <i class="fa-solid fa-angle-right mx-1.5 text-[10px]"></i> <span class="text-slate-300">Дистрибутивы</span>
+            </nav>
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight fade-up d-1">16 дистрибутивов <span class="text-brand-green">на одной флешке</span></h1>
+            <p class="mt-4 text-slate-400 max-w-3xl leading-relaxed fade-up d-2">Каталог систем актуальной сборки от 16 октября 2026 года. Версии соответствуют содержимому флешки. Любую систему можно запустить в live-режиме без установки, а затем установить на диск — пошаговые инструкции и первые команды на каждой карточке.</p>
+            <div class="mt-6 flex flex-wrap gap-2.5 fade-up d-3">
+                <span class="chip chip-green"><i class="fa-solid fa-compact-disc"></i>Сборка от 16.10.2026</span>
+                <span class="chip"><i class="fa-solid fa-hard-drive text-brand-green"></i>exFAT · ISO от 4 ГБ+</span>
+                <span class="chip"><i class="fa-solid fa-shield-halved text-brand-green"></i>UEFI + Legacy BIOS · Secure Boot</span>
+                <span class="chip"><i class="fa-solid fa-scale-balanced text-brand-green"></i>Все системы свободны и бесплатны</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENARIOS -->
+    <section id="scenarios" class="py-16 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 reveal">
+                <span class="eyebrow">Раздел 07 руководства</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-4">Как выбрать дистрибутив</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">«Лучшего» Linux не существует — есть подходящий под задачу. Найдите свой сценарий, а лучше — запустите 2–3 кандидата в live-режиме прямо с флешки: это лучший способ выбрать, ничего не устанавливая.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div class="reveal glass-card tech-glow rounded-2xl p-6">
+                    <div class="w-11 h-11 rounded-xl bg-slate-950/70 border border-slate-700 flex items-center justify-center text-green-400 text-lg mb-4"><i class="fa-solid fa-door-open"></i></div>
+                    <h3 class="font-bold mb-2">Первый Linux после Windows</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">Привычная логика «пуск–панель–окна», всё работает из коробки, минимум терминала.</p>
+                    <div class="flex flex-wrap gap-2"><a href="#d05" class="chip chip-green font-mono text-xs">05 · Linux Mint</a><a href="#d11" class="chip chip-green font-mono text-xs">11 · Zorin OS</a><a href="#d16" class="chip chip-green font-mono text-xs">16 · Ubuntu</a><a href="#d02" class="chip chip-green font-mono text-xs">02 · MX Linux</a></div>
+                </div>
+                <div class="reveal glass-card tech-glow rounded-2xl p-6">
+                    <div class="w-11 h-11 rounded-xl bg-slate-950/70 border border-slate-700 flex items-center justify-center text-amber-400 text-lg mb-4"><i class="fa-solid fa-microchip"></i></div>
+                    <h3 class="font-bold mb-2">Старый или слабый компьютер</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">Puppy целиком работает в оперативной памяти и воскресит почти всё; Lubuntu и MX — лёгкие полноценные системы для 1–4 ГБ ОЗУ.</p>
+                    <div class="flex flex-wrap gap-2"><a href="#d08" class="chip chip-green font-mono text-xs">08 · Puppy Linux</a><a href="#d07" class="chip chip-green font-mono text-xs">07 · Lubuntu</a><a href="#d02" class="chip chip-green font-mono text-xs">02 · MX Linux</a></div>
+                </div>
+                <div class="reveal glass-card tech-glow rounded-2xl p-6">
+                    <div class="w-11 h-11 rounded-xl bg-slate-950/70 border border-slate-700 flex items-center justify-center text-pink-400 text-lg mb-4"><i class="fa-solid fa-palette"></i></div>
+                    <h3 class="font-bold mb-2">Красота и минимализм</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">elementary OS — выверенный дизайн в духе macOS; Zorin OS — глянцевая полировка и «раскладки» под Windows/macOS.</p>
+                    <div class="flex flex-wrap gap-2"><a href="#d06" class="chip chip-green font-mono text-xs">06 · elementary OS</a><a href="#d11" class="chip chip-green font-mono text-xs">11 · Zorin OS</a></div>
+                </div>
+                <div class="reveal glass-card tech-glow rounded-2xl p-6">
+                    <div class="w-11 h-11 rounded-xl bg-slate-950/70 border border-slate-700 flex items-center justify-center text-purple-400 text-lg mb-4"><i class="fa-solid fa-gamepad"></i></div>
+                    <h3 class="font-bold mb-2">Игры и видеокарта NVIDIA</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">Nobara — игровая сборка: Steam, Proton, драйверы и кодеки уже внутри; Pop!_OS — NVIDIA и тайлинг окон; также Manjaro.</p>
+                    <div class="flex flex-wrap gap-2"><a href="#d04" class="chip chip-green font-mono text-xs">04 · Nobara</a><a href="#d09" class="chip chip-green font-mono text-xs">09 · Pop!_OS</a><a href="#d15" class="chip chip-green font-mono text-xs">15 · Manjaro</a></div>
+                </div>
+                <div class="reveal glass-card tech-glow rounded-2xl p-6">
+                    <div class="w-11 h-11 rounded-xl bg-slate-950/70 border border-slate-700 flex items-center justify-center text-cyan-400 text-lg mb-4"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3 class="font-bold mb-2">Изучить, как устроен Linux</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">Arch — собрать систему руками по лучшей в индустрии Wiki; EndeavourOS — тот же Arch, но с установщиком; Manjaro — плавный вход в Arch-мир.</p>
+                    <div class="flex flex-wrap gap-2"><a href="#d01" class="chip chip-green font-mono text-xs">01 · Arch Linux</a><a href="#d10" class="chip chip-green font-mono text-xs">10 · EndeavourOS</a><a href="#d15" class="chip chip-green font-mono text-xs">15 · Manjaro</a></div>
+                </div>
+                <div class="reveal glass-card tech-glow rounded-2xl p-6">
+                    <div class="w-11 h-11 rounded-xl bg-slate-950/70 border border-slate-700 flex items-center justify-center text-sky-400 text-lg mb-4"><i class="fa-solid fa-server"></i></div>
+                    <h3 class="font-bold mb-2">Стабильность для работы и сервера</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">Debian — эталон надёжности; openSUSE Leap — «корпоративная» стабильность и снапшоты с откатом; MX — лёгкий Debian с удобными инструментами.</p>
+                    <div class="flex flex-wrap gap-2"><a href="#d12" class="chip chip-green font-mono text-xs">12 · Debian</a><a href="#d13" class="chip chip-green font-mono text-xs">13 · openSUSE Leap</a><a href="#d02" class="chip chip-green font-mono text-xs">02 · MX Linux</a></div>
+                </div>
+                <div class="reveal glass-card tech-glow rounded-2xl p-6">
+                    <div class="w-11 h-11 rounded-xl bg-slate-950/70 border border-slate-700 flex items-center justify-center text-yellow-400 text-lg mb-4"><i class="fa-solid fa-bolt"></i></div>
+                    <h3 class="font-bold mb-2">Свежий софт и новые технологии</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">Fedora Budgie и Nobara — передовой край, Wayland, Flatpak; Arch и EndeavourOS — rolling-release.</p>
+                    <div class="flex flex-wrap gap-2"><a href="#d03" class="chip chip-green font-mono text-xs">03 · Fedora Budgie</a><a href="#d04" class="chip chip-green font-mono text-xs">04 · Nobara</a><a href="#d01" class="chip chip-green font-mono text-xs">01 · Arch Linux</a><a href="#d10" class="chip chip-green font-mono text-xs">10 · EndeavourOS</a></div>
+                </div>
+                <div class="reveal glass-card tech-glow rounded-2xl p-6">
+                    <div class="w-11 h-11 rounded-xl bg-slate-950/70 border border-slate-700 flex items-center justify-center text-red-400 text-lg mb-4"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3 class="font-bold mb-2">Информационная безопасность</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">Kali Linux — сотни инструментов пентеста. Только для обучения и легальных задач, не как повседневная система.</p>
+                    <div class="flex flex-wrap gap-2"><a href="#d14" class="chip chip-green font-mono text-xs">14 · Kali Linux</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUMMARY TABLE -->
+    <section id="table" class="py-16 bg-slate-900/50 border-y border-slate-800/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 reveal">
+                <span class="eyebrow">Раздел 08 руководства</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-4">Сводная таблица всех систем</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Номера совпадают с порядком в меню Ventoy. Нажмите на название — откроется подробная карточка.</p>
+            </div>
+            <div class="reveal glass-card rounded-2xl overflow-x-auto">
+                <table class="data-table min-w-[880px]">
+                    <thead>
+                        <tr><th>№</th><th>Дистрибутив</th><th>База</th><th>Оболочка</th><th>Пакеты</th><th>Сложность</th><th>Сильная сторона</th></tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="font-mono text-brand-green">01</td>
+                        <td><a href="#d01" class="font-semibold text-white hover:text-brand-green transition"><i class="fa-solid fa-cube text-cyan-400 mr-2 w-5 text-center"></i>Arch Linux</a><div class="text-[11px] font-mono text-slate-500 mt-0.5">2026.10.01</div></td>
+                        <td>независимый</td>
+                        <td>любая на выбор</td>
+                        <td class="font-mono text-xs">pacman, AUR</td>
+                        <td><span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></td>
+                        <td>Максимальная гибкость и свежайший софт, легендарная Wiki</td>
+                    </tr>
+                    <tr>
+                        <td class="font-mono text-brand-green">02</td>
+                        <td><a href="#d02" class="font-semibold text-white hover:text-brand-green transition"><i class="fa-solid fa-screwdriver-wrench text-slate-200 mr-2 w-5 text-center"></i>MX Linux</a><div class="text-[11px] font-mono text-slate-500 mt-0.5">25.3 Xfce</div></td>
+                        <td>Debian Stable</td>
+                        <td>Xfce</td>
+                        <td class="font-mono text-xs">apt, flatpak</td>
+                        <td><span class="diff"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></td>
+                        <td>Стабильность Debian + фирменные MX-утилиты, лёгок на подъём</td>
+                    </tr>
+                    <tr>
+                        <td class="font-mono text-brand-green">03</td>
+                        <td><a href="#d03" class="font-semibold text-white hover:text-brand-green transition"><i class="fa-brands fa-fedora text-blue-400 mr-2 w-5 text-center"></i>Fedora Budgie</a><div class="text-[11px] font-mono text-slate-500 mt-0.5">44</div></td>
+                        <td>Fedora (независимая)</td>
+                        <td>Budgie</td>
+                        <td class="font-mono text-xs">dnf (RPM), flatpak</td>
+                        <td><span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></td>
+                        <td>Передовые технологии + лёгкая элегантная оболочка</td>
+                    </tr>
+                    <tr>
+                        <td class="font-mono text-brand-green">04</td>
+                        <td><a href="#d04" class="font-semibold text-white hover:text-brand-green transition"><i class="fa-solid fa-gamepad text-purple-400 mr-2 w-5 text-center"></i>Nobara</a><div class="text-[11px] font-mono text-slate-500 mt-0.5">44 Official</div></td>
+                        <td>Fedora</td>
+                        <td>KDE Plasma (Official)</td>
+                        <td class="font-mono text-xs">dnf + репозитории Nobara, RPM Fusion, flatpak</td>
+                        <td><span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></td>
+                        <td>Игры и стриминг «из коробки»: Steam, Proton, драйверы, кодеки</td>
+                    </tr>
+                    <tr>
+                        <td class="font-mono text-brand-green">05</td>
+                        <td><a href="#d05" class="font-semibold text-white hover:text-brand-green transition"><i class="fa-brands fa-linux text-lime-400 mr-2 w-5 text-center"></i>Linux Mint</a><div class="text-[11px] font-mono text-slate-500 mt-0.5">22.3 Cinnamon</div></td>
+                        <td>Ubuntu 24.04 LTS</td>
+                        <td>Cinnamon</td>
+                        <td class="font-mono text-xs">apt, flatpak</td>
+                        <td><span class="diff"><i class="on"></i><i></i><i></i><i></i><i></i></span></td>
+                        <td>Самый дружелюбный старт после Windows</td>
+                    </tr>
+                    <tr>
+                        <td class="font-mono text-brand-green">06</td>
+                        <td><a href="#d06" class="font-semibold text-white hover:text-brand-green transition"><i class="fa-solid fa-feather text-gray-300 mr-2 w-5 text-center"></i>elementary OS</a><div class="text-[11px] font-mono text-slate-500 mt-0.5">8.1 «Horus»</div></td>
+                        <td>Ubuntu LTS</td>
+                        <td>Pantheon</td>
+                        <td class="font-mono text-xs">apt, flatpak (AppCenter)</td>
+                        <td><span class="diff"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></td>
+                        <td>Дизайн и дисциплина интерфейса в духе macOS</td>
+                    </tr>
+                    <tr>
+                        <td class="font-mono text-brand-green">07</td>
+                        <td><a href="#d07" class="font-semibold text-white hover:text-brand-green transition"><i class="fa-solid fa-dove text-blue-300 mr-2 w-5 text-center"></i>Lubuntu</a><div class="text-[11px] font-mono text-slate-500 mt-0.5">24.04.4 LTS</div></td>
+                        <td>Ubuntu 24.04 LTS</td>
+                        <td>LXQt</td>
+                        <td class="font-mono text-xs">apt, snap</td>
+                        <td><span class="diff"><i class="on"></i><i></i><i></i><i></i><i></i></span></td>
+                        <td>Второе дыхание для очень старых ПК</td>
+                    </tr>
+                    <tr>
+                        <td class="font-mono text-brand-green">08</td>
+                        <td><a href="#d08" class="font-semibold text-white hover:text-brand-green transition"><i class="fa-solid fa-dog text-amber-400 mr-2 w-5 text-center"></i>Puppy Linux</a><div class="text-[11px] font-mono text-slate-500 mt-0.5">TrixiePup64 Wayland</div></td>
+                        <td>Debian 13 «Trixie»</td>
+                        <td>лёгкий Wayland-композитор</td>
+                        <td class="font-mono text-xs">PPM (deb), apt</td>
+                        <td><span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></td>
+                        <td>Вся система в оперативной памяти: воскресит любой ПК</td>
+                    </tr>
+                    <tr>
+                        <td class="font-mono text-brand-green">09</td>
+                        <td><a href="#d09" class="font-semibold text-white hover:text-brand-green transition"><i class="fa-solid fa-robot text-yellow-400 mr-2 w-5 text-center"></i>Pop!_OS</a><div class="text-[11px] font-mono text-slate-500 mt-0.5">24.04</div></td>
+                        <td>Ubuntu LTS + репозитории System76</td>
+                        <td>COSMIC (Rust)</td>
+                        <td class="font-mono text-xs">apt, flatpak (Pop!_Shop)</td>
+                        <td><span class="diff"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></td>
+                        <td>Игры, NVIDIA, тайлинг окон — новая COSMIC на Rust</td>
+                    </tr>
+                    <tr>
+                        <td class="font-mono text-brand-green">10</td>
+                        <td><a href="#d10" class="font-semibold text-white hover:text-brand-green transition"><i class="fa-solid fa-shuttle-space text-indigo-300 mr-2 w-5 text-center"></i>EndeavourOS</a><div class="text-[11px] font-mono text-slate-500 mt-0.5">«Titan-Nova»</div></td>
+                        <td>Arch Linux</td>
+                        <td>Xfce в live; любая при установке</td>
+                        <td class="font-mono text-xs">pacman, AUR (yay)</td>
+                        <td><span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></td>
+                        <td>Самый короткий путь в Arch: установщик + AUR</td>
+                    </tr>
+                    <tr>
+                        <td class="font-mono text-brand-green">11</td>
+                        <td><a href="#d11" class="font-semibold text-white hover:text-brand-green transition"><i class="fa-solid fa-window-maximize text-sky-300 mr-2 w-5 text-center"></i>Zorin OS</a><div class="text-[11px] font-mono text-slate-500 mt-0.5">18.1 Core</div></td>
+                        <td>Ubuntu LTS</td>
+                        <td>Zorin Desktop (GNOME)</td>
+                        <td class="font-mono text-xs">apt, flatpak, snap</td>
+                        <td><span class="diff"><i class="on"></i><i></i><i></i><i></i><i></i></span></td>
+                        <td>Выглядит как Windows/macOS — переход без стресса</td>
+                    </tr>
+                    <tr>
+                        <td class="font-mono text-brand-green">12</td>
+                        <td><a href="#d12" class="font-semibold text-white hover:text-brand-green transition"><i class="fa-brands fa-debian text-red-400 mr-2 w-5 text-center"></i>Debian</a><div class="text-[11px] font-mono text-slate-500 mt-0.5">13.7 «Trixie»</div></td>
+                        <td>независимый</td>
+                        <td>любая на выбор при установке</td>
+                        <td class="font-mono text-xs">apt (deb)</td>
+                        <td><span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></td>
+                        <td>Эталон стабильности, гигантский репозиторий</td>
+                    </tr>
+                    <tr>
+                        <td class="font-mono text-brand-green">13</td>
+                        <td><a href="#d13" class="font-semibold text-white hover:text-brand-green transition"><i class="fa-brands fa-suse text-green-400 mr-2 w-5 text-center"></i>openSUSE Leap</a><div class="text-[11px] font-mono text-slate-500 mt-0.5">16.0</div></td>
+                        <td>SUSE Linux Enterprise</td>
+                        <td>KDE / GNOME / Xfce — при установке</td>
+                        <td class="font-mono text-xs">zypper (RPM), flatpak</td>
+                        <td><span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></td>
+                        <td>Корпоративная надёжность, YaST, снапшоты и откат</td>
+                    </tr>
+                    <tr>
+                        <td class="font-mono text-brand-green">14</td>
+                        <td><a href="#d14" class="font-semibold text-white hover:text-brand-green transition"><i class="fa-solid fa-dragon text-red-500 mr-2 w-5 text-center"></i>Kali Linux</a><div class="text-[11px] font-mono text-slate-500 mt-0.5">2026.2</div></td>
+                        <td>Debian Testing</td>
+                        <td>Xfce (или выбор при установке)</td>
+                        <td class="font-mono text-xs">apt (deb)</td>
+                        <td><span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></td>
+                        <td>Полный арсенал специалиста по безопасности</td>
+                    </tr>
+                    <tr>
+                        <td class="font-mono text-brand-green">15</td>
+                        <td><a href="#d15" class="font-semibold text-white hover:text-brand-green transition"><i class="fa-solid fa-mountain text-emerald-400 mr-2 w-5 text-center"></i>Manjaro</a><div class="text-[11px] font-mono text-slate-500 mt-0.5">26.1.0 GNOME</div></td>
+                        <td>Arch (свои репозитории)</td>
+                        <td>GNOME</td>
+                        <td class="font-mono text-xs">pacman/Pamac, AUR, flatpak</td>
+                        <td><span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></td>
+                        <td>Arch с комфортом: менеджеры драйверов и программ</td>
+                    </tr>
+                    <tr>
+                        <td class="font-mono text-brand-green">16</td>
+                        <td><a href="#d16" class="font-semibold text-white hover:text-brand-green transition"><i class="fa-brands fa-ubuntu text-orange-400 mr-2 w-5 text-center"></i>Ubuntu</a><div class="text-[11px] font-mono text-slate-500 mt-0.5">26.04.1 LTS</div></td>
+                        <td>Ubuntu (Canonical), Debian-наследие</td>
+                        <td>GNOME</td>
+                        <td class="font-mono text-xs">apt, snap, flatpak</td>
+                        <td><span class="diff"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></td>
+                        <td>Самая популярная и документированная система</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="reveal text-xs text-slate-500 mt-4">Сложность: ● — «всё само», ●● — минимум внимания, ●●● — стоит почитать инструкцию, ●●●● — для любопытных и настойчивых, ●●●●● — осознанный выбор энтузиаста. Все системы бесплатны и свободно скачиваются с официальных сайтов: ценность флешки — в готовой сборке, оформлении меню и руководстве.</p>
+        </div>
+    </section>
+
+    <!-- CARDS -->
+    <section id="cards" class="py-16 bg-slate-950">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8 reveal">
+                <span class="eyebrow">Подробные карточки</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-4">Каждая система — детально</h2>
+            </div>
+            <div class="mb-12 reveal">
+                <div class="flex flex-wrap gap-2 justify-center max-w-4xl mx-auto">
+                    <a href="#d01" class="chip flex-none text-xs"><i class="fa-solid fa-cube text-cyan-400"></i>01 · Arch Linux</a>
+                    <a href="#d02" class="chip flex-none text-xs"><i class="fa-solid fa-screwdriver-wrench text-slate-200"></i>02 · MX Linux</a>
+                    <a href="#d03" class="chip flex-none text-xs"><i class="fa-brands fa-fedora text-blue-400"></i>03 · Fedora Budgie</a>
+                    <a href="#d04" class="chip flex-none text-xs"><i class="fa-solid fa-gamepad text-purple-400"></i>04 · Nobara</a>
+                    <a href="#d05" class="chip flex-none text-xs"><i class="fa-brands fa-linux text-lime-400"></i>05 · Linux Mint</a>
+                    <a href="#d06" class="chip flex-none text-xs"><i class="fa-solid fa-feather text-gray-300"></i>06 · elementary OS</a>
+                    <a href="#d07" class="chip flex-none text-xs"><i class="fa-solid fa-dove text-blue-300"></i>07 · Lubuntu</a>
+                    <a href="#d08" class="chip flex-none text-xs"><i class="fa-solid fa-dog text-amber-400"></i>08 · Puppy Linux</a>
+                    <a href="#d09" class="chip flex-none text-xs"><i class="fa-solid fa-robot text-yellow-400"></i>09 · Pop!_OS</a>
+                    <a href="#d10" class="chip flex-none text-xs"><i class="fa-solid fa-shuttle-space text-indigo-300"></i>10 · EndeavourOS</a>
+                    <a href="#d11" class="chip flex-none text-xs"><i class="fa-solid fa-window-maximize text-sky-300"></i>11 · Zorin OS</a>
+                    <a href="#d12" class="chip flex-none text-xs"><i class="fa-brands fa-debian text-red-400"></i>12 · Debian</a>
+                    <a href="#d13" class="chip flex-none text-xs"><i class="fa-brands fa-suse text-green-400"></i>13 · openSUSE Leap</a>
+                    <a href="#d14" class="chip flex-none text-xs"><i class="fa-solid fa-dragon text-red-500"></i>14 · Kali Linux</a>
+                    <a href="#d15" class="chip flex-none text-xs"><i class="fa-solid fa-mountain text-emerald-400"></i>15 · Manjaro</a>
+                    <a href="#d16" class="chip flex-none text-xs"><i class="fa-brands fa-ubuntu text-orange-400"></i>16 · Ubuntu</a>
+                </div>
+            </div>
+            <div class="space-y-8">
+            <article id="d01" class="reveal glass-card rounded-3xl overflow-hidden">
+                <div class="p-6 md:p-8 pb-5 border-b border-slate-800 bg-slate-900/40 flex flex-wrap items-center gap-4">
+                    <span class="w-14 h-14 rounded-2xl bg-slate-950/80 border border-slate-700 flex items-center justify-center text-2xl text-cyan-400 flex-none"><i class="fa-solid fa-cube"></i></span>
+                    <div class="mr-auto min-w-0">
+                        <div class="font-mono text-[11px] text-slate-500 uppercase tracking-wider">Дистрибутив 01 из 16</div>
+                        <h3 class="text-xl md:text-2xl font-bold leading-tight">Arch Linux <span class="text-brand-green font-mono text-sm md:text-base">2026.10.01</span></h3>
+                        <p class="text-xs text-slate-500 mt-1">2026.10.01 · x86_64 · rolling-release · независимая база</p>
+                    </div>
+                    <div class="text-right flex-none">
+                        <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>
+                        <div class="text-[11px] text-slate-500 mt-1.5">сложность: энтузиаст</div>
+                    </div>
+                </div>
+                <div class="px-6 md:px-8 py-4 flex flex-wrap gap-2 border-b border-slate-800/70"><span class="chip">pacman + AUR</span><span class="chip">оболочку выбираете сами</span><span class="chip">ежемесячные ISO</span></div>
+                <div class="p-6 md:p-8 grid lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 space-y-5">
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-brand-green mb-2">Что это</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Независимый дистрибутив с моделью rolling-release: «версий» нет — система непрерывно обновляется, а ISO ежемесячно выпускается как свежий снимок. Философия Arch — минимализм и полный контроль: после установки вы получаете консоль и собираете систему под себя (KDE, GNOME, i3, Hyprland — что угодно). Пакетный менеджер pacman и пользовательский репозиторий AUR дают доступ практически к любому существующему софту, а документация Arch Wiki считается лучшей в мире Linux (есть русская).</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-sky-400 mb-2">Кому подойдёт</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Энтузиастам, которые хотят понимать Linux «до винтика» и всегда иметь самые свежие версии программ. Новичкам — только вместе с Wiki и мастером archinstall.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Установка</h4>
+                            <ol class="space-y-2 text-sm text-slate-300 leading-relaxed list-decimal pl-5 marker:text-brand-green marker:font-mono">
+                                <li>Загрузите ISO; в live-сессии вы сразу попадёте в консоль под root без пароля.</li><li>Подключите Wi-Fi: iwctl → station wlan0 connect «имя_сети» (для кабеля — пропустить).</li><li>Запустите мастер: archinstall — выберите диск, файловую систему, профиль рабочего стола (например, KDE), приложения, зеркало и пользователя. Либо ставьте вручную по Installation Guide в Wiki — это классический путь обучения.</li><li>По завершении — reboot, извлеките флешку.</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Первые шаги в терминале</h4>
+                            <div class="code-block"><span class="p">$</span> sudo pacman -Syu <span class="c"># полное обновление системы</span>
+<span class="p">$</span> sudo pacman -S firefox <span class="c"># установка программы</span>
+<span class="p">$</span> paru -S имя-пакета <span class="c"># AUR (после установки paru/yay)</span></div>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2">Нюансы</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">Rolling-release требует дисциплины: обновляйтесь минимум раз в неделю и заглядывайте на archlinux.org/news перед крупными обновлениями. Русскоязычные статьи в интернете часто устаревают — первоисточник только Wiki. Это самый «сделай сам» вариант на флешке.</p>
+                            <div class="callout callout-ok mt-4 text-sm">
+                            <i class="fa-solid fa-lightbulb mr-2"></i><b>Совет LinuxDrive.</b> Хотите Arch, но без ручной сборки? Начните с EndeavourOS (№10) или Manjaro (№15) — обе на этой же флешке.
+                        </div>
+                        </div>
+                    </div>
+                    <aside class="lg:col-span-1">
+                        <div class="rounded-2xl p-5 spec-box bg-slate-950/70 border border-slate-800 lg:sticky lg:top-32">
+                            <h4 class="font-bold text-sm text-white mb-1"><i class="fa-solid fa-id-card text-brand-green mr-2"></i>Кратко</h4>
+                            <dl>
+                                <dt>База</dt><dd>независимый</dd>
+                                <dt>Оболочка</dt><dd>любая на выбор</dd>
+                                <dt>Пакеты</dt><dd>pacman, AUR</dd>
+                                <dt>Релизы</dt><dd>rolling, ISO каждый месяц</dd>
+                                <dt>Live-доступ</dt><dd>root, без пароля</dd>
+                                <dt>ОЗУ</dt><dd>1 ГБ мин. / 2+ ГБ рек.</dd>
+                                <dt>Диск</dt><dd>10+ ГБ, комфортно 20+</dd>
+                                <dt>Secure Boot</dt><dd>Подписанного загрузчика нет — при проблемах с загрузкой после установки отключите Secure Boot.</dd>
+                                <dt>Файл на флешке</dt><dd class="mono">archlinux-2026.10.01-x86_64.iso</dd>
+                            </dl>
+                            <a href="order.html" class="btn-primary w-full py-2.5 text-sm mt-5 !rounded-lg"><i class="fa-solid fa-bolt"></i> Заказать флешку</a>
+                        </div>
+                    </aside>
+                </div>
+            </article>
+
+            <article id="d02" class="reveal glass-card rounded-3xl overflow-hidden">
+                <div class="p-6 md:p-8 pb-5 border-b border-slate-800 bg-slate-900/40 flex flex-wrap items-center gap-4">
+                    <span class="w-14 h-14 rounded-2xl bg-slate-950/80 border border-slate-700 flex items-center justify-center text-2xl text-slate-200 flex-none"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+                    <div class="mr-auto min-w-0">
+                        <div class="font-mono text-[11px] text-slate-500 uppercase tracking-wider">Дистрибутив 02 из 16</div>
+                        <h3 class="text-xl md:text-2xl font-bold leading-tight">MX Linux <span class="text-brand-green font-mono text-sm md:text-base">25.3 Xfce</span></h3>
+                        <p class="text-xs text-slate-500 mt-1">25.3 · x64 · на базе Debian Stable · оболочка Xfce</p>
+                    </div>
+                    <div class="text-right flex-none">
+                        <span class="diff"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span>
+                        <div class="text-[11px] text-slate-500 mt-1.5">сложность: легко</div>
+                    </div>
+                </div>
+                <div class="px-6 md:px-8 py-4 flex flex-wrap gap-2 border-b border-slate-800/70"><span class="chip">apt + MX Tools</span><span class="chip">systemd или SysVinit</span><span class="chip">кодеки включены</span></div>
+                <div class="p-6 md:p-8 grid lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 space-y-5">
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-brand-green mb-2">Что это</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Практичный дистрибутив на стабильной базе Debian с лёгкой оболочкой Xfce — многолетний №1 по популярности на DistroWatch. Визитная карточка — набор фирменных MX Tools: снапшоты всей системы в ISO-файл, установка кодеков, очистка, управление загрузкой и автологином, «ремонт» GRUB. При загрузке можно выбрать init-систему: современный systemd или классический SysVinit. Мультимедиа-кодеки и драйверы — уже в комплекте.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-sky-400 mb-2">Кому подойдёт</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Тем, кто хочет надёжный «Debian по-человечески» на любом железе, включая старое; прагматикам и новичкам, которым важны готовые инструменты вместо консольной магии.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Установка</h4>
+                            <ol class="space-y-2 text-sm text-slate-300 leading-relaxed list-decimal pl-5 marker:text-brand-green marker:font-mono">
+                                <li>Загрузите ISO — live-сессия стартует автоматически, логин demo, пароль demo.</li><li>Проверьте в live-режиме сеть, звук и экран.</li><li>Запустите ярлык Install MX Linux на рабочем столе: язык → диск (автоматическая или ручная разметка) → имя пользователя и пароль.</li><li>После установки перезагрузитесь и извлеките флешку.</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Первые шаги в терминале</h4>
+                            <div class="code-block"><span class="p">$</span> sudo apt update &amp;&amp; sudo apt upgrade <span class="c"># обновления</span>
+<span class="p">$</span> mx-tools <span class="c"># или меню → MX Tools</span></div>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2">Нюансы</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">На флешке — стандартная редакция Xfce x64. Для совсем нового железа (свежие GPU/CPU) у MX есть редакция AHS с более новым ядром — скачайте её ISO и просто положите на флешку. Фирменный MX Snapshot делает полную копию настроенной системы в один файл — идеально для бэкапов.</p>
+                            
+                        </div>
+                    </div>
+                    <aside class="lg:col-span-1">
+                        <div class="rounded-2xl p-5 spec-box bg-slate-950/70 border border-slate-800 lg:sticky lg:top-32">
+                            <h4 class="font-bold text-sm text-white mb-1"><i class="fa-solid fa-id-card text-brand-green mr-2"></i>Кратко</h4>
+                            <dl>
+                                <dt>База</dt><dd>Debian Stable</dd>
+                                <dt>Оболочка</dt><dd>Xfce</dd>
+                                <dt>Пакеты</dt><dd>apt, flatpak</dd>
+                                <dt>Релизы</dt><dd>~раз в год + точечные</dd>
+                                <dt>Live-доступ</dt><dd>demo / demo (root: root/root)</dd>
+                                <dt>ОЗУ</dt><dd>1 ГБ мин. / 4 ГБ рек.</dd>
+                                <dt>Диск</dt><dd>от 20 ГБ</dd>
+                                <dt>Secure Boot</dt><dd>Подписанный загрузчик — работает при включённом Secure Boot.</dd>
+                                <dt>Файл на флешке</dt><dd class="mono">MX-25.3_Xfce_x64.iso</dd>
+                            </dl>
+                            <a href="order.html" class="btn-primary w-full py-2.5 text-sm mt-5 !rounded-lg"><i class="fa-solid fa-bolt"></i> Заказать флешку</a>
+                        </div>
+                    </aside>
+                </div>
+            </article>
+
+            <article id="d03" class="reveal glass-card rounded-3xl overflow-hidden">
+                <div class="p-6 md:p-8 pb-5 border-b border-slate-800 bg-slate-900/40 flex flex-wrap items-center gap-4">
+                    <span class="w-14 h-14 rounded-2xl bg-slate-950/80 border border-slate-700 flex items-center justify-center text-2xl text-blue-400 flex-none"><i class="fa-brands fa-fedora"></i></span>
+                    <div class="mr-auto min-w-0">
+                        <div class="font-mono text-[11px] text-slate-500 uppercase tracking-wider">Дистрибутив 03 из 16</div>
+                        <h3 class="text-xl md:text-2xl font-bold leading-tight">Fedora Budgie <span class="text-brand-green font-mono text-sm md:text-base">44</span></h3>
+                        <p class="text-xs text-slate-500 mt-1">44-1.7 · x86_64 · спин Fedora с оболочкой Budgie</p>
+                    </div>
+                    <div class="text-right flex-none">
+                        <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>
+                        <div class="text-[11px] text-slate-500 mt-1.5">сложность: средне</div>
+                    </div>
+                </div>
+                <div class="px-6 md:px-8 py-4 flex flex-wrap gap-2 border-b border-slate-800/70"><span class="chip">dnf + flatpak</span><span class="chip">Wayland · PipeWire</span><span class="chip">btrfs по умолчанию</span><span class="chip">SELinux</span></div>
+                <div class="p-6 md:p-8 grid lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 space-y-5">
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-brand-green mb-2">Что это</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Fedora — витрина новых технологий Linux (свежие ядра, Wayland, PipeWire, Flatpak; именно Fedora обкатывает то, что позже появляется везде). Budgie — лёгкая и элегантная оболочка, выросшая из проекта Solus: классическая панель, меню приложений, апплеты — быстрая и визуально приятная без тяжёлых эффектов. Новые версии Fedora выходят примерно раз в 6 месяцев.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-sky-400 mb-2">Кому подойдёт</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Разработчикам и всем, кто хочет свежий софт без рисков rolling-release; тем, кому GNOME/KDE кажутся перегруженными, а классика — скучной.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Установка</h4>
+                            <ol class="space-y-2 text-sm text-slate-300 leading-relaxed list-decimal pl-5 marker:text-brand-green marker:font-mono">
+                                <li>Загрузите ISO: live-сессия с автологином (пользователь liveuser, пароль не требуется).</li><li>Запустите Install to Hard Drive — откроется установщик Anaconda.</li><li>Выберите язык, в разделе «Место установки» — диск (автоматическая разметка подходит почти всегда), задайте пользователя и пароль.</li><li>«Начать установку» → после завершения перезагрузитесь без флешки.</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Первые шаги в терминале</h4>
+                            <div class="code-block"><span class="p">$</span> sudo dnf upgrade --refresh <span class="c"># обновление системы</span>
+<span class="p">$</span> flatpak install flathub &lt;имя-приложения&gt; <span class="c"># flatpak-софт</span></div>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2">Нюансы</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">Для проприетарных кодеков и драйверов NVIDIA подключите репозиторий RPM Fusion (в один клик через «Центр приложений» или с сайта rpmfusion.org). Каждую версию Fedora поддерживают ~13 месяцев — раз в год-полтора выполняйте обновление релиза. Snap-пакеты не приветствуются — основной формат Flatpak.</p>
+                            <div class="callout callout-ok mt-4 text-sm">
+                            <i class="fa-solid fa-lightbulb mr-2"></i><b>Совет LinuxDrive.</b> Нужна система «сразу для игр»? Смотрите Nobara (№04) — она на той же базе.
+                        </div>
+                        </div>
+                    </div>
+                    <aside class="lg:col-span-1">
+                        <div class="rounded-2xl p-5 spec-box bg-slate-950/70 border border-slate-800 lg:sticky lg:top-32">
+                            <h4 class="font-bold text-sm text-white mb-1"><i class="fa-solid fa-id-card text-brand-green mr-2"></i>Кратко</h4>
+                            <dl>
+                                <dt>База</dt><dd>Fedora (независимая)</dd>
+                                <dt>Оболочка</dt><dd>Budgie</dd>
+                                <dt>Пакеты</dt><dd>dnf (RPM), flatpak</dd>
+                                <dt>Релизы</dt><dd>~каждые 6 месяцев</dd>
+                                <dt>Live-доступ</dt><dd>liveuser, авто-вход</dd>
+                                <dt>ОЗУ</dt><dd>2 ГБ мин. / 4 ГБ рек.</dd>
+                                <dt>Диск</dt><dd>от 20 ГБ</dd>
+                                <dt>Secure Boot</dt><dd>Подписанный загрузчик — работает при включённом Secure Boot.</dd>
+                                <dt>Файл на флешке</dt><dd class="mono">Fedora-Budgie-Live-44-1.7.x86_64.iso</dd>
+                            </dl>
+                            <a href="order.html" class="btn-primary w-full py-2.5 text-sm mt-5 !rounded-lg"><i class="fa-solid fa-bolt"></i> Заказать флешку</a>
+                        </div>
+                    </aside>
+                </div>
+            </article>
+
+            <article id="d04" class="reveal glass-card rounded-3xl overflow-hidden">
+                <div class="p-6 md:p-8 pb-5 border-b border-slate-800 bg-slate-900/40 flex flex-wrap items-center gap-4">
+                    <span class="w-14 h-14 rounded-2xl bg-slate-950/80 border border-slate-700 flex items-center justify-center text-2xl text-purple-400 flex-none"><i class="fa-solid fa-gamepad"></i></span>
+                    <div class="mr-auto min-w-0">
+                        <div class="font-mono text-[11px] text-slate-500 uppercase tracking-wider">Дистрибутив 04 из 16</div>
+                        <h3 class="text-xl md:text-2xl font-bold leading-tight">Nobara <span class="text-brand-green font-mono text-sm md:text-base">44 Official</span></h3>
+                        <p class="text-xs text-slate-500 mt-1">44 Official · сборка 2026-10-13 · x86_64 · на базе Fedora 44</p>
+                    </div>
+                    <div class="text-right flex-none">
+                        <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>
+                        <div class="text-[11px] text-slate-500 mt-1.5">сложность: средне</div>
+                    </div>
+                </div>
+                <div class="px-6 md:px-8 py-4 flex flex-wrap gap-2 border-b border-slate-800/70"><span class="chip">Steam · Proton · Lutris из коробки</span><span class="chip">ядро с игровыми патчами</span><span class="chip">KDE Plasma</span></div>
+                <div class="p-6 md:p-8 grid lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 space-y-5">
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-brand-green mb-2">Что это</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Проект Томаса Кридера (GloriousEggroll), автора знаменитых сборок Proton-GE для Steam. Это Fedora, доведённая до состояния «включил — играешь»: ядро с патчами для игр и отзывчивости, предустановленные Steam, Lutris, Wine, OBS Studio для стримов, полный набор кодеков, улучшенная поддержка геймпадов. Редакция Official — основная, с оболочкой KDE Plasma и максимальным набором игровых доработок.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-sky-400 mb-2">Кому подойдёт</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Геймерам и стримерам, владельцам карт NVIDIA/AMD, всем, кто хочет игровую Linux-станцию без многочасовой настройки.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Установка</h4>
+                            <ol class="space-y-2 text-sm text-slate-300 leading-relaxed list-decimal pl-5 marker:text-brand-green marker:font-mono">
+                                <li>Загрузите ISO — live-сессия с автологином (как в Fedora).</li><li>Откройте приложение Nobara Welcome: при необходимости установите драйвер NVIDIA и проприетарные дополнения в один клик.</li><li>Запустите установщик (Anaconda): язык → диск → пользователь → «Начать установку».</li><li>После перезагрузки Steam и игровые инструменты уже в меню приложений.</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Первые шаги в терминале</h4>
+                            <div class="code-block"><span class="p">$</span> sudo dnf upgrade --refresh <span class="c"># обновления (или Nobara Package Manager)</span>
+<span class="c"># Steam → Settings → Compatibility — включить Steam Play для всех игр</span></div>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2">Нюансы</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">Secure Boot не поддерживается (неподписанное кастомное ядро) — отключите его в UEFI. Проект ведёт небольшая команда: обновления идут через собственные репозитории Nobara — не смешивайте их с инструкциями для «чистой» Fedora; поддержка — на форуме и в Discord проекта.</p>
+                            <div class="callout callout-ok mt-4 text-sm">
+                            <i class="fa-solid fa-lightbulb mr-2"></i><b>Совет LinuxDrive.</b> Нужна более консервативная система на той же базе — берите Fedora Budgie (№03).
+                        </div>
+                        </div>
+                    </div>
+                    <aside class="lg:col-span-1">
+                        <div class="rounded-2xl p-5 spec-box bg-slate-950/70 border border-slate-800 lg:sticky lg:top-32">
+                            <h4 class="font-bold text-sm text-white mb-1"><i class="fa-solid fa-id-card text-brand-green mr-2"></i>Кратко</h4>
+                            <dl>
+                                <dt>База</dt><dd>Fedora</dd>
+                                <dt>Оболочка</dt><dd>KDE Plasma (Official)</dd>
+                                <dt>Пакеты</dt><dd>dnf + репозитории Nobara, RPM Fusion, flatpak</dd>
+                                <dt>Релизы</dt><dd>вслед за Fedora (~6 мес.) + постоянные обновления</dd>
+                                <dt>Live-доступ</dt><dd>liveuser, авто-вход</dd>
+                                <dt>ОЗУ</dt><dd>4 ГБ мин. / 8 ГБ рек.</dd>
+                                <dt>Диск</dt><dd>от 25 ГБ (+ игры)</dd>
+                                <dt>Secure Boot</dt><dd>Не поддерживается (неподписанное кастомное ядро) — отключите Secure Boot в UEFI.</dd>
+                                <dt>Файл на флешке</dt><dd class="mono">Nobara-44-Official-2026-10-13.iso</dd>
+                            </dl>
+                            <a href="order.html" class="btn-primary w-full py-2.5 text-sm mt-5 !rounded-lg"><i class="fa-solid fa-bolt"></i> Заказать флешку</a>
+                        </div>
+                    </aside>
+                </div>
+            </article>
+
+            <article id="d05" class="reveal glass-card rounded-3xl overflow-hidden">
+                <div class="p-6 md:p-8 pb-5 border-b border-slate-800 bg-slate-900/40 flex flex-wrap items-center gap-4">
+                    <span class="w-14 h-14 rounded-2xl bg-slate-950/80 border border-slate-700 flex items-center justify-center text-2xl text-lime-400 flex-none"><i class="fa-brands fa-linux"></i></span>
+                    <div class="mr-auto min-w-0">
+                        <div class="font-mono text-[11px] text-slate-500 uppercase tracking-wider">Дистрибутив 05 из 16</div>
+                        <h3 class="text-xl md:text-2xl font-bold leading-tight">Linux Mint <span class="text-brand-green font-mono text-sm md:text-base">22.3 Cinnamon</span></h3>
+                        <p class="text-xs text-slate-500 mt-1">22.3 · 64-bit · на базе Ubuntu LTS · оболочка Cinnamon</p>
+                    </div>
+                    <div class="text-right flex-none">
+                        <span class="diff"><i class="on"></i><i></i><i></i><i></i><i></i></span>
+                        <div class="text-[11px] text-slate-500 mt-1.5">сложность: очень легко</div>
+                    </div>
+                </div>
+                <div class="px-6 md:px-8 py-4 flex flex-wrap gap-2 border-b border-slate-800/70"><span class="chip">apt + flatpak</span><span class="chip">менеджер обновлений</span><span class="chip">менеджер драйверов</span><span class="chip">кодеки в комплекте</span></div>
+                <div class="p-6 md:p-8 grid lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 space-y-5">
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-brand-green mb-2">Что это</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Самый рекомендуемый дистрибутив для новичков. База — Ubuntu LTS (поддержка ветки 22.x — до 2029 года), оболочка — собственная Cinnamon: рабочий стол с привычной по Windows логикой — панель снизу, меню «Пуск», системный трей. Из коробки: мультимедиа-кодеки, темы Mint-Y и фирменные инструменты — Менеджер обновлений (гибкие правила с защитой от поломок), Менеджер драйверов (NVIDIA в два клика), Менеджер программ (deb + flatpak). Snap-пакеты Mint по умолчанию не использует.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-sky-400 mb-2">Кому подойдёт</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Переходящим с Windows; домашним и офисным ПК; всем, кто хочет «просто работающий» компьютер без обучения.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Установка</h4>
+                            <ol class="space-y-2 text-sm text-slate-300 leading-relaxed list-decimal pl-5 marker:text-brand-green marker:font-mono">
+                                <li>Загрузите ISO — live-сессия с автологином (пользователь mint, без пароля).</li><li>Дважды щёлкните Install Linux Mint на рабочем столе.</li><li>Язык → раскладка → предложит подключить мультимедиа-кодеки — согласитесь.</li><li>Тип установки: «Стереть диск» (всё удалить) или «Рядом с Windows» / «Другой вариант» (ручная разметка).</li><li>Создайте пользователя и пароль → «Установить» → ~20 минут → перезагрузка без флешки.</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Первые шаги в терминале</h4>
+                            <div class="code-block"><span class="p">$</span> sudo apt update &amp;&amp; sudo apt upgrade <span class="c"># обновления</span>
+<span class="c"># Меню → «Менеджер драйверов» — проприетарный драйвер NVIDIA/AMD</span></div>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2">Нюансы</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">На ПК с 2 ГБ ОЗУ и меньше присмотритесь к Lubuntu (№07) или Puppy Linux (№08); у Mint есть и более лёгкая редакция MATE — её ISO при желании можно добавить на флешку самостоятельно. В «Менеджере обновлений» не отключайте уровни обновлений без причины — они защищают систему.</p>
+                            
+                        </div>
+                    </div>
+                    <aside class="lg:col-span-1">
+                        <div class="rounded-2xl p-5 spec-box bg-slate-950/70 border border-slate-800 lg:sticky lg:top-32">
+                            <h4 class="font-bold text-sm text-white mb-1"><i class="fa-solid fa-id-card text-brand-green mr-2"></i>Кратко</h4>
+                            <dl>
+                                <dt>База</dt><dd>Ubuntu 24.04 LTS</dd>
+                                <dt>Оболочка</dt><dd>Cinnamon</dd>
+                                <dt>Пакеты</dt><dd>apt, flatpak</dd>
+                                <dt>Релизы</dt><dd>~раз в полгода; поддержка ветки до 2029</dd>
+                                <dt>Live-доступ</dt><dd>mint, авто-вход</dd>
+                                <dt>ОЗУ</dt><dd>2 ГБ мин. / 4 ГБ рек.</dd>
+                                <dt>Диск</dt><dd>от 20 ГБ</dd>
+                                <dt>Secure Boot</dt><dd>Подписанный загрузчик — работает при включённом Secure Boot.</dd>
+                                <dt>Файл на флешке</dt><dd class="mono">linuxmint-22.3-cinnamon-64bit.iso</dd>
+                            </dl>
+                            <a href="order.html" class="btn-primary w-full py-2.5 text-sm mt-5 !rounded-lg"><i class="fa-solid fa-bolt"></i> Заказать флешку</a>
+                        </div>
+                    </aside>
+                </div>
+            </article>
+
+            <article id="d06" class="reveal glass-card rounded-3xl overflow-hidden">
+                <div class="p-6 md:p-8 pb-5 border-b border-slate-800 bg-slate-900/40 flex flex-wrap items-center gap-4">
+                    <span class="w-14 h-14 rounded-2xl bg-slate-950/80 border border-slate-700 flex items-center justify-center text-2xl text-gray-300 flex-none"><i class="fa-solid fa-feather"></i></span>
+                    <div class="mr-auto min-w-0">
+                        <div class="font-mono text-[11px] text-slate-500 uppercase tracking-wider">Дистрибутив 06 из 16</div>
+                        <h3 class="text-xl md:text-2xl font-bold leading-tight">elementary OS <span class="text-brand-green font-mono text-sm md:text-base">8.1 «Horus»</span></h3>
+                        <p class="text-xs text-slate-500 mt-1">8.1 stable · amd64 · сборка 2026-02-19 · на базе Ubuntu LTS</p>
+                    </div>
+                    <div class="text-right flex-none">
+                        <span class="diff"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span>
+                        <div class="text-[11px] text-slate-500 mt-1.5">сложность: легко</div>
+                    </div>
+                </div>
+                <div class="px-6 md:px-8 py-4 flex flex-wrap gap-2 border-b border-slate-800/70"><span class="chip">Pantheon</span><span class="chip">AppCenter (flatpak)</span><span class="chip">жесты тачпада</span><span class="chip">экранный контроль</span></div>
+                <div class="p-6 md:p-8 grid lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 space-y-5">
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-brand-green mb-2">Что это</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">«Linux с дизайном macOS»: собственная оболочка Pantheon — док снизу, аккуратная верхняя панель, строгие правила оформления для всех приложений. Свои продуманные программы: файлы, почта, музыка, календарь, терминал. AppCenter устанавливает flatpak-приложения и поддерживает модель «заплати сколько хочешь» — деньги идут разработчикам. Есть родительский контроль (Screen Time), режим «Не беспокоить», приватность по умолчанию. База — Ubuntu LTS, поэтому совместимость с deb-софтом отличная.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-sky-400 mb-2">Кому подойдёт</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Переходящим с macOS; эстетам; ноутбукам с хорошими тачпадами; тем, кто ценит порядок и минимализм вместо тысяч настроек.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Установка</h4>
+                            <ol class="space-y-2 text-sm text-slate-300 leading-relaxed list-decimal pl-5 marker:text-brand-green marker:font-mono">
+                                <li>Загрузите ISO — после выбора языка стартует «демо-режим» live-сессии, пароль не требуется.</li><li>Проверьте тачпад, Wi-Fi, звук и разрешение экрана.</li><li>Запустите Install elementary в доке: язык → раскладка → диск → пользователь и пароль.</li><li>После установки перезагрузитесь без флешки и войдите в свой аккаунт.</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Первые шаги в терминале</h4>
+                            <div class="code-block"><span class="p">$</span> sudo apt update &amp;&amp; sudo apt upgrade <span class="c"># системные обновления</span>
+<span class="c"># AppCenter (в доке) — установка приложений; Настройки → Онлайн-аккаунты</span></div>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2">Нюансы</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">Философия «не захламлять»: нет иконок на рабочем столе, минимум переключателей — кому-то покажется аскетично. Значительная часть приложений — Flatpak из AppCenter; классические deb-пакеты тоже работают. Кастомизация ограничена сознательно — это часть дизайна продукта.</p>
+                            
+                        </div>
+                    </div>
+                    <aside class="lg:col-span-1">
+                        <div class="rounded-2xl p-5 spec-box bg-slate-950/70 border border-slate-800 lg:sticky lg:top-32">
+                            <h4 class="font-bold text-sm text-white mb-1"><i class="fa-solid fa-id-card text-brand-green mr-2"></i>Кратко</h4>
+                            <dl>
+                                <dt>База</dt><dd>Ubuntu LTS</dd>
+                                <dt>Оболочка</dt><dd>Pantheon</dd>
+                                <dt>Пакеты</dt><dd>apt, flatpak (AppCenter)</dd>
+                                <dt>Релизы</dt><dd>мажорные ~раз в 2 года + точечные</dd>
+                                <dt>Live-доступ</dt><dd>демо-режим, авто-вход</dd>
+                                <dt>ОЗУ</dt><dd>4 ГБ мин. / 8 ГБ рек.</dd>
+                                <dt>Диск</dt><dd>от 15 ГБ</dd>
+                                <dt>Secure Boot</dt><dd>Подписанный загрузчик — работает при включённом Secure Boot.</dd>
+                                <dt>Файл на флешке</dt><dd class="mono">elementaryos-8.1-stable-amd64.20260219.iso</dd>
+                            </dl>
+                            <a href="order.html" class="btn-primary w-full py-2.5 text-sm mt-5 !rounded-lg"><i class="fa-solid fa-bolt"></i> Заказать флешку</a>
+                        </div>
+                    </aside>
+                </div>
+            </article>
+
+            <article id="d07" class="reveal glass-card rounded-3xl overflow-hidden">
+                <div class="p-6 md:p-8 pb-5 border-b border-slate-800 bg-slate-900/40 flex flex-wrap items-center gap-4">
+                    <span class="w-14 h-14 rounded-2xl bg-slate-950/80 border border-slate-700 flex items-center justify-center text-2xl text-blue-300 flex-none"><i class="fa-solid fa-dove"></i></span>
+                    <div class="mr-auto min-w-0">
+                        <div class="font-mono text-[11px] text-slate-500 uppercase tracking-wider">Дистрибутив 07 из 16</div>
+                        <h3 class="text-xl md:text-2xl font-bold leading-tight">Lubuntu <span class="text-brand-green font-mono text-sm md:text-base">24.04.4 LTS</span></h3>
+                        <p class="text-xs text-slate-500 mt-1">24.04.4 «Noble Numbat» · amd64 · официальный флейвор Ubuntu · LXQt</p>
+                    </div>
+                    <div class="text-right flex-none">
+                        <span class="diff"><i class="on"></i><i></i><i></i><i></i><i></i></span>
+                        <div class="text-[11px] text-slate-500 mt-1.5">сложность: очень легко</div>
+                    </div>
+                </div>
+                <div class="px-6 md:px-8 py-4 flex flex-wrap gap-2 border-b border-slate-800/70"><span class="chip">apt</span><span class="chip">LTS до 2029</span><span class="chip">установщик Calamares</span></div>
+                <div class="p-6 md:p-8 grid lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 space-y-5">
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-brand-green mb-2">Что это</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Официальная редакция Ubuntu с лёгкой оболочкой LXQt — тот же Ubuntu-репозиторий, та же LTS-поддержка и документация, но интерфейс расходует минимум ресурсов. Версия 24.04.4 — четвёртое обслуживающее обновление ветки «Noble Numbat»: весь накопленный набор исправлений уже внутри. Из коробки — всё необходимое: браузер, офис, медиаплеер, менеджер файлов; установщик Calamares простой и быстрый.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-sky-400 mb-2">Кому подойдёт</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Нетбукам и компьютерам с 1–4 ГБ ОЗУ; всем, кто предпочитает скорость эффектам; вторая жизнь для старого ноутбука.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Установка</h4>
+                            <ol class="space-y-2 text-sm text-slate-300 leading-relaxed list-decimal pl-5 marker:text-brand-green marker:font-mono">
+                                <li>Загрузите ISO — live-сессия с автологином (пользователь ubuntu, без пароля).</li><li>Проверьте сеть и периферию в live-режиме.</li><li>Запустите Install Lubuntu: язык → раскладка → разделы диска → пользователь → установка (~15–20 минут).</li><li>Перезагрузитесь без флешки.</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Первые шаги в терминале</h4>
+                            <div class="code-block"><span class="p">$</span> sudo apt update &amp;&amp; sudo apt upgrade <span class="c"># обновления</span>
+<span class="p">$</span> sudo apt install htop mc vlc <span class="c"># пример установки программ</span></div>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2">Нюансы</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">Интерфейс аскетичный — панели, апплеты и темы настраиваются вручную (ПКМ по панели → «Настроить»). Тяжёлый контент (современный браузер с десятком вкладок + видео) на 1–2 ГБ ОЗУ всё равно будет трудным — для совсем слабого железа возьмите Puppy Linux (№08). Всё, что написано про Ubuntu, применимо и здесь.</p>
+                            
+                        </div>
+                    </div>
+                    <aside class="lg:col-span-1">
+                        <div class="rounded-2xl p-5 spec-box bg-slate-950/70 border border-slate-800 lg:sticky lg:top-32">
+                            <h4 class="font-bold text-sm text-white mb-1"><i class="fa-solid fa-id-card text-brand-green mr-2"></i>Кратко</h4>
+                            <dl>
+                                <dt>База</dt><dd>Ubuntu 24.04 LTS</dd>
+                                <dt>Оболочка</dt><dd>LXQt</dd>
+                                <dt>Пакеты</dt><dd>apt, snap</dd>
+                                <dt>Релизы</dt><dd>LTS: поддержка ветки до 2029</dd>
+                                <dt>Live-доступ</dt><dd>ubuntu, авто-вход</dd>
+                                <dt>ОЗУ</dt><dd>1 ГБ мин. / 2–4 ГБ рек.</dd>
+                                <dt>Диск</dt><dd>от 10–20 ГБ</dd>
+                                <dt>Secure Boot</dt><dd>Подписанный загрузчик — работает при включённом Secure Boot.</dd>
+                                <dt>Файл на флешке</dt><dd class="mono">lubuntu-24.04.4-desktop-amd64.iso</dd>
+                            </dl>
+                            <a href="order.html" class="btn-primary w-full py-2.5 text-sm mt-5 !rounded-lg"><i class="fa-solid fa-bolt"></i> Заказать флешку</a>
+                        </div>
+                    </aside>
+                </div>
+            </article>
+
+            <article id="d08" class="reveal glass-card rounded-3xl overflow-hidden">
+                <div class="p-6 md:p-8 pb-5 border-b border-slate-800 bg-slate-900/40 flex flex-wrap items-center gap-4">
+                    <span class="w-14 h-14 rounded-2xl bg-slate-950/80 border border-slate-700 flex items-center justify-center text-2xl text-amber-400 flex-none"><i class="fa-solid fa-dog"></i></span>
+                    <div class="mr-auto min-w-0">
+                        <div class="font-mono text-[11px] text-slate-500 uppercase tracking-wider">Дистрибутив 08 из 16</div>
+                        <h3 class="text-xl md:text-2xl font-bold leading-tight">Puppy Linux <span class="text-brand-green font-mono text-sm md:text-base">TrixiePup64 Wayland</span></h3>
+                        <p class="text-xs text-slate-500 mt-1">версия 2606 · сборка 261003 (2026-10-03) · 64-bit · на пакетах Debian 13 «Trixie»</p>
+                    </div>
+                    <div class="text-right flex-none">
+                        <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>
+                        <div class="text-[11px] text-slate-500 mt-1.5">сложность: непривычно</div>
+                    </div>
+                </div>
+                <div class="px-6 md:px-8 py-4 flex flex-wrap gap-2 border-b border-slate-800/70"><span class="chip">работает целиком в ОЗУ</span><span class="chip">Wayland-редакция</span><span class="chip">образ ~1 ГБ</span><span class="chip">карманная система</span></div>
+                <div class="p-6 md:p-8 grid lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 space-y-5">
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-brand-green mb-2">Что это</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Puppy — семейство ультракомпактных систем: весь дистрибутив (~1 ГБ) при старте загружается в оперативную память и работает молниеносно даже на компьютерах двадцатилетней давности. TrixiePup64 собран на пакетах Debian 13 «Trixie» — то есть совместим с её репозиториями, а Wayland-редакция использует современный графический стек вместо X11. Настройки сохраняются в специальный файл/папку (savefile/savefolder) — флешка становится «карманной системой», которая носит ваш рабочий стол с собой.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-sky-400 mb-2">Кому подойдёт</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Очень старому и слабому железу; для диагностики, восстановления файлов и интернета «на чужом ПК»; как портативная система в кармане.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Использование (установка обычно не нужна)</h4>
+                            <ol class="space-y-2 text-sm text-slate-300 leading-relaxed list-decimal pl-5 marker:text-brand-green marker:font-mono">
+                                <li>Загрузите ISO — система стартует в ОЗУ за секунды; пройдите мастер первого запуска (клавиатура, сеть).</li><li>Работайте как обычно: браузер, файлы, офис — всё включено; программы доустанавливаются через Puppy Package Manager (репозитории Debian trixie) или Quickpet.</li><li>Перед выключением Puppy предложит сохранить сессию — выберите раздел (лучше ext4 на диске или вторая флешка) и размер save-файла. Без сохранения каждый старт будет «чистым».</li><li>Полноценная «frugal»-установка на диск возможна, но Puppy раскрывается именно в портативном режиме.</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Первые шаги в терминале</h4>
+                            <div class="code-block"><span class="p">$</span> apt update &amp;&amp; apt install &lt;имя-пакета&gt; <span class="c"># сессия работает от root — sudo не нужен</span></div>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2">Нюансы</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">По традиции Puppy работает от root без пароля — это удобно, но снижает безопасность: не используйте его для банк-клиентов и чувствительных данных в непроверенных сетях. Wayland-редакция запускает X11-программы через XWayland. Как основную повседневную систему Puppy выбирают редко — это специалист по особым задачам.</p>
+                            
+                        </div>
+                    </div>
+                    <aside class="lg:col-span-1">
+                        <div class="rounded-2xl p-5 spec-box bg-slate-950/70 border border-slate-800 lg:sticky lg:top-32">
+                            <h4 class="font-bold text-sm text-white mb-1"><i class="fa-solid fa-id-card text-brand-green mr-2"></i>Кратко</h4>
+                            <dl>
+                                <dt>База</dt><dd>Debian 13 «Trixie»</dd>
+                                <dt>Оболочка</dt><dd>лёгкий Wayland-композитор</dd>
+                                <dt>Пакеты</dt><dd>PPM (deb), apt</dd>
+                                <dt>Релизы</dt><dd>нерегулярные, силами сообщества</dd>
+                                <dt>Live-доступ</dt><dd>root, без пароля</dd>
+                                <dt>ОЗУ</dt><dd>хватает 1 ГБ; комфортно 2+ ГБ</dd>
+                                <dt>Диск</dt><dd>не требуется (save-файл 1–4 ГБ — по желанию)</dd>
+                                <dt>Secure Boot</dt><dd>Подписанного загрузчика нет — при проблемах отключите Secure Boot.</dd>
+                                <dt>Файл на флешке</dt><dd class="mono">PuppyLinuxTrixiePup64-Wayland-2606-261003.iso</dd>
+                            </dl>
+                            <a href="order.html" class="btn-primary w-full py-2.5 text-sm mt-5 !rounded-lg"><i class="fa-solid fa-bolt"></i> Заказать флешку</a>
+                        </div>
+                    </aside>
+                </div>
+            </article>
+
+            <article id="d09" class="reveal glass-card rounded-3xl overflow-hidden">
+                <div class="p-6 md:p-8 pb-5 border-b border-slate-800 bg-slate-900/40 flex flex-wrap items-center gap-4">
+                    <span class="w-14 h-14 rounded-2xl bg-slate-950/80 border border-slate-700 flex items-center justify-center text-2xl text-yellow-400 flex-none"><i class="fa-solid fa-robot"></i></span>
+                    <div class="mr-auto min-w-0">
+                        <div class="font-mono text-[11px] text-slate-500 uppercase tracking-wider">Дистрибутив 09 из 16</div>
+                        <h3 class="text-xl md:text-2xl font-bold leading-tight">Pop!_OS <span class="text-brand-green font-mono text-sm md:text-base">24.04</span></h3>
+                        <p class="text-xs text-slate-500 mt-1">24.04 · amd64 · образ «generic 28» · разработка System76</p>
+                    </div>
+                    <div class="text-right flex-none">
+                        <span class="diff"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span>
+                        <div class="text-[11px] text-slate-500 mt-1.5">сложность: легко</div>
+                    </div>
+                </div>
+                <div class="px-6 md:px-8 py-4 flex flex-wrap gap-2 border-b border-slate-800/70"><span class="chip">COSMIC на Rust</span><span class="chip">тайлинг окон</span><span class="chip">NVIDIA из коробки</span><span class="chip">шифрование в 1 клик</span></div>
+                <div class="p-6 md:p-8 grid lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 space-y-5">
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-brand-green mb-2">Что это</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Дистрибутив производителя Linux-компьютеров System76 на базе Ubuntu LTS. Версия 24.04 — историческая: в ней дебютировала собственная оболочка COSMIC, написанная с нуля на Rust — быстрая, плавная, с продуманным автоматическим тайлингом окон, рабочими пространствами и клавиатурной навигацией. Pop!_OS славится поддержкой видеокарт (удобная установка драйверов NVIDIA), работой на ноутбуках с гибридной графикой и геймингом. Образ generic на этой флешке подходит для подавляющего большинства ПК.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-sky-400 mb-2">Кому подойдёт</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Геймерам; владельцам NVIDIA; разработчикам и любителям клавиатурных workflow; ноутбукам — управление питанием и гибридной графикой здесь одно из лучших.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Установка</h4>
+                            <ol class="space-y-2 text-sm text-slate-300 leading-relaxed list-decimal pl-5 marker:text-brand-green marker:font-mono">
+                                <li>Загрузите ISO — графическая сессия запускается автоматически, пароль не требуется.</li><li>Запустите установщик и выберите язык и раскладку.</li><li>Разметка: «Clean install» (стереть диск) или «Custom» (ручная); здесь же — включение шифрования всего диска (LUKS) одной галочкой — если включите, пароль не забыть!</li><li>Создайте пользователя → установка → перезагрузка без флешки.</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Первые шаги в терминале</h4>
+                            <div class="code-block"><span class="p">$</span> sudo apt update &amp;&amp; sudo apt upgrade <span class="c"># обновления</span>
+<span class="c"># Настройки → COSMIC — тайлинг окон; Pop!_Shop — приложения и драйверы</span></div>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2">Нюансы</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">COSMIC — молодая оболочка: часть GTK-расширений и тем прошлых версий может не поддерживаться, зато скорость и тайлинг — на высоте. Привыкайте к лаунчеру (клавиша Super) и переключению рабочих мест. База Ubuntu LTS означает широкую совместимость софта.</p>
+                            
+                        </div>
+                    </div>
+                    <aside class="lg:col-span-1">
+                        <div class="rounded-2xl p-5 spec-box bg-slate-950/70 border border-slate-800 lg:sticky lg:top-32">
+                            <h4 class="font-bold text-sm text-white mb-1"><i class="fa-solid fa-id-card text-brand-green mr-2"></i>Кратко</h4>
+                            <dl>
+                                <dt>База</dt><dd>Ubuntu LTS + репозитории System76</dd>
+                                <dt>Оболочка</dt><dd>COSMIC (Rust)</dd>
+                                <dt>Пакеты</dt><dd>apt, flatpak (Pop!_Shop)</dd>
+                                <dt>Релизы</dt><dd>по LTS-циклу + обновления COSMIC</dd>
+                                <dt>Live-доступ</dt><dd>авто-вход, без пароля</dd>
+                                <dt>ОЗУ</dt><dd>4 ГБ мин. / 8 ГБ рек.</dd>
+                                <dt>Диск</dt><dd>от 16–25 ГБ</dd>
+                                <dt>Secure Boot</dt><dd>Подписанный загрузчик — работает при включённом Secure Boot.</dd>
+                                <dt>Файл на флешке</dt><dd class="mono">pop-os_24.04_amd64_generic_28.iso</dd>
+                            </dl>
+                            <a href="order.html" class="btn-primary w-full py-2.5 text-sm mt-5 !rounded-lg"><i class="fa-solid fa-bolt"></i> Заказать флешку</a>
+                        </div>
+                    </aside>
+                </div>
+            </article>
+
+            <article id="d10" class="reveal glass-card rounded-3xl overflow-hidden">
+                <div class="p-6 md:p-8 pb-5 border-b border-slate-800 bg-slate-900/40 flex flex-wrap items-center gap-4">
+                    <span class="w-14 h-14 rounded-2xl bg-slate-950/80 border border-slate-700 flex items-center justify-center text-2xl text-indigo-300 flex-none"><i class="fa-solid fa-shuttle-space"></i></span>
+                    <div class="mr-auto min-w-0">
+                        <div class="font-mono text-[11px] text-slate-500 uppercase tracking-wider">Дистрибутив 10 из 16</div>
+                        <h3 class="text-xl md:text-2xl font-bold leading-tight">EndeavourOS <span class="text-brand-green font-mono text-sm md:text-base">«Titan-Nova»</span></h3>
+                        <p class="text-xs text-slate-500 mt-1">сборка 2026.08.15 · x86_64 · на базе Arch · rolling-release</p>
+                    </div>
+                    <div class="text-right flex-none">
+                        <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>
+                        <div class="text-[11px] text-slate-500 mt-1.5">сложность: для опытных</div>
+                    </div>
+                </div>
+                <div class="px-6 md:px-8 py-4 flex flex-wrap gap-2 border-b border-slate-800/70"><span class="chip">pacman + AUR (yay)</span><span class="chip">Calamares: online/offline</span><span class="chip">почти чистый Arch</span></div>
+                <div class="p-6 md:p-8 grid lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 space-y-5">
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-brand-green mb-2">Что это</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">«Arch с человеческим лицом» — самый короткий путь в мир Arch Linux: графический установщик Calamares (онлайн — ставит свежайшие пакеты прямо из репозиториев Arch, офлайн — готовый набор с live-носителя), минимум предустановленного софта и никаких «надстроек» поверх Arch — система остаётся практически чистой. Из удобств: приветственное приложение с полезными ссылками, инструменты EOS (обновление зеркал, логи), предустановленный yay для AUR. Live-сессия — с лёгкой оболочкой Xfce; при установке можно выбрать любую: KDE, GNOME, i3, Hyprland и др.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-sky-400 mb-2">Кому подойдёт</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Тем, кто хочет rolling-release и AUR, но не готов к ручной установке Arch; уверенным пользователям, готовым читать документацию и обновляться регулярно.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Установка</h4>
+                            <ol class="space-y-2 text-sm text-slate-300 leading-relaxed list-decimal pl-5 marker:text-brand-green marker:font-mono">
+                                <li>Загрузите ISO — live-сессия, пользователь liveuser, пароль не требуется.</li><li>Запустите Install EndeavourOS: язык → сеть (для онлайн-режима) → диск и файловая система.</li><li>Выберите оболочку (DE/WM) и набор приложений, создайте пользователя.</li><li>Установка онлайн-режима занимает 15–40 минут в зависимости от сети → перезагрузка.</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Первые шаги в терминале</h4>
+                            <div class="code-block"><span class="p">$</span> sudo pacman -Syu <span class="c"># обновление системы</span>
+<span class="p">$</span> yay -S имя-пакета <span class="c"># поиск и установка из AUR</span></div>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2">Нюансы</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">Всё наследует Arch: обновляйтесь минимум раз в неделю, читайте archlinux.org/news, не ставьте пакеты «частично». AUR — пользовательский репозиторий без гарантий: просматривайте PKGBUILD перед сборкой. Подписи Secure Boot нет — при проблемах с загрузкой отключите его.</p>
+                            <div class="callout callout-ok mt-4 text-sm">
+                            <i class="fa-solid fa-lightbulb mr-2"></i><b>Совет LinuxDrive.</b> Не готовы к такому уровню самостоятельности — начните с Manjaro (№15).
+                        </div>
+                        </div>
+                    </div>
+                    <aside class="lg:col-span-1">
+                        <div class="rounded-2xl p-5 spec-box bg-slate-950/70 border border-slate-800 lg:sticky lg:top-32">
+                            <h4 class="font-bold text-sm text-white mb-1"><i class="fa-solid fa-id-card text-brand-green mr-2"></i>Кратко</h4>
+                            <dl>
+                                <dt>База</dt><dd>Arch Linux</dd>
+                                <dt>Оболочка</dt><dd>Xfce в live; любая при установке</dd>
+                                <dt>Пакеты</dt><dd>pacman, AUR (yay)</dd>
+                                <dt>Релизы</dt><dd>rolling; ISO ~раз в 2–4 месяца</dd>
+                                <dt>Live-доступ</dt><dd>liveuser, без пароля</dd>
+                                <dt>ОЗУ</dt><dd>2 ГБ мин. / 4+ ГБ рек.</dd>
+                                <dt>Диск</dt><dd>от 25 ГБ</dd>
+                                <dt>Secure Boot</dt><dd>Подписанного загрузчика нет — при проблемах с загрузкой отключите Secure Boot.</dd>
+                                <dt>Файл на флешке</dt><dd class="mono">EndeavourOS_Titan-Nova-2026.08.15.iso</dd>
+                            </dl>
+                            <a href="order.html" class="btn-primary w-full py-2.5 text-sm mt-5 !rounded-lg"><i class="fa-solid fa-bolt"></i> Заказать флешку</a>
+                        </div>
+                    </aside>
+                </div>
+            </article>
+
+            <article id="d11" class="reveal glass-card rounded-3xl overflow-hidden">
+                <div class="p-6 md:p-8 pb-5 border-b border-slate-800 bg-slate-900/40 flex flex-wrap items-center gap-4">
+                    <span class="w-14 h-14 rounded-2xl bg-slate-950/80 border border-slate-700 flex items-center justify-center text-2xl text-sky-300 flex-none"><i class="fa-solid fa-window-maximize"></i></span>
+                    <div class="mr-auto min-w-0">
+                        <div class="font-mono text-[11px] text-slate-500 uppercase tracking-wider">Дистрибутив 11 из 16</div>
+                        <h3 class="text-xl md:text-2xl font-bold leading-tight">Zorin OS <span class="text-brand-green font-mono text-sm md:text-base">18.1 Core</span></h3>
+                        <p class="text-xs text-slate-500 mt-1">18.1 Core · 64-bit · на базе Ubuntu LTS · оболочка Zorin Desktop</p>
+                    </div>
+                    <div class="text-right flex-none">
+                        <span class="diff"><i class="on"></i><i></i><i></i><i></i><i></i></span>
+                        <div class="text-[11px] text-slate-500 mt-1.5">сложность: очень легко</div>
+                    </div>
+                </div>
+                <div class="px-6 md:px-8 py-4 flex flex-wrap gap-2 border-b border-slate-800/70"><span class="chip">раскладки под Windows/macOS</span><span class="chip">поддержка .exe через Wine</span><span class="chip">apt + flatpak</span></div>
+                <div class="p-6 md:p-8 grid lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 space-y-5">
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-brand-green mb-2">Что это</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Zorin OS создана специально для перехода с Windows и macOS. Фирменная оболочка Zorin Desktop (на базе GNOME) позволяет одним кликом менять «раскладку» рабочего стола: привычная панель и меню как в Windows, dock-стиль как в macOS, классика или минимализм. Встроенная поддержка запуска Windows-программ (слой совместимости Wine) помогает перенести любимые приложения. Система отполирована до мелочей: темы, анимации, шрифты — всё выглядит дорого. Редакция Core бесплатна; Pro-редакция добавляет раскладки и утилиты за плату.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-sky-400 mb-2">Кому подойдёт</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Новичкам и семьям, пересаживающимся с Windows; всем, кто хочет красивый Linux без настройки; офисным ПК.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Установка</h4>
+                            <ol class="space-y-2 text-sm text-slate-300 leading-relaxed list-decimal pl-5 marker:text-brand-green marker:font-mono">
+                                <li>Загрузите ISO — live-сессия стартует с автологином, учётные данные не нужны.</li><li>Проверьте Wi-Fi, звук, экран.</li><li>Запустите Install Zorin OS: язык → кодеки/драйверы (рекомендуется включить) → тип установки (стереть диск / рядом с Windows / вручную).</li><li>Создайте пользователя → установка ~20–30 минут → перезагрузка без флешки.</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Первые шаги в терминале</h4>
+                            <div class="code-block"><span class="p">$</span> sudo apt update &amp;&amp; sudo apt upgrade <span class="c"># обновления</span>
+<span class="c"># Zorin Appearance — смена раскладки рабочего стола; Zorin Menu → Software — программы</span></div>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2">Нюансы</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">Запуск Windows-программ через Wine — помощник, а не гарантия: простые утилиты работают хорошо, сложные (игры с античитами, спецсофт) — как повезёт; проверяйте в live-сессии до переезда. Часть оформления доступна только в платной Pro-редакции — Core покрывает 95% потребностей. Для слабого железа у Zorin есть редакция Lite — её ISO можно добавить на флешку.</p>
+                            
+                        </div>
+                    </div>
+                    <aside class="lg:col-span-1">
+                        <div class="rounded-2xl p-5 spec-box bg-slate-950/70 border border-slate-800 lg:sticky lg:top-32">
+                            <h4 class="font-bold text-sm text-white mb-1"><i class="fa-solid fa-id-card text-brand-green mr-2"></i>Кратко</h4>
+                            <dl>
+                                <dt>База</dt><dd>Ubuntu LTS</dd>
+                                <dt>Оболочка</dt><dd>Zorin Desktop (GNOME)</dd>
+                                <dt>Пакеты</dt><dd>apt, flatpak, snap</dd>
+                                <dt>Релизы</dt><dd>мажорные ~раз в 2 года</dd>
+                                <dt>Live-доступ</dt><dd>авто-вход, без пароля</dd>
+                                <dt>ОЗУ</dt><dd>2 ГБ мин. / 4 ГБ рек.</dd>
+                                <dt>Диск</dt><dd>рекомендуется 40 ГБ</dd>
+                                <dt>Secure Boot</dt><dd>Подписанный загрузчик — работает при включённом Secure Boot.</dd>
+                                <dt>Файл на флешке</dt><dd class="mono">Zorin-OS-18.1-Core-64-bit.iso</dd>
+                            </dl>
+                            <a href="order.html" class="btn-primary w-full py-2.5 text-sm mt-5 !rounded-lg"><i class="fa-solid fa-bolt"></i> Заказать флешку</a>
+                        </div>
+                    </aside>
+                </div>
+            </article>
+
+            <article id="d12" class="reveal glass-card rounded-3xl overflow-hidden">
+                <div class="p-6 md:p-8 pb-5 border-b border-slate-800 bg-slate-900/40 flex flex-wrap items-center gap-4">
+                    <span class="w-14 h-14 rounded-2xl bg-slate-950/80 border border-slate-700 flex items-center justify-center text-2xl text-red-400 flex-none"><i class="fa-brands fa-debian"></i></span>
+                    <div class="mr-auto min-w-0">
+                        <div class="font-mono text-[11px] text-slate-500 uppercase tracking-wider">Дистрибутив 12 из 16</div>
+                        <h3 class="text-xl md:text-2xl font-bold leading-tight">Debian <span class="text-brand-green font-mono text-sm md:text-base">13.7 «Trixie»</span></h3>
+                        <p class="text-xs text-slate-500 mt-1">13.7.0 · amd64 · DVD-1 — полный офлайн-установщик</p>
+                    </div>
+                    <div class="text-right flex-none">
+                        <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>
+                        <div class="text-[11px] text-slate-500 mt-1.5">сложность: средне</div>
+                    </div>
+                </div>
+                <div class="px-6 md:px-8 py-4 flex flex-wrap gap-2 border-b border-slate-800/70"><span class="chip">apt</span><span class="chip">60 000+ пакетов</span><span class="chip">поддержка ~5 лет</span><span class="chip">выбор DE при установке</span></div>
+                <div class="p-6 md:p-8 grid lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 space-y-5">
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-brand-green mb-2">Что это</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Один из старейших и самых стабильных дистрибутивов — фундамент, на котором стоят Ubuntu, Mint, Kali и сотни других систем. Ветка 13 «Trixie» — это stable: версии программ заморожены и годами получают только исправления безопасности; поддержка — около 5 лет. Гигантский репозиторий (60+ тысяч пакетов) и строгая приверженность свободному ПО. Образ DVD-1 на этой флешке содержит полноценный установщик и основной набор пакетов — установка возможна без интернета.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-sky-400 mb-2">Кому подойдёт</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Тем, кому нужна система «поставил и забыл»: рабочие станции, серверы, домашние NAS; админам и вдумчивым пользователям.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Установка (live-режима нет — сразу установщик)</h4>
+                            <ol class="space-y-2 text-sm text-slate-300 leading-relaxed list-decimal pl-5 marker:text-brand-green marker:font-mono">
+                                <li>Загрузите ISO → выберите Graphical Install: язык, регион, раскладка; сеть можно пропустить — DVD-1 всё содержит.</li><li>Задайте пароль root и создайте обычного пользователя.</li><li>Разметка: «Авто — использовать весь диск» (проще всего) или вручную.</li><li>Выбор ПО: галочками отметьте DE — GNOME, KDE Plasma, Xfce, MATE, LXQt, Cinnamon — или «без графики» для сервера.</li><li>Установка GRUB на диск → перезагрузка без флешки.</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Первые шаги в терминале</h4>
+                            <div class="code-block"><span class="p">$</span> su - <span class="c"># вход под root (пароль root)</span>
+<span class="p">$</span> apt update &amp;&amp; apt full-upgrade <span class="c"># обновления</span>
+<span class="p">$</span> apt install sudo &amp;&amp; usermod -aG sudo имя_пользователя <span class="c"># если нужен sudo</span></div>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2">Нюансы</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">Stable = не самые свежие версии программ: это плата за надёжность; для нового софта есть Flatpak и backports. На шаге установки non-free-компонентов (прошивки, драйверы) соглашайтесь, иначе возможны проблемы с Wi-Fi/графикой. «Попробовать без установки» Debian с этой флешки не выйдет (DVD-1 — установщик); роль live-знакомства возьмут на себя MX или Mint.</p>
+                            
+                        </div>
+                    </div>
+                    <aside class="lg:col-span-1">
+                        <div class="rounded-2xl p-5 spec-box bg-slate-950/70 border border-slate-800 lg:sticky lg:top-32">
+                            <h4 class="font-bold text-sm text-white mb-1"><i class="fa-solid fa-id-card text-brand-green mr-2"></i>Кратко</h4>
+                            <dl>
+                                <dt>База</dt><dd>независимый</dd>
+                                <dt>Оболочка</dt><dd>любая на выбор при установке</dd>
+                                <dt>Пакеты</dt><dd>apt (deb)</dd>
+                                <dt>Релизы</dt><dd>stable ~раз в 2 года; поддержка ~5 лет</dd>
+                                <dt>Live-доступ</dt><dd>нет — образ установочный</dd>
+                                <dt>ОЗУ</dt><dd>1 ГБ мин. / 2–4 ГБ рек.</dd>
+                                <dt>Диск</dt><dd>от 10 ГБ, комфортно 25+</dd>
+                                <dt>Secure Boot</dt><dd>Подписанный загрузчик — работает при включённом Secure Boot.</dd>
+                                <dt>Файл на флешке</dt><dd class="mono">debian-13.7.0-amd64-DVD-1.iso</dd>
+                            </dl>
+                            <a href="order.html" class="btn-primary w-full py-2.5 text-sm mt-5 !rounded-lg"><i class="fa-solid fa-bolt"></i> Заказать флешку</a>
+                        </div>
+                    </aside>
+                </div>
+            </article>
+
+            <article id="d13" class="reveal glass-card rounded-3xl overflow-hidden">
+                <div class="p-6 md:p-8 pb-5 border-b border-slate-800 bg-slate-900/40 flex flex-wrap items-center gap-4">
+                    <span class="w-14 h-14 rounded-2xl bg-slate-950/80 border border-slate-700 flex items-center justify-center text-2xl text-green-400 flex-none"><i class="fa-brands fa-suse"></i></span>
+                    <div class="mr-auto min-w-0">
+                        <div class="font-mono text-[11px] text-slate-500 uppercase tracking-wider">Дистрибутив 13 из 16</div>
+                        <h3 class="text-xl md:text-2xl font-bold leading-tight">openSUSE Leap <span class="text-brand-green font-mono text-sm md:text-base">16.0</span></h3>
+                        <p class="text-xs text-slate-500 mt-1">16.0 · x86_64 · Build 178.27 · офлайн-установщик (полный DVD)</p>
+                    </div>
+                    <div class="text-right flex-none">
+                        <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>
+                        <div class="text-[11px] text-slate-500 mt-1.5">сложность: средне</div>
+                    </div>
+                </div>
+                <div class="px-6 md:px-8 py-4 flex flex-wrap gap-2 border-b border-slate-800/70"><span class="chip">zypper + YaST</span><span class="chip">снапшоты Btrfs/snapper</span><span class="chip">синхронно с SUSE Enterprise</span></div>
+                <div class="p-6 md:p-8 grid lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 space-y-5">
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-brand-green mb-2">Что это</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Стабильная ветка openSUSE, синхронизированная с коммерческим SUSE Linux Enterprise — «корпоративное» качество бесплатно. Главные козыри: YaST — единый центр управления системой (сеть, firewall, службы, пользователи — всё в одном GUI-окне), и снапшоты snapper: система автоматически делает снимки перед изменениями, и любую неудачную операцию можно откатить одним движением. Leap 16.0 — новая крупная версия линейки. Образ на флешке — офлайн-установщик: интернет для установки не нужен.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-sky-400 mb-2">Кому подойдёт</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Любителям стабильности и порядка; сисадминам; тем, кто хочет лучшую реализацию KDE Plasma; всем, кому важна страховка от поломок (снапшоты).</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Установка (live-режима нет — сразу установщик)</h4>
+                            <ol class="space-y-2 text-sm text-slate-300 leading-relaxed list-decimal pl-5 marker:text-brand-green marker:font-mono">
+                                <li>Загрузите ISO → стартует графический установщик: язык и лицензия.</li><li>Разметка: предложенная схема с Btrfs и снапшотами — хороший выбор по умолчанию; при желании скорректируйте.</li><li>Роль системы: «Desktop with KDE Plasma» / «Desktop with GNOME» / «Generic Desktop» / сервер без графики.</li><li>Создайте пользователя (можно общий пароль для пользователя и root), проверьте сводку → «Установить» → перезагрузка без флешки.</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Первые шаги в терминале</h4>
+                            <div class="code-block"><span class="p">$</span> sudo zypper refresh &amp;&amp; sudo zypper update <span class="c"># обновления</span>
+<span class="p">$</span> snapper list <span class="c"># список снапшотов</span>
+<span class="c"># YaST (в меню) — все настройки системы в одном окне</span></div>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2">Нюансы</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">Мультимедиа-кодеки (MP3/H.264 и др.) — в стороннем репозитории Packman: подключается через YaST/zypper за минуту. Откат системы: в GRUB при загрузке выберите снапшот → после входа sudo snapper rollback. Свежий софт сверх репозиториев — через Flatpak или OBS.</p>
+                            
+                        </div>
+                    </div>
+                    <aside class="lg:col-span-1">
+                        <div class="rounded-2xl p-5 spec-box bg-slate-950/70 border border-slate-800 lg:sticky lg:top-32">
+                            <h4 class="font-bold text-sm text-white mb-1"><i class="fa-solid fa-id-card text-brand-green mr-2"></i>Кратко</h4>
+                            <dl>
+                                <dt>База</dt><dd>SUSE Linux Enterprise</dd>
+                                <dt>Оболочка</dt><dd>KDE / GNOME / Xfce — при установке</dd>
+                                <dt>Пакеты</dt><dd>zypper (RPM), flatpak</dd>
+                                <dt>Релизы</dt><dd>~раз в год; поддержка версии — несколько лет</dd>
+                                <dt>Live-доступ</dt><dd>нет — образ установочный</dd>
+                                <dt>ОЗУ</dt><dd>2 ГБ мин. / 4 ГБ рек.</dd>
+                                <dt>Диск</dt><dd>от 16 ГБ, комфортно 40</dd>
+                                <dt>Secure Boot</dt><dd>Подписанный загрузчик — работает при включённом Secure Boot.</dd>
+                                <dt>Файл на флешке</dt><dd class="mono">OpenSUSE_Leap-16.0-offline-installer-x86_64-Build178.27.install.iso</dd>
+                            </dl>
+                            <a href="order.html" class="btn-primary w-full py-2.5 text-sm mt-5 !rounded-lg"><i class="fa-solid fa-bolt"></i> Заказать флешку</a>
+                        </div>
+                    </aside>
+                </div>
+            </article>
+
+            <article id="d14" class="reveal glass-card rounded-3xl overflow-hidden">
+                <div class="p-6 md:p-8 pb-5 border-b border-slate-800 bg-slate-900/40 flex flex-wrap items-center gap-4">
+                    <span class="w-14 h-14 rounded-2xl bg-slate-950/80 border border-slate-700 flex items-center justify-center text-2xl text-red-500 flex-none"><i class="fa-solid fa-dragon"></i></span>
+                    <div class="mr-auto min-w-0">
+                        <div class="font-mono text-[11px] text-slate-500 uppercase tracking-wider">Дистрибутив 14 из 16</div>
+                        <h3 class="text-xl md:text-2xl font-bold leading-tight">Kali Linux <span class="text-brand-green font-mono text-sm md:text-base">2026.2</span></h3>
+                        <p class="text-xs text-slate-500 mt-1">2026.2 · amd64 · установочный образ · на базе Debian Testing</p>
+                    </div>
+                    <div class="text-right flex-none">
+                        <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>
+                        <div class="text-[11px] text-slate-500 mt-1.5">сложность: для подготовленных</div>
+                    </div>
+                </div>
+                <div class="px-6 md:px-8 py-4 flex flex-wrap gap-2 border-b border-slate-800/70"><span class="chip">600+ инструментов ИБ</span><span class="chip">Xfce по умолчанию</span><span class="chip">релизы ~каждые 4 месяца</span></div>
+                <div class="p-6 md:p-8 grid lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 space-y-5">
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-brand-green mb-2">Что это</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Специализированный дистрибутив Offensive Security для тестирования на проникновение, аудита безопасности и форензики. Внутри — сотни профильных инструментов: nmap и masscan (сканирование), Wireshark (анализ трафика), Burp Suite (веб-аудит), Metasploit (эксплуатация), Aircrack-ng (Wi-Fi), John the Ripper и hashcat (пароли), криминалистика и реверс-инжиниринг. База — Debian Testing: инструменты всегда свежие. Оболочка по умолчанию — лёгкая Xfce; при установке доступны KDE, GNOME, i3 и другие.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-sky-400 mb-2">Кому подойдёт</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Специалистам и студентам направлений ИБ; для изучения безопасности в домашней лаборатории/виртуалке.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Установка (образ установочный, не live)</h4>
+                            <ol class="space-y-2 text-sm text-slate-300 leading-relaxed list-decimal pl-5 marker:text-brand-green marker:font-mono">
+                                <li>Загрузите ISO → Graphical Install — мастер в стиле Debian.</li><li>Язык, сеть, пользователь и пароль, разметка диска.</li><li>На шаге выбора ПО отметьте коллекции инструментов (например, «top10» или «large») и оболочку.</li><li>GRUB → перезагрузка. Для экспериментов безопаснее ставить Kali в виртуальную машину (VirtualBox/GNOME Boxes).</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Первые шаги в терминале</h4>
+                            <div class="code-block"><span class="p">$</span> sudo apt update &amp;&amp; sudo apt full-upgrade <span class="c"># Kali — rolling: обновляйтесь регулярно</span>
+<span class="p">$</span> sudo apt install kali-tools-top10 <span class="c"># добор инструментов метапакетами</span>
+<span class="p">$</span> kali-tweaks <span class="c"># тонкая настройка системы</span></div>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2">Нюансы</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">Kali — не повседневная система: здесь нет ни комфорта, ни «офисного» софта, зато есть агрессивные инструменты. Сканирование и атаки чужих сетей и сайтов незаконны — работайте только на своих системах или с письменного разрешения владельца. С 2021 года обычный пользователь не root, но инструменты требуют sudo. При включённом Secure Boot Kali может не загрузиться — отключите его.</p>
+                            <div class="callout callout-ok mt-4 text-sm">
+                            <i class="fa-solid fa-lightbulb mr-2"></i><b>Совет LinuxDrive.</b> Для повседневных задач поставьте Debian (№12) или Mint (№05) — они на этой же флешке.
+                        </div>
+                        </div>
+                    </div>
+                    <aside class="lg:col-span-1">
+                        <div class="rounded-2xl p-5 spec-box bg-slate-950/70 border border-slate-800 lg:sticky lg:top-32">
+                            <h4 class="font-bold text-sm text-white mb-1"><i class="fa-solid fa-id-card text-brand-green mr-2"></i>Кратко</h4>
+                            <dl>
+                                <dt>База</dt><dd>Debian Testing</dd>
+                                <dt>Оболочка</dt><dd>Xfce (или выбор при установке)</dd>
+                                <dt>Пакеты</dt><dd>apt (deb)</dd>
+                                <dt>Релизы</dt><dd>~каждые 4 месяца, rolling-обновления</dd>
+                                <dt>Live-доступ</dt><dd>нет (установщик); у live-образов: kali / kali</dd>
+                                <dt>ОЗУ</dt><dd>2 ГБ мин. / 4+ ГБ рек.</dd>
+                                <dt>Диск</dt><dd>от 20 ГБ (с инструментами 40+)</dd>
+                                <dt>Secure Boot</dt><dd>При включённом Secure Boot может не загрузиться — отключите его.</dd>
+                                <dt>Файл на флешке</dt><dd class="mono">kali-linux-2026.2-installer-amd64.iso</dd>
+                            </dl>
+                            <a href="order.html" class="btn-primary w-full py-2.5 text-sm mt-5 !rounded-lg"><i class="fa-solid fa-bolt"></i> Заказать флешку</a>
+                        </div>
+                    </aside>
+                </div>
+            </article>
+
+            <article id="d15" class="reveal glass-card rounded-3xl overflow-hidden">
+                <div class="p-6 md:p-8 pb-5 border-b border-slate-800 bg-slate-900/40 flex flex-wrap items-center gap-4">
+                    <span class="w-14 h-14 rounded-2xl bg-slate-950/80 border border-slate-700 flex items-center justify-center text-2xl text-emerald-400 flex-none"><i class="fa-solid fa-mountain"></i></span>
+                    <div class="mr-auto min-w-0">
+                        <div class="font-mono text-[11px] text-slate-500 uppercase tracking-wider">Дистрибутив 15 из 16</div>
+                        <h3 class="text-xl md:text-2xl font-bold leading-tight">Manjaro <span class="text-brand-green font-mono text-sm md:text-base">26.1.0 GNOME</span></h3>
+                        <p class="text-xs text-slate-500 mt-1">26.1.0 · сборка 260812 · ядро linux71 (серия 7.1) · на базе Arch</p>
+                    </div>
+                    <div class="text-right flex-none">
+                        <span class="diff"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>
+                        <div class="text-[11px] text-slate-500 mt-1.5">сложность: средне</div>
+                    </div>
+                </div>
+                <div class="px-6 md:px-8 py-4 flex flex-wrap gap-2 border-b border-slate-800/70"><span class="chip">pacman + Pamac</span><span class="chip">MHWD: драйверы в 1 клик</span><span class="chip">свои репозитории</span></div>
+                <div class="p-6 md:p-8 grid lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 space-y-5">
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-brand-green mb-2">Что это</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Самый популярный «дружелюбный Arch»: Manjaro использует собственные репозитории — пакеты Arch приходят сюда с задержкой в пару недель, проходя дополнительное тестирование. Из фирменного: Pamac — магазин программ, объединяющий официальные репозитории, AUR и Flatpak в одном окне; MHWD — автоматическая установка драйверов (включая проприетарные NVIDIA) и выбор версии ядра Linux (в этой сборке — linux71). Оболочка GNOME здесь аккуратно доработана: удобнее для мыши, с фирменной темой. Кодеки и основные драйверы — уже включены.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-sky-400 mb-2">Кому подойдёт</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Тем, кто хочет преимущества Arch (rolling, AUR, свежий софт) с комфортом и «подушкой безопасности»; пользователям NVIDIA; относительно новичкам, готовым обновляться раз в неделю.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Установка</h4>
+                            <ol class="space-y-2 text-sm text-slate-300 leading-relaxed list-decimal pl-5 marker:text-brand-green marker:font-mono">
+                                <li>Загрузите ISO — live-сессия, пользователь manjaro, пароль manjaro (обычно вход автоматический).</li><li>Запустите Launch Installer (Calamares): язык → раскладка → диск (автоматически или вручную) → пользователь.</li><li>Установка 15–30 минут → перезагрузка без флешки.</li><li>При первом запуске — приветственное окно с базовой настройкой (драйверы, раскладки).</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Первые шаги в терминале</h4>
+                            <div class="code-block"><span class="p">$</span> sudo pacman -Syu <span class="c"># или Pamac → Обновления (GUI)</span>
+<span class="p">$</span> pamac install telegram-desktop <span class="c"># установка из репозиториев/AUR/flatpak</span>
+<span class="c"># Настройки Manjaro → MHWD — видеодрайвер (NVIDIA — proprietary)</span></div>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2">Нюансы</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">Не применяйте «вслепую» инструкции для чистого Arch: репозитории Manjaro отличаются по версиям — сначала ищите решение на форуме Manjaro. AUR доступен, но обновляйте систему целиком (-Syu), а не отдельные пакеты, иначе возможны конфликты версий. Раз в неделю обновления — обязательная гигиена rolling-дистрибутива.</p>
+                            
+                        </div>
+                    </div>
+                    <aside class="lg:col-span-1">
+                        <div class="rounded-2xl p-5 spec-box bg-slate-950/70 border border-slate-800 lg:sticky lg:top-32">
+                            <h4 class="font-bold text-sm text-white mb-1"><i class="fa-solid fa-id-card text-brand-green mr-2"></i>Кратко</h4>
+                            <dl>
+                                <dt>База</dt><dd>Arch (свои репозитории)</dd>
+                                <dt>Оболочка</dt><dd>GNOME</dd>
+                                <dt>Пакеты</dt><dd>pacman/Pamac, AUR, flatpak</dd>
+                                <dt>Релизы</dt><dd>rolling; снимки ISO ~раз в месяц</dd>
+                                <dt>Live-доступ</dt><dd>manjaro / manjaro</dd>
+                                <dt>ОЗУ</dt><dd>2 ГБ мин. / 4+ ГБ рек.</dd>
+                                <dt>Диск</dt><dd>от 30 ГБ</dd>
+                                <dt>Secure Boot</dt><dd>Подписанный загрузчик — работает при включённом Secure Boot.</dd>
+                                <dt>Файл на флешке</dt><dd class="mono">manjaro-gnome-26.1.0-260812-linux71.iso</dd>
+                            </dl>
+                            <a href="order.html" class="btn-primary w-full py-2.5 text-sm mt-5 !rounded-lg"><i class="fa-solid fa-bolt"></i> Заказать флешку</a>
+                        </div>
+                    </aside>
+                </div>
+            </article>
+
+            <article id="d16" class="reveal glass-card rounded-3xl overflow-hidden">
+                <div class="p-6 md:p-8 pb-5 border-b border-slate-800 bg-slate-900/40 flex flex-wrap items-center gap-4">
+                    <span class="w-14 h-14 rounded-2xl bg-slate-950/80 border border-slate-700 flex items-center justify-center text-2xl text-orange-400 flex-none"><i class="fa-brands fa-ubuntu"></i></span>
+                    <div class="mr-auto min-w-0">
+                        <div class="font-mono text-[11px] text-slate-500 uppercase tracking-wider">Дистрибутив 16 из 16</div>
+                        <h3 class="text-xl md:text-2xl font-bold leading-tight">Ubuntu <span class="text-brand-green font-mono text-sm md:text-base">26.04.1 LTS</span></h3>
+                        <p class="text-xs text-slate-500 mt-1">26.04.1 LTS «Resolute Raccoon» · amd64 · разработка Canonical</p>
+                    </div>
+                    <div class="text-right flex-none">
+                        <span class="diff"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span>
+                        <div class="text-[11px] text-slate-500 mt-1.5">сложность: легко</div>
+                    </div>
+                </div>
+                <div class="px-6 md:px-8 py-4 flex flex-wrap gap-2 border-b border-slate-800/70"><span class="chip">GNOME</span><span class="chip">apt + snap + flatpak</span><span class="chip">поддержка 5 лет (до 2031)</span></div>
+                <div class="p-6 md:p-8 grid lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 space-y-5">
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-brand-green mb-2">Что это</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Самый популярный настольный Linux в мире и «стандарт де-факто»: большинство программ и инструкций в интернете пишутся прежде всего под Ubuntu. Версия 26.04 LTS — ветка с долгосрочной поддержкой: 5 лет обновлений безопасности (до 2031, с Pro/ESM — до 12); 26.04.1 — первый накопительный выпуск, рекомендуемая точка для чистой установки. Оболочка — GNOME с фирменными доработками Canonical (док слева), современный установщик с «интерактивной» разметкой. Экосистема пакетов: apt, snap и flatpak.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-sky-400 mb-2">Кому подойдёт</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">Новичкам, которым важна огромная база готовых ответов; разработчикам (свежие toolchain-пакеты, Docker, IDE); рабочим и учебным ПК; геймерам (Steam официально поддерживает Ubuntu).</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Установка</h4>
+                            <ol class="space-y-2 text-sm text-slate-300 leading-relaxed list-decimal pl-5 marker:text-brand-green marker:font-mono">
+                                <li>Загрузите ISO → «Try or Install Ubuntu» — live-сессия с автологином (пользователь ubuntu, без пароля).</li><li>Запустите Install Ubuntu: язык → Wi-Fi → тип установки.</li><li>Отметьте установку сторонних драйверов и кодеков (рекомендуется).</li><li>Разметка: «Стереть диск и установить Ubuntu», «Рядом с Windows» или вручную.</li><li>Пользователь и пароль → установка ~20–30 минут → перезагрузка без флешки.</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Первые шаги в терминале</h4>
+                            <div class="code-block"><span class="p">$</span> sudo apt update &amp;&amp; sudo apt upgrade <span class="c"># обновления</span>
+<span class="p">$</span> sudo ubuntu-drivers install <span class="c"># рекомендуемые драйверы (NVIDIA и др.)</span></div>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2">Нюансы</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">Часть приложений поставляется в формате snap (например, Firefox) — работает «из коробки» и обновляется самостоятельно; при желании snap заменяется на deb/flatpak. Каждые 2 года выходит новая LTS — переход выполняется мастером обновлений, когда придёт время. Слабое железо — смотрите Lubuntu (№07), Mint (№05) или Puppy (№08).</p>
+                            
+                        </div>
+                    </div>
+                    <aside class="lg:col-span-1">
+                        <div class="rounded-2xl p-5 spec-box bg-slate-950/70 border border-slate-800 lg:sticky lg:top-32">
+                            <h4 class="font-bold text-sm text-white mb-1"><i class="fa-solid fa-id-card text-brand-green mr-2"></i>Кратко</h4>
+                            <dl>
+                                <dt>База</dt><dd>Ubuntu (Canonical), Debian-наследие</dd>
+                                <dt>Оболочка</dt><dd>GNOME</dd>
+                                <dt>Пакеты</dt><dd>apt, snap, flatpak</dd>
+                                <dt>Релизы</dt><dd>LTS каждые 2 года; поддержка до 2031</dd>
+                                <dt>Live-доступ</dt><dd>ubuntu, авто-вход</dd>
+                                <dt>ОЗУ</dt><dd>4 ГБ мин. / 8 ГБ рек.</dd>
+                                <dt>Диск</dt><dd>от 25 ГБ</dd>
+                                <dt>Secure Boot</dt><dd>Подписанный загрузчик — работает при включённом Secure Boot.</dd>
+                                <dt>Файл на флешке</dt><dd class="mono">ubuntu-26.04.1-desktop-amd64.iso</dd>
+                            </dl>
+                            <a href="order.html" class="btn-primary w-full py-2.5 text-sm mt-5 !rounded-lg"><i class="fa-solid fa-bolt"></i> Заказать флешку</a>
+                        </div>
+                    </aside>
+                </div>
+            </article>
+            </div>
+
+            <!-- CTA -->
+            <div class="reveal mt-14 glass-card rounded-3xl p-8 md:p-12 text-center border-brand-green/25 relative overflow-hidden">
+                <div class="absolute -top-20 -right-20 w-64 h-64 bg-green-500 blur-[100px] opacity-15 rounded-full pointer-events-none"></div>
+                <h3 class="text-2xl md:text-3xl font-bold mb-3">Все 16 систем — на одной флешке</h3>
+                <p class="text-slate-400 mb-7 max-w-xl mx-auto">Готовая сборка с авторским меню Ventoy, руководством на 30 страниц и гарантией. Бесплатная доставка до ближайшего пункта выдачи Ozon при заказе на сайте.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="order.html" class="btn-primary px-9 py-4 text-lg"><i class="fa-solid fa-bolt"></i> Заказать за 3&nbsp;298&nbsp;₽</a>
+                    <a href="guide.html" class="btn-outline px-9 py-4 text-lg"><i class="fa-solid fa-book text-brand-green"></i> Как это работает</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-slate-950 border-t border-slate-800 relative">
+    <div class="marquee-line absolute top-0 left-0 right-0"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+            <div>
+                <a href="index.html" class="flex items-center gap-2.5 mb-4">
+                    <span class="w-9 h-9 rounded-lg bg-brand-green/15 border border-brand-green/40 flex items-center justify-center">
+                        <i class="fa-brands fa-linux text-brand-green text-xl"></i>
+                    </span>
+                    <span class="font-bold text-xl tracking-tight">Linux<span class="text-brand-green">Drive</span></span>
+                </a>
+                <p class="text-sm text-slate-400 leading-relaxed">Мультизагрузочные USB-флешки с Linux на базе Ventoy: готовые сборки, авторское оформление меню, подробное руководство. Собрано и проверено вручную.</p>
+                <p class="mt-3 text-xs font-mono text-slate-500"><i class="fa-solid fa-compact-disc text-brand-green mr-1.5"></i>Актуальная сборка: 16.10.2026 · 16 систем</p>
+            </div>
+            <div>
+                <h4 class="text-sm font-bold uppercase tracking-wider text-slate-200 mb-4">Навигация</h4>
+                <ul class="space-y-2.5 text-sm">
+                    <li><a class="footer-link" href="index.html"><i class="fa-solid fa-angle-right text-xs text-brand-green"></i>Главная</a></li>
+                    <li><a class="footer-link" href="distros.html"><i class="fa-solid fa-angle-right text-xs text-brand-green"></i>16 дистрибутивов</a></li>
+                    <li><a class="footer-link" href="guide.html"><i class="fa-solid fa-angle-right text-xs text-brand-green"></i>Руководство пользователя</a></li>
+                    <li><a class="footer-link" href="order.html"><i class="fa-solid fa-angle-right text-xs text-brand-green"></i>Заказ и доставка</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-sm font-bold uppercase tracking-wider text-slate-200 mb-4">Документы</h4>
+                <ul class="space-y-2.5 text-sm">
+                    <li><a class="footer-link" href="politika.html"><i class="fa-solid fa-file-shield text-xs text-brand-green"></i>Политика конфиденциальности</a></li>
+                    <li><a class="footer-link" href="soglasie.html"><i class="fa-solid fa-file-signature text-xs text-brand-green"></i>Согласие на обработку ПД</a></li>
+                </ul>
+                <p class="mt-4 text-xs text-slate-500 leading-relaxed">Информация на сайте не является публичной офертой.</p>
+            </div>
+            <div>
+                <h4 class="text-sm font-bold uppercase tracking-wider text-slate-200 mb-4">Контакты</h4>
+                <ul class="space-y-2.5 text-sm">
+                    <li><a class="footer-link" href="tel:+79952376995"><i class="fa-solid fa-phone text-xs text-brand-green"></i>+7 995 237-69-95</a></li>
+                    <li><a class="footer-link" href="https://wa.me/79952376995" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp text-xs text-green-500"></i>WhatsApp</a></li>
+                    <li><span class="footer-link"><i class="fa-brands fa-telegram text-xs text-sky-400"></i>Telegram: +7 995 237-69-95</span></li>
+                    <li><a class="footer-link" href="mailto:i02@ya.ru"><i class="fa-solid fa-envelope text-xs text-brand-green"></i>i02@ya.ru</a></li>
+                    <li><a class="footer-link" href="https://www.avito.ru/sankt-peterburg/tovary_dlya_kompyutera/multizagruzochnaya_fleshka_linuks_12_v_1_7834413303" target="_blank" rel="noopener"><i class="fa-solid fa-store text-xs text-sky-400"></i>Мы на Авито</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="border-t border-slate-800/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
+            <p class="text-xs text-slate-500">&copy; <span data-year>2026</span> LinuxDrive · linuxdrive.ru</p>
+            <p class="legal-note mt-2 text-[11px] text-slate-600 max-w-4xl mx-auto">Linux&reg; — зарегистрированная товарная марка Линуса Торвальдса. Ubuntu, Linux Mint, Debian, Fedora, Nobara, Arch Linux, Manjaro, EndeavourOS, openSUSE, Kali Linux, elementary OS, Zorin OS, Pop!_OS, Lubuntu, MX Linux, Puppy Linux — товарные знаки соответствующих правообладателей. Все перечисленные системы распространяются свободно на условиях открытых лицензий (GNU GPL и др.) и предоставляются «как есть» их разработчиками. linuxdrive.ru не аффилирован ни с одним из проектов; оплата при покупке взимается исключительно за носитель, работу по сборке, оформлению, проверке и документации. Ventoy — свободное ПО (GPL-3.0), ventoy.net.</p>
+        </div>
+    </div>
+</footer>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Руководство пользователя мультизагрузочной флешки | LinuxDrive</title>
+<meta name="description" content="Руководство к флешке LinuxDrive на базе Ventoy: запуск за 5 шагов, клавиши boot-меню по производителям, настройка Secure Boot, управление ISO-образами, установка Linux и dual-boot с Windows, решение частых проблем, мини-словарь.">
+<link rel="canonical" href="https://linuxdrive.ru/guide.html">
+<meta property="og:site_name" content="LinuxDrive">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Руководство пользователя мультизагрузочной флешки | LinuxDrive">
+<meta property="og:description" content="Руководство к флешке LinuxDrive на базе Ventoy: запуск за 5 шагов, клавиши boot-меню по производителям, настройка Secure Boot, управление ISO-образами, установка Linux и dual-boot с Windows, решение частых проблем, мини-словарь.">
+<meta property="og:url" content="https://linuxdrive.ru/guide.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Cpath d='M15 21l11 11-11 11' stroke='%2322c55e' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='32' y='39' width='17' height='6' rx='3' fill='%2322c55e'/%3E%3C/svg%3E">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106115108', 'ym');
+
+    ym(106115108, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106115108" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    sans: ['Inter', 'sans-serif'],
+                    mono: ['JetBrains Mono', 'monospace'],
+                },
+                colors: {
+                    brand: {
+                        green: '#22c55e',
+                        dark: '#0f172a',
+                        accent: '#38bdf8'
+                    }
+                }
+            }
+        }
+    }
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased">
+
+<header id="site-header" class="site-header fixed w-full z-50 bg-slate-950/75 backdrop-blur-md border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <a href="index.html" class="flex items-center gap-2.5 group" aria-label="LinuxDrive — на главную">
+                <span class="w-9 h-9 rounded-lg bg-brand-green/15 border border-brand-green/40 flex items-center justify-center group-hover:bg-brand-green/25 transition">
+                    <i class="fa-brands fa-linux text-brand-green text-xl"></i>
+                </span>
+                <span class="font-bold text-xl tracking-tight">Linux<span class="text-brand-green">Drive</span></span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-1" aria-label="Основная навигация">
+                <a href="index.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white transition">Главная</a>
+                        <a href="distros.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white transition">Дистрибутивы</a>
+                        <a href="guide.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white transition active">Руководство</a>
+                        <a href="order.html#delivery" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-white transition">Доставка</a>
+                <a href="order.html" class="btn-primary ml-4 px-5 py-2.5 text-sm">Заказать · 3 298 ₽</a>
+            </nav>
+            <div class="flex items-center gap-4 md:hidden">
+                <a href="tel:+79952376995" class="text-brand-green font-bold text-sm"><i class="fa-solid fa-phone mr-1.5"></i>Позвонить</a>
+                <button id="burger" class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-700 text-slate-200 hover:border-brand-green/50 transition" aria-label="Меню" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden border-t border-slate-800 bg-slate-950/97 backdrop-blur-lg">
+        <div class="px-4 py-4 space-y-1.5">
+            <a href="index.html" class="block px-4 py-3 rounded-lg text-slate-200 hover:bg-slate-800 hover:text-brand-green transition font-medium">Главная</a>
+                <a href="distros.html" class="block px-4 py-3 rounded-lg text-slate-200 hover:bg-slate-800 hover:text-brand-green transition font-medium">Дистрибутивы</a>
+                <a href="guide.html" class="block px-4 py-3 rounded-lg text-slate-200 hover:bg-slate-800 hover:text-brand-green transition font-medium">Руководство</a>
+                <a href="order.html#delivery" class="block px-4 py-3 rounded-lg text-slate-200 hover:bg-slate-800 hover:text-brand-green transition font-medium">Доставка</a>
+                <a href="order.html" class="block px-4 py-3 rounded-lg bg-brand-green text-slate-900 font-bold text-center">Заказать · 3 298 ₽</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- ============ PAGE HERO ============ -->
+    <section class="page-hero pt-32 pb-14 bg-slate-950 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <nav class="text-xs text-slate-500 mb-4 fade-up" aria-label="Хлебные крошки">
+                <a href="index.html" class="hover:text-brand-green transition">Главная</a> <i class="fa-solid fa-angle-right mx-1.5 text-[10px]"></i> <span class="text-slate-300">Руководство</span>
+            </nav>
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight fade-up d-1">Руководство <span class="text-brand-green">пользователя</span></h1>
+            <p class="mt-4 text-slate-400 max-w-3xl leading-relaxed fade-up d-2">Всё, что нужно знать о флешке LinuxDrive: от первого запуска за 5 шагов до dual-boot с Windows и решения частых проблем. Веб-версия руководства к сборке от 16 октября 2026 (издание 1.0) — тот же буклет входит в комплект в печатном виде и в PDF.</p>
+        </div>
+    </section>
+
+    <!-- ============ SUB-NAV ============ -->
+    <div class="guide-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="chips">
+                <a class="chip flex-none" href="#structure"><i class="fa-solid fa-hard-drive text-brand-green"></i>Что на флешке</a>
+                <a class="chip flex-none" href="#quickstart"><i class="fa-solid fa-bolt text-brand-green"></i>Быстрый старт</a>
+                <a class="chip flex-none" href="#boot"><i class="fa-solid fa-keyboard text-brand-green"></i>Boot-меню</a>
+                <a class="chip flex-none" href="#ventoy"><i class="fa-solid fa-list text-brand-green"></i>Клавиши Ventoy</a>
+                <a class="chip flex-none" href="#secureboot"><i class="fa-solid fa-shield-halved text-brand-green"></i>Secure Boot</a>
+                <a class="chip flex-none" href="#images"><i class="fa-solid fa-compact-disc text-brand-green"></i>Образы ISO</a>
+                <a class="chip flex-none" href="#install"><i class="fa-solid fa-download text-brand-green"></i>Установка Linux</a>
+                <a class="chip flex-none" href="#faq"><i class="fa-solid fa-circle-question text-brand-green"></i>Частые проблемы</a>
+                <a class="chip flex-none" href="#glossary"><i class="fa-solid fa-book text-brand-green"></i>Мини-словарь</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ 01 STRUCTURE ============ -->
+    <section id="structure" class="py-16 bg-slate-950">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="reveal">
+                <span class="eyebrow">Раздел 01</span>
+                <h2 class="text-2xl md:text-3xl font-bold mt-3 mb-4">Что на флешке: структура и правила обращения</h2>
+                <p class="text-slate-400 leading-relaxed mb-8">Флешка LinuxDrive разделена загрузчиком Ventoy на две части. Для вас как для пользователя видна только одна — обычный диск exFAT, куда уже записаны ISO-образы систем.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-5 mb-8">
+                <div class="reveal glass-card rounded-2xl p-6 border-l-4 border-slate-500">
+                    <div class="font-mono text-xs text-slate-500 mb-2">СЛУЖЕБНЫЙ РАЗДЕЛ</div>
+                    <h3 class="font-bold mb-2">VTOYEFI · ~32 МБ</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">Раздел загрузчика Ventoy: UEFI-файлы и ключ Secure Boot. В Windows обычно не виден — это нормально. <b class="text-amber-300">Не трогать.</b></p>
+                </div>
+                <div class="reveal glass-card rounded-2xl p-6 border-l-4 border-brand-green md:col-span-2">
+                    <div class="font-mono text-xs text-brand-green mb-2">ОСНОВНОЙ РАЗДЕЛ</div>
+                    <h3 class="font-bold mb-2">VENTOY · exFAT · весь остальной объём</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">ISO-образы 16 дистрибутивов, папка <code class="font-mono text-brand-green text-xs">ventoy/</code> с кастомной темой меню и конфигурацией, при желании — ваши личные файлы. Работает как обычная флешка в Windows, macOS и Linux.</p>
+                </div>
+            </div>
+
+            <div class="reveal grid md:grid-cols-2 gap-5">
+                <div class="callout callout-ok">
+                    <h4 class="font-bold mb-2"><i class="fa-solid fa-circle-check mr-2"></i>Можно</h4>
+                    <p class="leading-relaxed">Добавлять и удалять ISO-образы обычным копированием, хранить рядом свои файлы, переименовывать образы, использовать флешку в любом компьютере.</p>
+                </div>
+                <div class="callout callout-bad">
+                    <h4 class="font-bold mb-2"><i class="fa-solid fa-triangle-exclamation mr-2"></i>Нельзя и опасно</h4>
+                    <p class="leading-relaxed">Не форматируйте флешку целиком и не переразмечайте её дисковыми утилитами — загрузчик будет уничтожен. Если Windows предлагает «отформатировать диск» при подключении — это запрос к служебному разделу VTOYEFI, нажмите «Отмена». Не удаляйте папку <code class="font-mono text-xs">ventoy/</code> и не извлекайте флешку во время загрузки системы.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 02 QUICK START ============ -->
+    <section id="quickstart" class="py-16 bg-slate-900/50 border-y border-slate-800/70">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="reveal">
+                <span class="eyebrow">Раздел 02</span>
+                <h2 class="text-2xl md:text-3xl font-bold mt-3 mb-4">Быстрый старт: первый запуск за 5 шагов</h2>
+                <p class="text-slate-400 leading-relaxed mb-8">Ничего устанавливать на компьютер не нужно: live-сессия запускается прямо с флешки и не трогает ваш диск. Вся последовательность занимает пару минут.</p>
+            </div>
+
+            <ol class="space-y-4">
+                <li class="reveal glass-card rounded-2xl p-6 flex gap-5 items-start">
+                    <div class="step-num">1</div>
+                    <div><h3 class="font-bold mb-1.5">Вставьте флешку в USB-порт</h3><p class="text-sm text-slate-400 leading-relaxed">Лучше в порт USB 3.0 (обычно синий) — загрузка и работа live-сессии заметно быстрее.</p></div>
+                </li>
+                <li class="reveal glass-card rounded-2xl p-6 flex gap-5 items-start">
+                    <div class="step-num">2</div>
+                    <div><h3 class="font-bold mb-1.5">Откройте boot-меню и выберите флешку</h3><p class="text-sm text-slate-400 leading-relaxed">Включите или перезагрузите компьютер и сразу нажимайте <span class="kbd">F12</span>, <span class="kbd">F11</span>, <span class="kbd">F9</span>, <span class="kbd">F8</span> или <span class="kbd">Esc</span> — таблица клавиш по производителям в <a href="#boot" class="text-brand-green hover:underline">разделе «Boot-меню»</a>. На современных ПК выбирайте пункт, начинающийся с <b class="text-white">UEFI:</b></p></div>
+                </li>
+                <li class="reveal glass-card rounded-2xl p-6 flex gap-5 items-start">
+                    <div class="step-num">3</div>
+                    <div><h3 class="font-bold mb-1.5">При необходимости — разовая настройка Secure Boot</h3><p class="text-sm text-slate-400 leading-relaxed">Если появился синий экран «Verification failed / Security Violation» — это разовая процедура регистрации ключа: пять нажатий по стрелкам и Enter. Пошагово — <a href="#secureboot" class="text-brand-green hover:underline">раздел Secure Boot</a>. Альтернатива — отключить Secure Boot в настройках UEFI.</p></div>
+                </li>
+                <li class="reveal glass-card rounded-2xl p-6 flex gap-5 items-start">
+                    <div class="step-num">4</div>
+                    <div><h3 class="font-bold mb-1.5">Выберите систему в меню Ventoy</h3><p class="text-sm text-slate-400 leading-relaxed">Стрелками выберите нужный ISO-образ и нажмите <span class="kbd">Enter</span>. Если появилось подменю режимов — выберите <b class="text-white">Boot in normal mode</b> (обычный режим подходит в 99% случаев).</p></div>
+                </li>
+                <li class="reveal glass-card rounded-2xl p-6 flex gap-5 items-start">
+                    <div class="step-num">5</div>
+                    <div><h3 class="font-bold mb-1.5">Проверьте всё в live-сессии — и устанавливайте, если понравилось</h3><p class="text-sm text-slate-400 leading-relaxed">Проверьте Wi-Fi, звук, разрешение экрана, затем запустите установщик — ярлык «Install …» на рабочем столе. Установку можно отложить: live-режим полностью работоспособен без неё.</p></div>
+                </li>
+            </ol>
+
+            <div class="reveal callout callout-info mt-8">
+                <h4 class="font-bold mb-1.5"><i class="fa-solid fa-circle-info mr-2"></i>Главное правило</h4>
+                <p class="leading-relaxed">Live-сессия безопасна: система работает в оперативной памяти, а после перезагрузки компьютер останется в исходном состоянии. Опасен только установщик на этапе разметки диска — до начала установки сделайте резервные копии важных данных и внимательно читайте, что именно предлагается отформатировать.</p>
+            </div>
+            <div class="reveal callout callout-warn mt-4">
+                <h4 class="font-bold mb-1.5"><i class="fa-solid fa-microchip mr-2"></i>Старые компьютеры</h4>
+                <p class="leading-relaxed">На ПК старше ~2012 года (без UEFI) флешка тоже работает через Legacy BIOS. Если в boot-меню нет пункта с флешкой, зайдите в настройки BIOS и включите режим Legacy / CSM, а Secure Boot отключите.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 04 BOOT MENU ============ -->
+    <section id="boot" class="py-16 bg-slate-950">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="reveal">
+                <span class="eyebrow">Раздел 04</span>
+                <h2 class="text-2xl md:text-3xl font-bold mt-3 mb-4">Как загрузить компьютер с флешки (UEFI и BIOS)</h2>
+                <p class="text-slate-400 leading-relaxed mb-8">Компьютеры по умолчанию загружаются с внутреннего диска. Чтобы однократно запуститься с флешки, не меняя настройки, используйте boot-меню — оно вызывается горячей клавишей сразу после включения.</p>
+            </div>
+
+            <div class="reveal glass-card rounded-2xl overflow-hidden mb-8">
+                <table class="data-table">
+                    <thead>
+                        <tr><th>Производитель</th><th>Boot-меню</th><th>Настройки BIOS/UEFI</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>ASUS (ноутбуки)</td><td><span class="kbd">Esc</span></td><td><span class="kbd">F2</span></td></tr>
+                        <tr><td>ASUS (мат. платы ПК)</td><td><span class="kbd">F8</span></td><td><span class="kbd">Del</span></td></tr>
+                        <tr><td>Acer</td><td><span class="kbd">F12</span> *</td><td><span class="kbd">F2</span> / <span class="kbd">Del</span></td></tr>
+                        <tr><td>Lenovo / ThinkPad</td><td><span class="kbd">F12</span> / <span class="kbd">Fn+F12</span>, кнопка Novo</td><td><span class="kbd">F1</span> / <span class="kbd">F2</span> / <span class="kbd">Del</span></td></tr>
+                        <tr><td>HP</td><td><span class="kbd">F9</span> (или <span class="kbd">Esc</span> → меню)</td><td><span class="kbd">F10</span></td></tr>
+                        <tr><td>Dell</td><td><span class="kbd">F12</span></td><td><span class="kbd">F2</span></td></tr>
+                        <tr><td>MSI (платы и ноутбуки)</td><td><span class="kbd">F11</span></td><td><span class="kbd">Del</span></td></tr>
+                        <tr><td>Gigabyte</td><td><span class="kbd">F12</span></td><td><span class="kbd">Del</span></td></tr>
+                        <tr><td>ASRock</td><td><span class="kbd">F11</span></td><td><span class="kbd">Del</span></td></tr>
+                        <tr><td>Samsung</td><td><span class="kbd">F10</span> / <span class="kbd">Esc</span></td><td><span class="kbd">F2</span></td></tr>
+                        <tr><td>Huawei / Honor</td><td><span class="kbd">F12</span></td><td><span class="kbd">F2</span> / <span class="kbd">Del</span></td></tr>
+                        <tr><td>Sony VAIO</td><td><span class="kbd">F11</span> / кнопка ASSIST</td><td><span class="kbd">F2</span> / <span class="kbd">F3</span></td></tr>
+                        <tr><td>Toshiba / Dynabook</td><td><span class="kbd">F12</span></td><td><span class="kbd">F2</span></td></tr>
+                        <tr><td>Fujitsu</td><td><span class="kbd">F12</span></td><td><span class="kbd">F2</span></td></tr>
+                        <tr><td>Другой / неизвестный</td><td><span class="kbd">Esc</span>, <span class="kbd">F8</span>…<span class="kbd">F12</span> подряд</td><td><span class="kbd">Del</span> / <span class="kbd">F2</span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="reveal text-xs text-slate-500 -mt-4 mb-8">* На некоторых Acer пункт boot-меню сначала нужно включить в BIOS: Main → F12 Boot Menu → Enabled. На компактных клавиатурах может потребоваться сочетание с <span class="kbd">Fn</span>. Нажимайте клавишу часто, сразу после включения, до появления логотипа.</p>
+
+            <div class="grid md:grid-cols-2 gap-5">
+                <div class="reveal glass-card rounded-2xl p-6">
+                    <h3 class="font-bold mb-3"><i class="fa-solid fa-code-branch text-brand-green mr-2"></i>UEFI или Legacy: что выбирать</h3>
+                    <ul class="space-y-2.5 text-sm text-slate-400 leading-relaxed list-disc pl-5">
+                        <li>Флешка может отображаться двумя пунктами: <b class="text-slate-200">UEFI: &lt;имя флешки&gt;</b> и просто <b class="text-slate-200">&lt;имя флешки&gt;</b> (Legacy). На компьютере моложе ~2013 года выбирайте пункт UEFI — в этом режиме работают Secure Boot и современная разметка GPT.</li>
+                        <li>Если Windows установлена в режиме UEFI (все современные ПК) — ставьте Linux тоже в UEFI-режиме, иначе загрузчик не сможет управлять двойной системой.</li>
+                        <li>Пункта с флешкой нет: попробуйте другой порт (лучше USB 2.0 — чёрный), отключите в BIOS «Fast Boot»; на старых ПК включите Legacy/CSM.</li>
+                    </ul>
+                </div>
+                <div class="reveal callout callout-info h-fit">
+                    <h4 class="font-bold mb-2"><i class="fa-brands fa-windows mr-2"></i>Совет для Windows 10/11</h4>
+                    <p class="leading-relaxed">Если «быстрый запуск» мешает попасть в boot-меню, используйте штатный путь: <b>Параметры → Система → Восстановление → Расширенные параметры загрузки → Перезагрузить сейчас → «Использовать устройство» → ваша флешка</b>. Либо перезагрузка с зажатым <span class="kbd">Shift</span>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 03 VENTOY KEYS ============ -->
+    <section id="ventoy" class="py-16 bg-slate-900/50 border-y border-slate-800/70">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="reveal">
+                <span class="eyebrow">Раздел 03</span>
+                <h2 class="text-2xl md:text-3xl font-bold mt-3 mb-4">Ventoy: загрузочное меню и горячие клавиши</h2>
+                <p class="text-slate-400 leading-relaxed mb-8">Ventoy — открытый загрузчик, который превращает флешку в «меню систем»: ISO-образы не нужно «прожигать» — они просто лежат файлами, а Ventoy запускает их напрямую. При загрузке с флешки вы видите список всех образов (по алфавиту), оформленный кастомной темой LinuxDrive.</p>
+            </div>
+
+            <div class="reveal glass-card rounded-2xl overflow-hidden mb-8">
+                <table class="data-table">
+                    <thead><tr><th>Клавиша</th><th>Действие</th></tr></thead>
+                    <tbody>
+                        <tr><td><span class="kbd">Enter</span></td><td>Загрузить выбранный образ (обычный режим; может появиться подменю режимов)</td></tr>
+                        <tr><td><span class="kbd">F1</span></td><td>Встроенная справка Ventoy</td></tr>
+                        <tr><td><span class="kbd">F2</span></td><td>Режим обзора файлов: просмотр и запуск образов с флешки и локальных дисков</td></tr>
+                        <tr><td><span class="kbd">F3</span></td><td>Переключение вида меню: список ↔ дерево папок</td></tr>
+                        <tr><td><span class="kbd">F5</span></td><td>Инструменты: временные настройки запуска, режим отображения (текст/графика) и др.</td></tr>
+                        <tr><td><span class="kbd">F6</span></td><td>Расширенное GRUB2-меню плагинов (ventoy_grub.cfg) — для подготовленных пользователей</td></tr>
+                        <tr><td><span class="kbd">Ctrl+R</span></td><td>Режим GRUB2 — если образ не запускается в обычном режиме</td></tr>
+                        <tr><td><span class="kbd">Ctrl+D</span></td><td>Режим memdisk — образ целиком загружается в оперативную память (для небольших/капризных ISO; нужно ОЗУ ≥ размера образа)</td></tr>
+                        <tr><td><span class="kbd">Ctrl+W</span></td><td>Режим WIMboot — для образов Windows WIM (Linux-системам не нужен)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-5">
+                <div class="reveal callout callout-ok">
+                    <h4 class="font-bold mb-2"><i class="fa-solid fa-circle-check mr-2"></i>Правило режимов</h4>
+                    <p class="leading-relaxed">Всегда начинайте с обычного режима (normal mode). GRUB2, memdisk и прочие режимы — только если обычный не сработал: это официальная рекомендация Ventoy.</p>
+                </div>
+                <div class="reveal glass-card rounded-2xl p-6">
+                    <h4 class="font-bold mb-2"><i class="fa-solid fa-palette text-brand-green mr-2"></i>Кастомная тема LinuxDrive</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">Меню на вашей флешке оформлено темой LinuxDrive: графический режим с фоном, иконками дистрибутивов и подписями версий. Файлы темы лежат в папке <code class="font-mono text-xs text-brand-green">ventoy/</code> и прописаны в конфиге <code class="font-mono text-xs text-brand-green">ventoy/ventoy.json</code>. Если оформление сбилось, тема восстанавливается копированием исходной папки ventoy/ — её архив есть на linuxdrive.ru. Переключение текст/графика: <span class="kbd">F5</span> → Tools → Screen Display Mode.</p>
+                </div>
+            </div>
+
+            <div class="reveal glass-card rounded-2xl p-6 mt-5">
+                <h4 class="font-bold mb-3"><i class="fa-solid fa-wand-magic-sparkles text-sky-400 mr-2"></i>Что ещё умеет Ventoy (кратко)</h4>
+                <ul class="grid md:grid-cols-2 gap-x-8 gap-y-2.5 text-sm text-slate-400 leading-relaxed list-disc pl-5">
+                    <li>Образы больше 4 ГБ — exFAT не ограничивает размер файлов</li>
+                    <li>Запускаются не только Linux-ISO, но и Windows/WinPE, MemTest86, rescue-диски — просто скопируйте файл</li>
+                    <li>Плагины (ventoy.json или утилита VentoyPlugson): алиасы и подсказки в меню, автоустановка по скриптам, пароль на меню, защита от записи</li>
+                    <li>Persistence — сохранение настроек live-сессии в файл-контейнер .dat (работает для Ubuntu/Mint/Debian/Kali/MX)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 05 SECURE BOOT ============ -->
+    <section id="secureboot" class="py-16 bg-slate-950">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="reveal">
+                <span class="eyebrow">Раздел 05</span>
+                <h2 class="text-2xl md:text-3xl font-bold mt-3 mb-4">Secure Boot: разовая настройка при первом запуске</h2>
+                <p class="text-slate-400 leading-relaxed mb-8">Secure Boot — защита UEFI, разрешающая запуск только подписанных загрузчиков. Ventoy её поддерживает: при первом запуске на таком компьютере нужно один раз зарегистрировать его ключ. Дальше всё будет загружаться автоматически.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-6 mb-6">
+                <div class="reveal glass-card rounded-2xl p-7">
+                    <h3 class="font-bold mb-4 text-brand-green"><i class="fa-solid fa-key mr-2"></i>Сценарий А — синий экран «Perform MOK management»</h3>
+                    <ol class="space-y-3 text-sm text-slate-300 leading-relaxed">
+                        <li class="flex gap-3"><span class="step-num !w-7 !h-7 !text-xs flex-none">1</span><span>Если перед этим показано сообщение <code class="font-mono text-xs text-amber-300">Verification failed: (0x1A Security Violation)</code> — нажмите <span class="kbd">Enter</span> (OK).</span></li>
+                        <li class="flex gap-3"><span class="step-num !w-7 !h-7 !text-xs flex-none">2</span><span>На синем экране MokManager выберите <b class="text-white">Enroll key from disk</b> → <span class="kbd">Enter</span>.</span></li>
+                        <li class="flex gap-3"><span class="step-num !w-7 !h-7 !text-xs flex-none">3</span><span>Выберите раздел <b class="text-white">VTOYEFI</b> → файл <code class="font-mono text-xs text-brand-green">ENROLL_THIS_KEY_IN_MOKMANAGER.cer</code> → <span class="kbd">Enter</span>.</span></li>
+                        <li class="flex gap-3"><span class="step-num !w-7 !h-7 !text-xs flex-none">4</span><span><b class="text-white">Continue</b> → <span class="kbd">Enter</span>, затем <b class="text-white">Yes</b> → <span class="kbd">Enter</span> (подтвердить регистрацию).</span></li>
+                        <li class="flex gap-3"><span class="step-num !w-7 !h-7 !text-xs flex-none">5</span><span><b class="text-white">Reboot</b> → <span class="kbd">Enter</span>. После перезагрузки снова загрузитесь с флешки — меню Ventoy откроется без вопросов.</span></li>
+                    </ol>
+                </div>
+                <div class="space-y-6">
+                    <div class="reveal glass-card rounded-2xl p-7">
+                        <h3 class="font-bold mb-3 text-sky-400"><i class="fa-solid fa-power-off mr-2"></i>Сценарий Б — просто отключить Secure Boot</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed">Зайдите в настройки UEFI (клавиша из <a href="#boot" class="text-brand-green hover:underline">раздела «Boot-меню»</a>, вкладка Security / Boot / Authentication) и переведите Secure Boot в <b class="text-white">Disabled</b>. Ventoy и все образы с флешки работают как с включённым, так и с выключенным Secure Boot.</p>
+                    </div>
+                    <div class="reveal callout callout-warn">
+                        <h4 class="font-bold mb-2"><i class="fa-solid fa-triangle-exclamation mr-2"></i>Если вместо синего экрана — другая ошибка</h4>
+                        <p class="leading-relaxed">На части компьютеров (особенно с обновлённым UEFI 2023+) штатный экран регистрации не появляется — вместо него чёрный экран, «Linpus lite» и т.п. Это значит, что механизм MOK на данной машине не срабатывает: просто отключите Secure Boot (сценарий Б). На некоторых моделях нужно включить опцию «Allow Microsoft 3rd Party UEFI CA» (UEFI CA 2023).</p>
+                    </div>
+                    <div class="reveal callout callout-info">
+                        <h4 class="font-bold mb-2"><i class="fa-solid fa-circle-info mr-2"></i>Важно знать</h4>
+                        <p class="leading-relaxed">Регистрация ключа выполняется один раз для каждого компьютера и не влияет на Windows. Начиная с Ventoy 1.1.13 используется обновлённый ключ (требование UEFI CA 2023) — если флешка раньше работала, а после обновления прошивки ПК стала выдавать Security Violation, просто повторите регистрацию по сценарию А.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal glass-card rounded-2xl p-7">
+                <h4 class="font-bold mb-3"><i class="fa-brands fa-linux text-brand-green mr-2"></i>А что с самими дистрибутивами?</h4>
+                <p class="text-sm text-slate-400 leading-relaxed">После запуска образа через Ventoy проверка подписи ядра live-системы — уже задача самого дистрибутива. Практически все системы на флешке (Ubuntu, Mint, Fedora, Debian, openSUSE, elementary, Zorin, Lubuntu, Pop!_OS…) имеют подписанные загрузчики и нормально работают при включённом Secure Boot. Исключения (<b class="text-slate-200">Arch, EndeavourOS, Nobara, Puppy Linux</b>) подписанных загрузчиков не имеют — если после установки такой системы UEFI отказывается её грузить, отключите Secure Boot или используйте подписанный shim. <b class="text-slate-200">Kali</b> при включённом Secure Boot также может потребовать его отключения.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 06 IMAGES ============ -->
+    <section id="images" class="py-16 bg-slate-900/50 border-y border-slate-800/70">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="reveal">
+                <span class="eyebrow">Раздел 06</span>
+                <h2 class="text-2xl md:text-3xl font-bold mt-3 mb-4">Образы и Ventoy: добавление, удаление, обновление</h2>
+                <p class="text-slate-400 leading-relaxed mb-8">Главное преимущество Ventoy: флешку не нужно перезаписывать. Управление системами — это обычные файловые операции.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-6 mb-6">
+                <div class="reveal glass-card rounded-2xl p-7">
+                    <h3 class="font-bold mb-4"><i class="fa-solid fa-plus text-brand-green mr-2"></i>Добавить новый дистрибутив</h3>
+                    <ol class="space-y-3 text-sm text-slate-300 leading-relaxed list-decimal pl-5">
+                        <li>Скачайте ISO с официального сайта дистрибутива (ссылки ищите на linuxdrive.ru или через поиск «&lt;название&gt; download»).</li>
+                        <li>Подключите флешку к любому компьютеру — она видна как обычный диск <b class="text-white">VENTOY (exFAT)</b>.</li>
+                        <li>Скопируйте ISO-файл в корень флешки или в любую папку — Ventoy найдёт его рекурсивно.</li>
+                        <li>Безопасно извлеките флешку. Новый образ появится в меню автоматически — ничего пересобирать не нужно.</li>
+                    </ol>
+                </div>
+                <div class="space-y-6">
+                    <div class="reveal glass-card rounded-2xl p-7">
+                        <h3 class="font-bold mb-3"><i class="fa-solid fa-rotate text-sky-400 mr-2"></i>Удалить, заменить, проверить</h3>
+                        <ul class="space-y-2.5 text-sm text-slate-300 leading-relaxed list-disc pl-5">
+                            <li><b class="text-white">Удалить или заменить образ:</b> удалите файл ISO как обычный файл. Чтобы обновить версию дистрибутива — удалите старый ISO и скопируйте новый. Место освобождается мгновенно.</li>
+                            <li><b class="text-white">Проверить целостность:</b> если система ведёт себя странно при загрузке, возможно, ISO повреждён — в меню Ventoy нажмите <span class="kbd">F5</span> → Tools и воспользуйтесь проверкой контрольных сумм (SHA256/SHA512 сверяются с эталоном с сайтов дистрибутивов).</li>
+                        </ul>
+                    </div>
+                    <div class="reveal callout callout-bad">
+                        <h4 class="font-bold mb-2"><i class="fa-solid fa-triangle-exclamation mr-2"></i>INSTALL ≠ UPDATE</h4>
+                        <p class="leading-relaxed">Кнопка <b>Install</b> (или ключ <code class="font-mono text-xs">-i/-I</code>) форматирует флешку — все образы и тема будут уничтожены. Для уже подготовленной флешки LinuxDrive применим только <b>Update</b> / <code class="font-mono text-xs">-u</code>: эта операция безопасна и не трогает файлы на основном разделе.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal glass-card rounded-2xl p-7 mb-6">
+                <h3 class="font-bold mb-4"><i class="fa-solid fa-arrows-rotate text-brand-green mr-2"></i>Обновить сам Ventoy (без потери данных)</h3>
+                <div class="grid md:grid-cols-2 gap-5 text-sm text-slate-300 leading-relaxed">
+                    <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-5">
+                        <h4 class="font-bold text-white mb-2"><i class="fa-brands fa-windows text-sky-400 mr-2"></i>Windows</h4>
+                        <p>Скачайте архив <code class="font-mono text-xs text-brand-green">ventoy-x.x.xx-windows.zip</code> с ventoy.net, распакуйте, запустите <b>Ventoy2Disk.exe</b>. Выберите флешку → нажмите <b class="text-brand-green">Update</b> (именно Update, а не Install!). Все ISO и файлы останутся на месте.</p>
+                    </div>
+                    <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-5">
+                        <h4 class="font-bold text-white mb-2"><i class="fa-brands fa-linux text-brand-green mr-2"></i>Linux</h4>
+                        <p>Скачайте <code class="font-mono text-xs text-brand-green">ventoy-x.x.xx-linux.tar.gz</code>, распакуйте и выполните от root: <code class="font-mono text-xs text-brand-green">sh Ventoy2Disk.sh -u /dev/sdX</code>, где /dev/sdX — устройство флешки (проверьте через <code class="font-mono text-xs">lsblk</code>, чтобы не перепутать с диском!). Есть и графические режимы (GTK/Qt/WebUI).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-5">
+                <div class="reveal glass-card rounded-2xl p-6">
+                    <h4 class="font-bold mb-2"><i class="fa-solid fa-sliders text-purple-400 mr-2"></i>Для энтузиастов: ventoy.json и VentoyPlugson</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">Тонкая настройка меню (тема, алиасы, сортировка, пароли, автоустановка, persistence) задаётся в файле <code class="font-mono text-xs text-brand-green">ventoy/ventoy.json</code>. Править его удобнее через официальную утилиту VentoyPlugson — она поднимает локальный веб-интерфейс и валидирует конфиг. Документация плагинов: ventoy.net → Document → Plugin. Копия исходных ventoy.json и темы вашей сборки есть на linuxdrive.ru — экспериментируйте смело, но держите резервную копию.</p>
+                </div>
+                <div class="reveal callout callout-info h-fit">
+                    <h4 class="font-bold mb-2"><i class="fa-solid fa-gauge-high mr-2"></i>Скорость</h4>
+                    <p class="leading-relaxed">Скорость запуска live-системы упирается в чтение с флешки: используйте порт USB 3.0 и учитывайте, что тяжёлые образы (Debian DVD-1, openSUSE, Kali) читаются дольше лёгких live-ISO. Установленная на диск система всегда быстрее live-режима.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 09 INSTALL ============ -->
+    <section id="install" class="py-16 bg-slate-950">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="reveal">
+                <span class="eyebrow">Раздел 09</span>
+                <h2 class="text-2xl md:text-3xl font-bold mt-3 mb-4">Установка Linux: общие принципы, разметка, dual-boot</h2>
+                <p class="text-slate-400 leading-relaxed mb-8">Установщики у всех дистрибутивов разные внешне, но логика одна: <b class="text-slate-200">язык → сеть → разметка диска → пользователь → загрузчик</b>. Это «шпаргалка» для любой системы с флешки.</p>
+            </div>
+
+            <div class="reveal callout callout-bad mb-8">
+                <h4 class="font-bold mb-2"><i class="fa-solid fa-triangle-exclamation mr-2"></i>До начала: три обязательных действия</h4>
+                <ol class="list-decimal pl-5 space-y-1.5 leading-relaxed">
+                    <li><b>Резервная копия важных данных.</b> Любая операция с разделами несёт риск; «Стереть диск» удаляет данные полностью.</li>
+                    <li><b>BitLocker (Windows):</b> сохраните ключ восстановления и приостановите/отключите шифрование перед установкой.</li>
+                    <li><b>Отключите «быстрый запуск» Windows</b> (Панель управления → Электропитание → Действие кнопок питания) — иначе Windows «не отпускает» диск.</li>
+                </ol>
+            </div>
+
+            <h3 class="reveal text-xl font-bold mb-4">Разметка диска: как это обычно выглядит</h3>
+            <div class="grid md:grid-cols-3 gap-5 mb-6">
+                <div class="reveal glass-card rounded-2xl p-6">
+                    <div class="font-mono text-xs text-brand-green mb-2">EFI · 512 МБ</div>
+                    <p class="text-sm text-slate-400 leading-relaxed">FAT32. Загрузчики (GRUB, Windows). Часто уже есть от Windows — используется совместно.</p>
+                </div>
+                <div class="reveal glass-card rounded-2xl p-6">
+                    <div class="font-mono text-xs text-brand-green mb-2">/ (корень Linux) · от 30 ГБ</div>
+                    <p class="text-sm text-slate-400 leading-relaxed">ext4 или btrfs: система и программы. /home можно вынести отдельно — данные сохранятся при переустановке.</p>
+                </div>
+                <div class="reveal glass-card rounded-2xl p-6">
+                    <div class="font-mono text-xs text-brand-green mb-2">swap · по желанию</div>
+                    <p class="text-sm text-slate-400 leading-relaxed">Раздел или файл подкачки — современные системы создают его сами.</p>
+                </div>
+            </div>
+            <div class="reveal glass-card rounded-2xl p-6 mb-10 text-sm text-slate-400 leading-relaxed">
+                <p><b class="text-slate-200">Автоматический режим</b> («стереть диск», «guided») — установщик сам создаст разделы; подходит в 90% случаев. На UEFI-ПК нужен раздел EFI (ESP), на Legacy BIOS — флаг boot: установщики делают это сами.</p>
+                <p class="mt-2"><b class="text-slate-200">«Рядом с Windows»</b> — диск сжимается, Linux встаёт вторым, при включении появится меню GRUB с выбором системы. <b class="text-slate-200">Ручной режим</b> — для отдельных /home, шифрования LUKS и нестандартных схем.</p>
+            </div>
+
+            <h3 class="reveal text-xl font-bold mb-4">Dual-boot с Windows: порядок действий</h3>
+            <ol class="space-y-3 mb-6">
+                <li class="reveal glass-card rounded-xl px-6 py-4 flex gap-4 items-start text-sm text-slate-300"><span class="step-num !w-8 !h-8 !text-sm flex-none">1</span><span>В Windows: «Управление дисками» → сжать том, освободив 50+ ГБ (неразмеченное пространство).</span></li>
+                <li class="reveal glass-card rounded-xl px-6 py-4 flex gap-4 items-start text-sm text-slate-300"><span class="step-num !w-8 !h-8 !text-sm flex-none">2</span><span>Загрузитесь с флешки LinuxDrive и запустите установщик нужной системы.</span></li>
+                <li class="reveal glass-card rounded-xl px-6 py-4 flex gap-4 items-start text-sm text-slate-300"><span class="step-num !w-8 !h-8 !text-sm flex-none">3</span><span>Выберите «рядом с Windows» или вручную создайте разделы в освобождённом месте (Windows-разделы не трогать!).</span></li>
+                <li class="reveal glass-card rounded-xl px-6 py-4 flex gap-4 items-start text-sm text-slate-300"><span class="step-num !w-8 !h-8 !text-sm flex-none">4</span><span>Установщик пропишет GRUB в EFI-раздел и добавит Windows в меню загрузки (os-prober).</span></li>
+                <li class="reveal glass-card rounded-xl px-6 py-4 flex gap-4 items-start text-sm text-slate-300"><span class="step-num !w-8 !h-8 !text-sm flex-none">5</span><span>После перезагрузки GRUB предложит выбор: Linux (первая строка) или Windows Boot Manager.</span></li>
+            </ol>
+
+            <div class="grid md:grid-cols-2 gap-5 mb-10">
+                <div class="reveal callout callout-warn">
+                    <h4 class="font-bold mb-2"><i class="fa-solid fa-clock mr-2"></i>Часы в dual-boot</h4>
+                    <p class="leading-relaxed">Windows хранит в аппаратных часах местное время, Linux — UTC: время в Windows «съедет». Простое решение — <code class="font-mono text-xs">sudo timedatectl set-local-rtc 1</code> в Linux; «правильное» — параметр реестра Windows <code class="font-mono text-xs">RealTimeIsUniversal=1</code>.</p>
+                </div>
+                <div class="reveal callout callout-ok">
+                    <h4 class="font-bold mb-2"><i class="fa-solid fa-circle-check mr-2"></i>После установки</h4>
+                    <p class="leading-relaxed">Сначала полное обновление системы (команды — на <a href="distros.html" class="underline underline-offset-2">странице вашего дистрибутива</a>), затем драйверы видеокарты, и только потом «украшения». Если установка пошла не так — до перезагрузки всё легко начать заново, live-сессия останется рабочей.</p>
+                </div>
+            </div>
+
+            <div class="reveal glass-card rounded-2xl p-7">
+                <h3 class="font-bold mb-4"><i class="fa-solid fa-microchip text-sky-400 mr-2"></i>Драйверы и кодеки</h3>
+                <ul class="space-y-2.5 text-sm text-slate-400 leading-relaxed list-disc pl-5">
+                    <li><b class="text-slate-200">NVIDIA:</b> проприетарный драйвер ставится штатным инструментом — Менеджер драйверов (Mint, Zorin, Ubuntu), MHWD (Manjaro), Nobara Welcome, Pop!_Shop; в Arch/EndeavourOS — пакет <code class="font-mono text-xs text-brand-green">nvidia</code>. AMD/Intel: драйверы уже в ядре.</li>
+                    <li><b class="text-slate-200">Wi-Fi:</b> обычно работает сразу; редким Realtek/Broadcom нужен драйвер (в Ubuntu/Mint/Zorin — галочка «сторонние драйверы» при установке). Прошивки в Debian 13 и других современных образах уже включены.</li>
+                    <li><b class="text-slate-200">Кодеки:</b> в Mint/MX/Zorin/Nobara/Pop!_OS — включены или одной галочкой; в Fedora/openSUSE — через RPM Fusion / Packman; в Ubuntu — <code class="font-mono text-xs text-brand-green">ubuntu-restricted-extras</code>.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 10 FAQ ============ -->
+    <section id="faq" class="py-16 bg-slate-900/50 border-y border-slate-800/70">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="reveal text-center mb-10">
+                <span class="eyebrow">Раздел 10</span>
+                <h2 class="text-2xl md:text-3xl font-bold mt-3 mb-3">Частые проблемы и решения</h2>
+                <p class="text-slate-400">Скорая помощь по любому вопросу — от «не грузится» до «сбилось время».</p>
+            </div>
+
+            <div class="space-y-3">
+                <details class="faq-item reveal">
+                    <summary><i class="fa-solid fa-circle-question text-brand-green flex-none"></i>Компьютер не загружается с флешки — сразу грузится Windows<i class="fa-solid fa-plus faq-icon"></i></summary>
+                    <div class="faq-body">Откройте boot-меню правильной клавишей сразу при включении (<a href="#boot" class="text-brand-green hover:underline">таблица клавиш</a>). Если пункта с флешкой нет: попробуйте другой USB-порт (лучше чёрный USB 2.0 на задней панели ПК), отключите в UEFI «Fast Boot», включите «Legacy/CSM» на старых ПК. В Windows: Параметры → Восстановление → Расширенные параметры загрузки → «Использовать устройство».</div>
+                </details>
+                <details class="faq-item reveal">
+                    <summary><i class="fa-solid fa-circle-question text-brand-green flex-none"></i>«Verification failed: (0x1A Security Violation)» или чёрный экран вместо меню<i class="fa-solid fa-plus faq-icon"></i></summary>
+                    <div class="faq-body">Это Secure Boot. Разово зарегистрируйте ключ Ventoy (<a href="#secureboot" class="text-brand-green hover:underline">сценарий А</a>) или отключите Secure Boot в UEFI (сценарий Б). После этого флешка загружается всегда.</div>
+                </details>
+                <details class="faq-item reveal">
+                    <summary><i class="fa-solid fa-circle-question text-brand-green flex-none"></i>Меню Ventoy появляется, но выбранный дистрибутив зависает или гаснет экран<i class="fa-solid fa-plus faq-icon"></i></summary>
+                    <div class="faq-body">По порядку: (1) режим GRUB2 — в подменю после Enter или по <span class="kbd">Ctrl+R</span>; (2) для лёгких ISO — memdisk (<span class="kbd">Ctrl+D</span>, образ в ОЗУ); (3) в загрузочном меню самого дистрибутива нажмите <span class="kbd">e</span>, добавьте <code class="font-mono text-xs text-brand-green">nomodeset</code> в конец строки linux… и нажмите <span class="kbd">F10</span>; (4) обновите Ventoy и проверьте контрольную сумму ISO (<span class="kbd">F5</span> → Tools).</div>
+                </details>
+                <details class="faq-item reveal">
+                    <summary><i class="fa-solid fa-circle-question text-brand-green flex-none"></i>Всё работает, но очень медленно<i class="fa-solid fa-plus faq-icon"></i></summary>
+                    <div class="faq-body">Live-режим читает данные с флешки: порт USB 2.0 и бюджетные накопители тормозят сильнее. Используйте синий порт USB 3.0, закройте лишнее, выбирайте лёгкие системы (Lubuntu, MX, Puppy — последний целиком работает в ОЗУ и потому самый быстрый на слабом железе). Установленная на диск система всегда быстрее live-режима.</div>
+                </details>
+                <details class="faq-item reveal">
+                    <summary><i class="fa-solid fa-circle-question text-brand-green flex-none"></i>Windows при подключении флешки предлагает «Форматировать диск»<i class="fa-solid fa-plus faq-icon"></i></summary>
+                    <div class="faq-body">Это запрос к служебному разделу VTOYEFI, который Windows не понимает. Нажмите «Отмена» — основной раздел VENTOY откроется как обычно. Никогда не форматируйте этот диск средствами Windows.</div>
+                </details>
+                <details class="faq-item reveal">
+                    <summary><i class="fa-solid fa-circle-question text-brand-green flex-none"></i>Флешку случайно отформатировали / она перестала определяться как загрузочная<i class="fa-solid fa-plus faq-icon"></i></summary>
+                    <div class="faq-body">Восстановление полное: переустановите Ventoy (Ventoy2Disk → Install), скопируйте обратно ISO и папку ventoy/ с темой (архив сборки — на linuxdrive.ru). Если флешка не определяется вовсе — вероятна аппаратная смерть накопителя (гарантийный случай — напишите нам).</div>
+                </details>
+                <details class="faq-item reveal">
+                    <summary><i class="fa-solid fa-circle-question text-brand-green flex-none"></i>После установки Linux перестала загружаться Windows<i class="fa-solid fa-plus faq-icon"></i></summary>
+                    <div class="faq-body">Почти всегда Windows цела — UEFI грузит не тот загрузчик. В UEFI → Boot Order → поставьте «ubuntu»/«GRUB» первым; Windows останется в меню GRUB. Если её там нет: в Linux выполните <code class="font-mono text-xs text-brand-green">sudo update-grub</code> (в Fedora — <code class="font-mono text-xs text-brand-green">sudo grub2-mkconfig -o /boot/grub2/grub.cfg</code>).</div>
+                </details>
+                <details class="faq-item reveal">
+                    <summary><i class="fa-solid fa-circle-question text-brand-green flex-none"></i>В dual-boot сбивается время в Windows<i class="fa-solid fa-plus faq-icon"></i></summary>
+                    <div class="faq-body">См. блок «Часы в dual-boot» в <a href="#install" class="text-brand-green hover:underline">разделе об установке</a>: <code class="font-mono text-xs text-brand-green">sudo timedatectl set-local-rtc 1</code> в Linux — или параметр реестра RealTimeIsUniversal в Windows.</div>
+                </details>
+                <details class="faq-item reveal">
+                    <summary><i class="fa-solid fa-circle-question text-brand-green flex-none"></i>Не работает Wi-Fi в live-сессии<i class="fa-solid fa-plus faq-icon"></i></summary>
+                    <div class="faq-body">Проверьте аппаратный выключатель/Fn-клавишу Wi-Fi на ноутбуке. Некоторым новым адаптерам (Realtek, Broadcom) нужен драйвер: при установке отметьте «установить сторонние драйверы» (Ubuntu/Mint/Zorin/Pop!_OS) или подключитесь кабелем и поставьте драйвер после установки. В крайнем случае установите систему по кабелю — драйвер Wi-Fi подтянется из репозитория.</div>
+                </details>
+                <details class="faq-item reveal">
+                    <summary><i class="fa-solid fa-circle-question text-brand-green flex-none"></i>Чёрный экран или артефакты на видеокарте NVIDIA<i class="fa-solid fa-plus faq-icon"></i></summary>
+                    <div class="faq-body">Загрузитесь с параметром <code class="font-mono text-xs text-brand-green">nomodeset</code> (см. вопрос про зависание), установите систему, затем сразу поставьте проприетарный драйвер штатным менеджером. Проще всего на Nobara, Pop!_OS, Manjaro и Mint — там драйвер NVIDIA ставится в один клик.</div>
+                </details>
+                <details class="faq-item reveal">
+                    <summary><i class="fa-solid fa-circle-question text-brand-green flex-none"></i>Подойдёт ли флешка старому 32-битному компьютеру?<i class="fa-solid fa-plus faq-icon"></i></summary>
+                    <div class="faq-body">Все образы в этой сборке — 64-битные (x86_64/amd64): нужен процессор с поддержкой x86-64 (практически любой с 2007 года). Для настоящих 32-битных «антикваров» закажите на linuxdrive.ru сборку с 32-битными образами (например, antiX/Debian i386).</div>
+                </details>
+                <details class="faq-item reveal">
+                    <summary><i class="fa-solid fa-circle-question text-brand-green flex-none"></i>Где искать помощь по конкретному дистрибутиву?<i class="fa-solid fa-plus faq-icon"></i></summary>
+                    <div class="faq-body">Официальные Wiki и форумы каждого дистрибутива, русскоязычные сообщества, форумы linux.org.ru и 4pda. По вопросам самой флешки (Ventoy, сборка, гарантия) — <a href="order.html#contacts" class="text-brand-green hover:underline">поддержка linuxdrive.ru</a>.</div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 11 GLOSSARY ============ -->
+    <section id="glossary" class="py-16 bg-slate-950">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="reveal text-center mb-10">
+                <span class="eyebrow">Раздел 11</span>
+                <h2 class="text-2xl md:text-3xl font-bold mt-3 mb-3">Мини-словарь начинающего</h2>
+                <p class="text-slate-400">Двадцать терминов, после которых любой текст о Linux становится понятным.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="reveal glass-card rounded-xl p-5"><h4 class="font-bold text-brand-green text-sm mb-1.5">Дистрибутив</h4><p class="text-sm text-slate-400 leading-relaxed">Готовая к установке сборка Linux: ядро + программы + установщик. На вашей флешке их 16.</p></div>
+                <div class="reveal glass-card rounded-xl p-5"><h4 class="font-bold text-brand-green text-sm mb-1.5">ISO-образ</h4><p class="text-sm text-slate-400 leading-relaxed">Файл-«слепок» установочного диска (.iso). Ventoy запускает образы прямо из файлов — ничего «прожигать» не нужно.</p></div>
+                <div class="reveal glass-card rounded-xl p-5"><h4 class="font-bold text-brand-green text-sm mb-1.5">Live-сессия</h4><p class="text-sm text-slate-400 leading-relaxed">Запуск системы с флешки без установки: работает в оперативной памяти, диск компьютера не трогает. Идеальна для теста «перед покупкой».</p></div>
+                <div class="reveal glass-card rounded-xl p-5"><h4 class="font-bold text-brand-green text-sm mb-1.5">Оболочка (DE)</h4><p class="text-sm text-slate-400 leading-relaxed">Графический интерфейс системы: панели, окна, меню. GNOME, KDE Plasma, Xfce, Cinnamon, MATE, LXQt, COSMIC, Pantheon, Budgie — разные оболочки на одном Linux-ядре.</p></div>
+                <div class="reveal glass-card rounded-xl p-5"><h4 class="font-bold text-brand-green text-sm mb-1.5">Ядро (kernel)</h4><p class="text-sm text-slate-400 leading-relaxed">Сердце системы: управляет процессором, памятью, устройствами. Одно ядро — у всех дистрибутивов, версии различаются.</p></div>
+                <div class="reveal glass-card rounded-xl p-5"><h4 class="font-bold text-brand-green text-sm mb-1.5">Пакет и пакетный менеджер</h4><p class="text-sm text-slate-400 leading-relaxed">Программа в формате дистрибутива (deb, rpm…) и инструмент её установки: apt (Debian/Ubuntu), dnf (Fedora), pacman (Arch), zypper (openSUSE).</p></div>
+                <div class="reveal glass-card rounded-xl p-5"><h4 class="font-bold text-brand-green text-sm mb-1.5">Репозиторий</h4><p class="text-sm text-slate-400 leading-relaxed">Официальное хранилище пакетов с проверкой подписей. Сторонние репозитории подключаются вручную (RPM Fusion, Packman и т.п.).</p></div>
+                <div class="reveal glass-card rounded-xl p-5"><h4 class="font-bold text-brand-green text-sm mb-1.5">AUR (Arch User Repository)</h4><p class="text-sm text-slate-400 leading-relaxed">Пользовательский каталог Arch: почти любой софт в мире, но без гарантий — собирайте осознанно.</p></div>
+                <div class="reveal glass-card rounded-xl p-5"><h4 class="font-bold text-brand-green text-sm mb-1.5">Flatpak / Snap</h4><p class="text-sm text-slate-400 leading-relaxed">Универсальные форматы пакетов для всех дистрибутивов: свежие версии приложений независимо от репозиториев системы.</p></div>
+                <div class="reveal glass-card rounded-xl p-5"><h4 class="font-bold text-brand-green text-sm mb-1.5">Rolling-release</h4><p class="text-sm text-slate-400 leading-relaxed">Модель без версий: система обновляется непрерывно (Arch, EndeavourOS, Manjaro, Kali). LTS/стабильные — наоборот: редкие крупные релизы и годы поддержки (Ubuntu LTS, Debian, Mint, Leap).</p></div>
+                <div class="reveal glass-card rounded-xl p-5"><h4 class="font-bold text-brand-green text-sm mb-1.5">UEFI и Legacy BIOS</h4><p class="text-sm text-slate-400 leading-relaxed">Два поколения прошивок компьютера. UEFI (современное) грузит системы с GPT-диска и поддерживает Secure Boot; Legacy BIOS — старый режим (CSM).</p></div>
+                <div class="reveal glass-card rounded-xl p-5"><h4 class="font-bold text-brand-green text-sm mb-1.5">Secure Boot</h4><p class="text-sm text-slate-400 leading-relaxed">Проверка подписи загрузчика в UEFI. Ventoy обходится разовой регистрацией ключа.</p></div>
+                <div class="reveal glass-card rounded-xl p-5"><h4 class="font-bold text-brand-green text-sm mb-1.5">GRUB</h4><p class="text-sm text-slate-400 leading-relaxed">Стандартный загрузчик Linux: меню выбора системы при включении (в dual-boot — Linux или Windows).</p></div>
+                <div class="reveal glass-card rounded-xl p-5"><h4 class="font-bold text-brand-green text-sm mb-1.5">GPT / MBR</h4><p class="text-sm text-slate-400 leading-relaxed">Схемы разметки диска. GPT — современная (для UEFI), MBR — старая (Legacy). Ventoy поддерживает обе.</p></div>
+                <div class="reveal glass-card rounded-xl p-5"><h4 class="font-bold text-brand-green text-sm mb-1.5">Раздел, файловая система</h4><p class="text-sm text-slate-400 leading-relaxed">Часть диска со своей файловой системой: ext4 (классика Linux), btrfs (снапшоты), exFAT (флешки, все ОС), NTFS (Windows), FAT32 (EFI-раздел).</p></div>
+                <div class="reveal glass-card rounded-xl p-5"><h4 class="font-bold text-brand-green text-sm mb-1.5">Dual-boot</h4><p class="text-sm text-slate-400 leading-relaxed">Две системы на одном диске с выбором при загрузке.</p></div>
+                <div class="reveal glass-card rounded-xl p-5"><h4 class="font-bold text-brand-green text-sm mb-1.5">root, sudo</h4><p class="text-sm text-slate-400 leading-relaxed">root — суперпользователь; <code class="font-mono text-xs">sudo команда</code> — выполнить команду с правами root, введя свой пароль.</p></div>
+                <div class="reveal glass-card rounded-xl p-5"><h4 class="font-bold text-brand-green text-sm mb-1.5">Терминал</h4><p class="text-sm text-slate-400 leading-relaxed">Текстовый интерфейс: могущественно и быстро. Команды из руководства вводятся именно там (вставка — <span class="kbd">Ctrl+Shift+V</span>).</p></div>
+                <div class="reveal glass-card rounded-xl p-5"><h4 class="font-bold text-brand-green text-sm mb-1.5">Persistence / savefile</h4><p class="text-sm text-slate-400 leading-relaxed">Сохранение изменений live-сессии между перезагрузками: у Ventoy — плагин с контейнером .dat, у Puppy — savefile.</p></div>
+                <div class="reveal glass-card rounded-xl p-5"><h4 class="font-bold text-brand-green text-sm mb-1.5">Wayland / X11</h4><p class="text-sm text-slate-400 leading-relaxed">Графические подсистемы: Wayland — современная (по умолчанию почти везде), X11 — классическая. Выбор обычно доступен на экране входа.</p></div>
+            </div>
+
+            <!-- CTA -->
+            <div class="reveal mt-14 glass-card rounded-3xl p-8 md:p-10 text-center border-brand-green/25">
+                <h3 class="text-2xl font-bold mb-3">Остались вопросы?</h3>
+                <p class="text-slate-400 mb-6 max-w-xl mx-auto">Поддержка LinuxDrive поможет на любом этапе — от первого запуска до установки второй системы рядом с Windows.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="order.html" class="btn-primary px-8 py-3.5"><i class="fa-solid fa-bolt"></i> Заказать флешку · 3&nbsp;298&nbsp;₽</a>
+                    <a href="order.html#contacts" class="btn-outline px-8 py-3.5"><i class="fa-solid fa-headset text-brand-green"></i> Связаться с нами</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-slate-950 border-t border-slate-800 relative">
+    <div class="marquee-line absolute top-0 left-0 right-0"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+            <div>
+                <a href="index.html" class="flex items-center gap-2.5 mb-4">
+                    <span class="w-9 h-9 rounded-lg bg-brand-green/15 border border-brand-green/40 flex items-center justify-center">
+                        <i class="fa-brands fa-linux text-brand-green text-xl"></i>
+                    </span>
+                    <span class="font-bold text-xl tracking-tight">Linux<span class="text-brand-green">Drive</span></span>
+                </a>
+                <p class="text-sm text-slate-400 leading-relaxed">Мультизагрузочные USB-флешки с Linux на базе Ventoy: готовые сборки, авторское оформление меню, подробное руководство. Собрано и проверено вручную.</p>
+                <p class="mt-3 text-xs font-mono text-slate-500"><i class="fa-solid fa-compact-disc text-brand-green mr-1.5"></i>Актуальная сборка: 16.10.2026 · 16 систем</p>
+            </div>
+            <div>
+                <h4 class="text-sm font-bold uppercase tracking-wider text-slate-200 mb-4">Навигация</h4>
+                <ul class="space-y-2.5 text-sm">
+                    <li><a class="footer-link" href="index.html"><i class="fa-solid fa-angle-right text-xs text-brand-green"></i>Главная</a></li>
+                    <li><a class="footer-link" href="distros.html"><i class="fa-solid fa-angle-right text-xs text-brand-green"></i>16 дистрибутивов</a></li>
+                    <li><a class="footer-link" href="guide.html"><i class="fa-solid fa-angle-right text-xs text-brand-green"></i>Руководство пользователя</a></li>
+                    <li><a class="footer-link" href="order.html"><i class="fa-solid fa-angle-right text-xs text-brand-green"></i>Заказ и доставка</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-sm font-bold uppercase tracking-wider text-slate-200 mb-4">Документы</h4>
+                <ul class="space-y-2.5 text-sm">
+                    <li><a class="footer-link" href="politika.html"><i class="fa-solid fa-file-shield text-xs text-brand-green"></i>Политика конфиденциальности</a></li>
+                    <li><a class="footer-link" href="soglasie.html"><i class="fa-solid fa-file-signature text-xs text-brand-green"></i>Согласие на обработку ПД</a></li>
+                </ul>
+                <p class="mt-4 text-xs text-slate-500 leading-relaxed">Информация на сайте не является публичной офертой.</p>
+            </div>
+            <div>
+                <h4 class="text-sm font-bold uppercase tracking-wider text-slate-200 mb-4">Контакты</h4>
+                <ul class="space-y-2.5 text-sm">
+                    <li><a class="footer-link" href="tel:+79952376995"><i class="fa-solid fa-phone text-xs text-brand-green"></i>+7 995 237-69-95</a></li>
+                    <li><a class="footer-link" href="https://wa.me/79952376995" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp text-xs text-green-500"></i>WhatsApp</a></li>
+                    <li><span class="footer-link"><i class="fa-brands fa-telegram text-xs text-sky-400"></i>Telegram: +7 995 237-69-95</span></li>
+                    <li><a class="footer-link" href="mailto:i02@ya.ru"><i class="fa-solid fa-envelope text-xs text-brand-green"></i>i02@ya.ru</a></li>
+                    <li><a class="footer-link" href="https://www.avito.ru/sankt-peterburg/tovary_dlya_kompyutera/multizagruzochnaya_fleshka_linuks_12_v_1_7834413303" target="_blank" rel="noopener"><i class="fa-solid fa-store text-xs text-sky-400"></i>Мы на Авито</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="border-t border-slate-800/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
+            <p class="text-xs text-slate-500">&copy; <span data-year>2026</span> LinuxDrive · linuxdrive.ru</p>
+            <p class="legal-note mt-2 text-[11px] text-slate-600 max-w-4xl mx-auto">Linux&reg; — зарегистрированная товарная марка Линуса Торвальдса. Ubuntu, Linux Mint, Debian, Fedora, Nobara, Arch Linux, Manjaro, EndeavourOS, openSUSE, Kali Linux, elementary OS, Zorin OS, Pop!_OS, Lubuntu, MX Linux, Puppy Linux — товарные знаки соответствующих правообладателей. Все перечисленные системы распространяются свободно на условиях открытых лицензий (GNU GPL и др.) и предоставляются «как есть» их разработчиками. linuxdrive.ru не аффилирован ни с одним из проектов; оплата при покупке взимается исключительно за носитель, работу по сборке, оформлению, проверке и документации. Ventoy — свободное ПО (GPL-3.0), ventoy.net.</p>
+        </div>
+    </div>
+</footer>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
